@@ -31,7 +31,7 @@ ChambApp es una aplicación multiplataforma en la que sus usuarios pueden conseg
 * caracteristica3
 
 ### Diagrama de clases
-![Diagrama de clases](ChamApp.png)
+![Diagrama de clases](Imágenes/ChamApp.png)
 
 ### Autor(es)
 El autor(es) del proyecto son:
