@@ -1,8 +1,8 @@
 ### Objetivo del juego/aplicación
-El objetivo del juego/aplicación es ...
+ChambApp es una aplicación multiplataforma en la que sus usuarios pueden conseguir y dar trabajo entre si, además de desarrollar competencias y habilidades que complementen su desarrollo profesional dentro de la plataforma.
 
 ### Descripción del juego/aplicación
-La descripción del juego/aplicación es ...
+
 
 ### Clases principales y sus características
 1. Clase 1
@@ -35,8 +35,8 @@ La descripción del juego/aplicación es ...
 
 ### Autor(es)
 El autor(es) del proyecto son:
-- Nombre completo del autor 1 (@nombreUsuarioGitHub)
-- Nombre completo del autor 2 (@nombreUsuarioGitHub)
+- Jose Bernardo Bernal Cabrera (@Supermasterspark)
+- David Andrés Garza Medina (@davidazullo25)
 
 ### Materia(s)
 - Programación Orientada a Objetos
