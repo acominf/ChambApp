@@ -31,7 +31,7 @@ La descripción del juego/aplicación es ...
 * caracteristica3
 
 ### Diagrama de clases
-![Diagrama de clases](url-del-diagrama.png)
+![Diagrama de clases](ChamApp.png)
 
 ### Autor(es)
 El autor(es) del proyecto son:
