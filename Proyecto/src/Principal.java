@@ -1,4 +1,3 @@
-import javax.tools.Tool;
 import java.awt.*;
 
 /**
@@ -8,8 +7,8 @@ public class Principal {
     public static void main(String []args){
         try{
             Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
-            Lienzo lienzo = new Lienzo("ChambApp", tamano);
-            lienzo.setVisible(true);
+            Ventana ventana = new Ventana("ChambApp", tamano);
+            ventana.setVisible(true);
         }
         catch (Exception e){
             System.out.println("Ocurrió Un Error Al Obtener Los Datos De Tu Monitor");

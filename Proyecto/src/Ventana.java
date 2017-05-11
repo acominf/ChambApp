@@ -4,16 +4,15 @@ import java.awt.*;
  * Esta Clase Crea Un Lienzo Para Una GUI.
  * @author José Bernardo Bernal Cabrera
  */
-public class Lienzo extends JFrame{
-    String titulo;
+public class Ventana extends JFrame{
     private ImageIcon icono;
-    Dimension tamano;
+    private Dimension tamano;
     /**
      * Constructor de la clase Lienzo
      * @param titulo Define el nombre de la ventana
      * @param tamano Define el tamaño de la pantalla de salida actual
      */
-    public Lienzo(String titulo, Dimension tamano){
+    public Ventana(String titulo, Dimension tamano){
         super(titulo);
         this.tamano = tamano;
         inicializaVentana();
@@ -22,11 +21,12 @@ public class Lienzo extends JFrame{
     /**
      * Método encargado de inicializar los atributos de la pantalla
      */
-    private void inicializaVentana(){
+    private void inicializaVentana() {
+        Login login = new Login();
+        this.add(login);
         icono = new ImageIcon("src/Imagenes/Logo.png");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize((int)tamano.getWidth(), (int)tamano.getHeight());
+        setSize((int) tamano.getWidth(), (int) tamano.getHeight());
         setIconImage(icono.getImage());
     }
-
 }
