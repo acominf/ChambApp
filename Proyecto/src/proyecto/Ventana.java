@@ -1,3 +1,5 @@
+package proyecto;
+
 import javax.swing.*;
 import java.awt.*;
 /**
@@ -22,8 +24,6 @@ public class Ventana extends JFrame{
      * Método encargado de inicializar los atributos de la pantalla
      */
     private void inicializaVentana() {
-        Login login = new Login();
-        this.add(login);
         icono = new ImageIcon("src/Imagenes/Logo.png");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize((int) tamano.getWidth(), (int) tamano.getHeight());
