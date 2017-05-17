@@ -1,5 +1,4 @@
 package proyecto;
-
 import java.awt.*;
 
 /**
@@ -8,9 +7,9 @@ import java.awt.*;
 public class Principal {
     public static void main(String []args){
         try{
-            /*Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
+            Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
             Ventana ventana = new Ventana("ChambApp", tamano);
-            ventana.setVisible(true);*/
+            ventana.setVisible(true);
             new Login().setVisible(true);
         }
         catch (Exception e){
