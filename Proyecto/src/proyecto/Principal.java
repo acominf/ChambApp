@@ -1,5 +1,4 @@
 package proyecto;
-
 import java.awt.*;
 
 /**
