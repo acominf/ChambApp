@@ -26,7 +26,9 @@ public class Login extends javax.swing.JPanel {
         super.paintComponent(g);
         Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
         ImageIcon fondo = new ImageIcon("src/Imagenes/Logo.png");
-        g.drawImage(fondo.getImage(), tamano.width/2-fondo.getIconWidth()/500, 0, tamano.width/2+fondo.getIconWidth()/500, tamano.height/2, null);
+        g.drawImage(fondo.getImage(),
+                tamano.width/2-fondo.getIconWidth()/2, 0,
+                tamano.width/2+fondo.getIconWidth()/2, tamano.height/2, null);
     }
     /**
      * This method is called from within the constructor to initialize the form.
