@@ -9,10 +9,9 @@ public class Principal {
         try{
             //Dimension tamano = new Dimension(600, 600);
             Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
-            EmpleadoCV login = new EmpleadoCV();
-            Ventana ventana = new Ventana("ChambApp", tamano);
-            ventana.add(login);
-            ventana.setVisible(true);
+            //EmpleadoCV login = new EmpleadoCV();
+            Menu menu = new Menu("ChambApp");
+            menu.setVisible(true);
         }
         catch (Exception e){
             System.out.println("Ocurrió Un Error Al Obtener Los Datos De Tu Monitor");
