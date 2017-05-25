@@ -9,12 +9,12 @@ package proyecto;
  *
  * @author davidazullo
  */
-public class BuscarChamba extends javax.swing.JPanel {
+public class BuscarSocio extends javax.swing.JPanel {
 
     /**
      * Creates new form BuscarChamba
      */
-    public BuscarChamba() {
+    public BuscarSocio() {
         initComponents();
     }
 
@@ -30,24 +30,17 @@ public class BuscarChamba extends javax.swing.JPanel {
         Titulo = new javax.swing.JLabel();
         CamposDeTrabajo = new javax.swing.JComboBox<>();
         CampoTrabajo = new javax.swing.JLabel();
-        Rango = new javax.swing.JLabel();
         Instrucciones = new javax.swing.JLabel();
-        Minimo = new javax.swing.JSpinner();
-        TMinimo = new javax.swing.JLabel();
-        TMaximo = new javax.swing.JLabel();
-        Maximo = new javax.swing.JSpinner();
         Prestaciones = new javax.swing.JCheckBox();
         TPrestaciones = new javax.swing.JLabel();
         Enviar = new javax.swing.JButton();
-        TTiempoCompleto = new javax.swing.JLabel();
-        TiempoCompleto = new javax.swing.JCheckBox();
         ExperienciaTitulo = new javax.swing.JLabel();
         TExperiencia = new javax.swing.JLabel();
         Experiencia = new javax.swing.JSpinner();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo.setText("Buscador de Chamba");
+        Titulo.setText("Buscador de Socios");
 
         CamposDeTrabajo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tecnologías de la información",
             "Mercadotecnía",
@@ -55,20 +48,11 @@ public class BuscarChamba extends javax.swing.JPanel {
             "Administración de empresas" }));
 
 CampoTrabajo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-CampoTrabajo.setText("Campo:");
-
-Rango.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-Rango.setText("Rango de saldo esperado:");
+CampoTrabajo.setText("Especialidad");
 
 Instrucciones.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
 Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 Instrucciones.setText("Complete los siguientes campos para realizar su búsqueda");
-
-TMinimo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-TMinimo.setText("Mínimo:");
-
-TMaximo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-TMaximo.setText("Máximo:");
 
 Prestaciones.setText("Sí");
 Prestaciones.addActionListener(new java.awt.event.ActionListener() {
@@ -78,25 +62,15 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
     });
 
     TPrestaciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TPrestaciones.setText("Necesita prestaciones");
+    TPrestaciones.setText("¿Empresario?");
 
     Enviar.setText("Subir solicitud");
 
-    TTiempoCompleto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TTiempoCompleto.setText("Disponible tiempo completo");
-
-    TiempoCompleto.setText("Sí");
-    TiempoCompleto.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            TiempoCompletoActionPerformed(evt);
-        }
-    });
-
     ExperienciaTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    ExperienciaTitulo.setText("Años de experiencia en el área especificada");
+    ExperienciaTitulo.setText("Cantidad de capital que está dispuesto a invertir");
 
     TExperiencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TExperiencia.setText("Años");
+    TExperiencia.setText("Monto");
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
@@ -105,50 +79,28 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
         .addGroup(layout.createSequentialGroup()
             .addContainerGap()
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(Prestaciones)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(255, 255, 255))
-                .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(CampoTrabajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(415, 415, 415))
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(Rango, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(281, 281, 281))
-                .addComponent(CamposDeTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(12, 12, 12)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(Instrucciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CamposDeTrabajo, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(176, 176, 176)
+                                .addComponent(Enviar))
+                            .addComponent(Prestaciones, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addComponent(TPrestaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ExperienciaTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(TMaximo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TExperiencia)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(3, 3, 3)
-                            .addComponent(TMinimo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(346, 346, 346))
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(TPrestaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(310, 310, 310))
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(176, 176, 176)
-                    .addComponent(Enviar))
-                .addComponent(TiempoCompleto)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(TTiempoCompleto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(222, 222, 222))
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(ExperienciaTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(171, 171, 171))
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(12, 12, 12)
-                    .addComponent(TExperiencia)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addContainerGap())
+                            .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE))))
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,23 +114,9 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(CamposDeTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(Rango)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(TMinimo)
-                .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(TMaximo)
-                .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(TPrestaciones)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(Prestaciones)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(TTiempoCompleto)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(TiempoCompleto)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(ExperienciaTitulo)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -195,10 +133,6 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_PrestacionesActionPerformed
 
-    private void TiempoCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiempoCompletoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TiempoCompletoActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CampoTrabajo;
@@ -207,16 +141,9 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JSpinner Experiencia;
     private javax.swing.JLabel ExperienciaTitulo;
     private javax.swing.JLabel Instrucciones;
-    private javax.swing.JSpinner Maximo;
-    private javax.swing.JSpinner Minimo;
     private javax.swing.JCheckBox Prestaciones;
-    private javax.swing.JLabel Rango;
     private javax.swing.JLabel TExperiencia;
-    private javax.swing.JLabel TMaximo;
-    private javax.swing.JLabel TMinimo;
     private javax.swing.JLabel TPrestaciones;
-    private javax.swing.JLabel TTiempoCompleto;
-    private javax.swing.JCheckBox TiempoCompleto;
     private javax.swing.JLabel Titulo;
     // End of variables declaration//GEN-END:variables
 }

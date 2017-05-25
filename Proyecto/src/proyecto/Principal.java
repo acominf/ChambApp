@@ -9,7 +9,7 @@ public class Principal {
         try{
             //Dimension tamano = new Dimension(600, 600);
             Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
-            Login login = new Login();
+            EmpleadoCV login = new EmpleadoCV();
             Ventana ventana = new Ventana("ChambApp", tamano);
             ventana.add(login);
             ventana.setVisible(true);

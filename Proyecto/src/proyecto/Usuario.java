@@ -7,7 +7,6 @@ public class Usuario{
 	private String aMaterno;
 	private String aPaterno;
 	public Usuario(){
-
 	} 
 	/**
 	*Método encargado de la modificacion de datos del usuario
