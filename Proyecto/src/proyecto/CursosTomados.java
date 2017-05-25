@@ -27,20 +27,20 @@ public class CursosTomados extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        Titulo = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        Descripcion = new javax.swing.JLabel();
+        Curso1 = new javax.swing.JLabel();
+        Curso2 = new javax.swing.JLabel();
+        Intrucciones1 = new javax.swing.JLabel();
+        Instrucciones2 = new javax.swing.JLabel();
+        Intrucciones3 = new javax.swing.JLabel();
+        Horario1 = new javax.swing.JLabel();
+        Horario2 = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Cursos");
+        Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Titulo.setText("Cursos");
 
         jButton1.setText("Aceptar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -49,37 +49,37 @@ public class CursosTomados extends javax.swing.JPanel {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Usted ha seleccionado los siguientes cursos:");
+        Descripcion.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Descripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Descripcion.setText("Usted ha seleccionado los siguientes cursos:");
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("* Creación de un Modelo Canvas");
+        Curso1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Curso1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Curso1.setText("* Creación de un Modelo Canvas");
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("* Cómo declarar impuestos ante el SAT");
+        Curso2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Curso2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Curso2.setText("* Cómo declarar impuestos ante el SAT");
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Se le notifica que ambos cursos inician sesión el 25 de mayo y");
+        Intrucciones1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Intrucciones1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Intrucciones1.setText("Se le notifica que ambos cursos inician sesión el 25 de mayo y");
 
-        jLabel10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("se terminan el 12 de junio del año presente, el horario de clases");
+        Instrucciones2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Instrucciones2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Instrucciones2.setText("se terminan el 12 de junio del año presente, el horario de clases");
 
-        jLabel11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("es el siguiente:");
+        Intrucciones3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Intrucciones3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Intrucciones3.setText("es el siguiente:");
 
-        jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel12.setText("* Creación de un Modelo Canvas, martes y jueves de 12:00 a 14:00 hrs, $2000");
+        Horario1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Horario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Horario1.setText("* Creación de un Modelo Canvas, martes y jueves de 12:00 a 14:00 hrs, $2000");
 
-        jLabel13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("* Cómo declarar impuestos ante el SAT, sábados de 8:00 a 14:00 hrs, $3500");
+        Horario2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Horario2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Horario2.setText("* Cómo declarar impuestos ante el SAT, sábados de 8:00 a 14:00 hrs, $3500");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -88,39 +88,39 @@ public class CursosTomados extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13))
+                    .addComponent(Descripcion)
+                    .addComponent(Curso1)
+                    .addComponent(Curso2)
+                    .addComponent(Intrucciones1)
+                    .addComponent(Instrucciones2)
+                    .addComponent(Intrucciones3)
+                    .addComponent(Horario1)
+                    .addComponent(Horario2))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Descripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Curso1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Curso2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Intrucciones1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Instrucciones2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Intrucciones3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Horario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Horario2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(47, 47, 47)
                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(10, 10, 10))
@@ -133,15 +133,15 @@ public class CursosTomados extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Curso1;
+    private javax.swing.JLabel Curso2;
+    private javax.swing.JLabel Descripcion;
+    private javax.swing.JLabel Horario1;
+    private javax.swing.JLabel Horario2;
+    private javax.swing.JLabel Instrucciones2;
+    private javax.swing.JLabel Intrucciones1;
+    private javax.swing.JLabel Intrucciones3;
+    private javax.swing.JLabel Titulo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

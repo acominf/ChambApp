@@ -27,52 +27,52 @@ public class CursosDisponibles extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        Titulo = new javax.swing.JLabel();
+        Enviar = new javax.swing.JButton();
+        Intrucciones = new javax.swing.JLabel();
+        Intrucciones2 = new javax.swing.JLabel();
+        Intrucciones3 = new javax.swing.JLabel();
+        Campo1 = new javax.swing.JCheckBox();
+        Campo2 = new javax.swing.JCheckBox();
+        Campo3 = new javax.swing.JCheckBox();
+        Campo4 = new javax.swing.JCheckBox();
+        Campo5 = new javax.swing.JCheckBox();
+        Campo6 = new javax.swing.JCheckBox();
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Cursos");
+        Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Titulo.setText("Cursos");
 
-        jButton1.setText("Aceptar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Enviar.setText("Aceptar");
+        Enviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                EnviarActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Dadas sus preferencias, le recomendamos estos cursos,");
+        Intrucciones.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Intrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Intrucciones.setText("Dadas sus preferencias, le recomendamos estos cursos,");
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("seleccione uno o más, se le notificará de manera oportuna");
+        Intrucciones2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Intrucciones2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Intrucciones2.setText("seleccione uno o más, se le notificará de manera oportuna");
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("el costo y las fechas de inicio/terminación.");
+        Intrucciones3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Intrucciones3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Intrucciones3.setText("el costo y las fechas de inicio/terminación.");
 
-        jCheckBox1.setText("Creación de un Modelo Canvas");
+        Campo1.setText("Creación de un Modelo Canvas");
 
-        jCheckBox2.setText("Cómo declarar impuestos ante el SAT");
+        Campo2.setText("Cómo declarar impuestos ante el SAT");
 
-        jCheckBox3.setText("Curso intensivo de Excel");
+        Campo3.setText("Curso intensivo de Excel");
 
-        jCheckBox4.setText("Curso semi-intensivo de PowerPoint");
+        Campo4.setText("Curso semi-intensivo de PowerPoint");
 
-        jCheckBox5.setText("Introducción a los sistemas Unix");
+        Campo5.setText("Introducción a los sistemas Unix");
 
-        jCheckBox6.setText("Cómo mejorar el SEO en sus portales webs");
+        Campo6.setText("Cómo mejorar el SEO en sus portales webs");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -81,64 +81,64 @@ public class CursosDisponibles extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox6)
-                    .addComponent(jCheckBox5)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jCheckBox1))
+                    .addComponent(Campo6)
+                    .addComponent(Campo5)
+                    .addComponent(Campo4)
+                    .addComponent(Campo3)
+                    .addComponent(Campo2)
+                    .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Intrucciones)
+                    .addComponent(Intrucciones2)
+                    .addComponent(Intrucciones3)
+                    .addComponent(Campo1))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Intrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Intrucciones2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Intrucciones3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
+                .addComponent(Campo1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(Campo2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox3)
+                .addComponent(Campo3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox4)
+                .addComponent(Campo4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox5)
+                .addComponent(Campo5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox6)
+                .addComponent(Campo6)
                 .addGap(22, 22, 22)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Enviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(10, 10, 10))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_EnviarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JCheckBox Campo1;
+    private javax.swing.JCheckBox Campo2;
+    private javax.swing.JCheckBox Campo3;
+    private javax.swing.JCheckBox Campo4;
+    private javax.swing.JCheckBox Campo5;
+    private javax.swing.JCheckBox Campo6;
+    private javax.swing.JButton Enviar;
+    private javax.swing.JLabel Intrucciones;
+    private javax.swing.JLabel Intrucciones2;
+    private javax.swing.JLabel Intrucciones3;
+    private javax.swing.JLabel Titulo;
     // End of variables declaration//GEN-END:variables
 }

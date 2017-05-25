@@ -29,14 +29,14 @@ public class CalificarEmpleador extends javax.swing.JPanel {
 
         Titulo = new javax.swing.JLabel();
         Instrucciones = new javax.swing.JLabel();
-        CampoTrabajo = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jSlider1 = new javax.swing.JSlider();
-        CampoTrabajo1 = new javax.swing.JLabel();
-        jSlider2 = new javax.swing.JSlider();
-        CampoTrabajo2 = new javax.swing.JLabel();
-        jSlider3 = new javax.swing.JSlider();
-        CampoTrabajo3 = new javax.swing.JLabel();
+        TEmpresa = new javax.swing.JLabel();
+        Empresa = new javax.swing.JComboBox<>();
+        Horario = new javax.swing.JSlider();
+        THorario = new javax.swing.JLabel();
+        Prestaciones = new javax.swing.JSlider();
+        TPrestaciones = new javax.swing.JLabel();
+        Vacaciones = new javax.swing.JSlider();
+        TVacaciones = new javax.swing.JLabel();
         Enviar = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -47,24 +47,24 @@ public class CalificarEmpleador extends javax.swing.JPanel {
         Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Instrucciones.setText("Complete los siguientes campos para realizar la calificación");
 
-        CampoTrabajo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo.setText("Empresa");
+        TEmpresa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TEmpresa.setText("Empresa");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Valeo" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        Empresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Valeo" }));
+        Empresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                EmpresaActionPerformed(evt);
             }
         });
 
-        CampoTrabajo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo1.setText("Horario");
+        THorario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        THorario.setText("Horario");
 
-        CampoTrabajo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo2.setText("Prestaciones");
+        TPrestaciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TPrestaciones.setText("Prestaciones");
 
-        CampoTrabajo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo3.setText("Vacaciones");
+        TVacaciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TVacaciones.setText("Vacaciones");
 
         Enviar.setText("Calificar");
 
@@ -78,15 +78,15 @@ public class CalificarEmpleador extends javax.swing.JPanel {
                     .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CampoTrabajo)
+                            .addComponent(TEmpresa)
                             .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CampoTrabajo1)
-                            .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CampoTrabajo2)
-                            .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CampoTrabajo3)
+                            .addComponent(Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Horario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(THorario)
+                            .addComponent(Prestaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TPrestaciones)
+                            .addComponent(Vacaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TVacaciones)
                             .addComponent(Enviar))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -99,43 +99,43 @@ public class CalificarEmpleador extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Instrucciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoTrabajo)
+                .addComponent(TEmpresa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoTrabajo1)
+                .addComponent(THorario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Horario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoTrabajo2)
+                .addComponent(TPrestaciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Prestaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoTrabajo3)
+                .addComponent(TVacaciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Vacaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(Enviar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void EmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpresaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_EmpresaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel CampoTrabajo;
-    private javax.swing.JLabel CampoTrabajo1;
-    private javax.swing.JLabel CampoTrabajo2;
-    private javax.swing.JLabel CampoTrabajo3;
+    private javax.swing.JComboBox<String> Empresa;
     private javax.swing.JButton Enviar;
+    private javax.swing.JSlider Horario;
     private javax.swing.JLabel Instrucciones;
+    private javax.swing.JSlider Prestaciones;
+    private javax.swing.JLabel TEmpresa;
+    private javax.swing.JLabel THorario;
+    private javax.swing.JLabel TPrestaciones;
+    private javax.swing.JLabel TVacaciones;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
-    private javax.swing.JSlider jSlider3;
+    private javax.swing.JSlider Vacaciones;
     // End of variables declaration//GEN-END:variables
 }

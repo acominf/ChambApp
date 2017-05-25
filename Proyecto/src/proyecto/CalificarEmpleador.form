@@ -22,15 +22,15 @@
                   <Component id="Instrucciones" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="CampoTrabajo" min="-2" max="-2" attributes="0"/>
+                          <Component id="TEmpresa" min="-2" max="-2" attributes="0"/>
                           <Component id="Titulo" min="-2" pref="199" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSlider1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CampoTrabajo1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSlider2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CampoTrabajo2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jSlider3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CampoTrabajo3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Empresa" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Horario" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="THorario" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Prestaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="TPrestaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Vacaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="TVacaciones" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="Enviar" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -48,21 +48,21 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Instrucciones" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="CampoTrabajo" min="-2" max="-2" attributes="0"/>
+              <Component id="TEmpresa" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+              <Component id="Empresa" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="CampoTrabajo1" min="-2" max="-2" attributes="0"/>
+              <Component id="THorario" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jSlider1" min="-2" max="-2" attributes="0"/>
+              <Component id="Horario" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="CampoTrabajo2" min="-2" max="-2" attributes="0"/>
+              <Component id="TPrestaciones" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jSlider2" min="-2" max="-2" attributes="0"/>
+              <Component id="Prestaciones" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="CampoTrabajo3" min="-2" max="-2" attributes="0"/>
+              <Component id="TVacaciones" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jSlider3" min="-2" max="-2" attributes="0"/>
+              <Component id="Vacaciones" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               <Component id="Enviar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
@@ -89,13 +89,13 @@
         <Property name="text" type="java.lang.String" value="Complete los siguientes campos para realizar la calificaci&#xf3;n"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="CampoTrabajo">
+    <Component class="javax.swing.JLabel" name="TEmpresa">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Empresa"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox1">
+    <Component class="javax.swing.JComboBox" name="Empresa">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="1">
@@ -104,31 +104,31 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpresaActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JSlider" name="jSlider1">
+    <Component class="javax.swing.JSlider" name="Horario">
     </Component>
-    <Component class="javax.swing.JLabel" name="CampoTrabajo1">
+    <Component class="javax.swing.JLabel" name="THorario">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Horario"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JSlider" name="jSlider2">
+    <Component class="javax.swing.JSlider" name="Prestaciones">
     </Component>
-    <Component class="javax.swing.JLabel" name="CampoTrabajo2">
+    <Component class="javax.swing.JLabel" name="TPrestaciones">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Prestaciones"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JSlider" name="jSlider3">
+    <Component class="javax.swing.JSlider" name="Vacaciones">
     </Component>
-    <Component class="javax.swing.JLabel" name="CampoTrabajo3">
+    <Component class="javax.swing.JLabel" name="TVacaciones">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Vacaciones"/>

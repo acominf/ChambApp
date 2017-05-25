@@ -28,22 +28,22 @@ public class SubirProyecto extends javax.swing.JPanel {
     private void initComponents() {
 
         Titulo = new javax.swing.JLabel();
-        CampoTrabajo = new javax.swing.JLabel();
+        TDescripcion = new javax.swing.JLabel();
         Instrucciones = new javax.swing.JLabel();
         Enviar = new javax.swing.JButton();
-        ExperienciaTitulo = new javax.swing.JLabel();
-        TExperiencia = new javax.swing.JLabel();
-        Experiencia = new javax.swing.JSpinner();
-        jTextField1 = new javax.swing.JTextField();
-        TPrestaciones = new javax.swing.JLabel();
-        Prestaciones = new javax.swing.JCheckBox();
+        DescipcionMonto = new javax.swing.JLabel();
+        TMonto = new javax.swing.JLabel();
+        Monto = new javax.swing.JSpinner();
+        Descripcion = new javax.swing.JTextField();
+        TEmpresa = new javax.swing.JLabel();
+        Empresa = new javax.swing.JCheckBox();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("Subir proyecto");
 
-        CampoTrabajo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo.setText("Descripción general");
+        TDescripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TDescripcion.setText("Descripción general");
 
         Instrucciones.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -51,19 +51,19 @@ public class SubirProyecto extends javax.swing.JPanel {
 
         Enviar.setText("Subir proyecto");
 
-        ExperienciaTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ExperienciaTitulo.setText("Monto solicitado para financiar proyecto");
+        DescipcionMonto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DescipcionMonto.setText("Monto solicitado para financiar proyecto");
 
-        TExperiencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TExperiencia.setText("Monto");
+        TMonto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TMonto.setText("Monto");
 
-        TPrestaciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TPrestaciones.setText("Es una empresa ya constituida, con menos de 2 años de actividad");
+        TEmpresa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TEmpresa.setText("Es una empresa ya constituida, con menos de 2 años de actividad");
 
-        Prestaciones.setText("Sí");
-        Prestaciones.addActionListener(new java.awt.event.ActionListener() {
+        Empresa.setText("Sí");
+        Empresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrestacionesActionPerformed(evt);
+                EmpresaActionPerformed(evt);
             }
         });
 
@@ -75,7 +75,7 @@ public class SubirProyecto extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(CampoTrabajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(427, 427, 427))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,14 +87,14 @@ public class SubirProyecto extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(TExperiencia)
+                                .addComponent(TMonto)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(ExperienciaTitulo)
-                            .addComponent(Prestaciones)
-                            .addComponent(TPrestaciones))
+                                .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(DescipcionMonto)
+                            .addComponent(Empresa)
+                            .addComponent(TEmpresa))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -105,40 +105,40 @@ public class SubirProyecto extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Instrucciones)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CampoTrabajo)
+                .addComponent(TDescripcion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ExperienciaTitulo)
+                .addComponent(DescipcionMonto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TExperiencia)
-                    .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TMonto)
+                    .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TPrestaciones)
+                .addComponent(TEmpresa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Prestaciones)
+                .addComponent(Empresa)
                 .addGap(10, 10, 10)
                 .addComponent(Enviar)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void PrestacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrestacionesActionPerformed
+    private void EmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpresaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PrestacionesActionPerformed
+    }//GEN-LAST:event_EmpresaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel CampoTrabajo;
+    private javax.swing.JLabel DescipcionMonto;
+    private javax.swing.JTextField Descripcion;
+    private javax.swing.JCheckBox Empresa;
     private javax.swing.JButton Enviar;
-    private javax.swing.JSpinner Experiencia;
-    private javax.swing.JLabel ExperienciaTitulo;
     private javax.swing.JLabel Instrucciones;
-    private javax.swing.JCheckBox Prestaciones;
-    private javax.swing.JLabel TExperiencia;
-    private javax.swing.JLabel TPrestaciones;
+    private javax.swing.JSpinner Monto;
+    private javax.swing.JLabel TDescripcion;
+    private javax.swing.JLabel TEmpresa;
+    private javax.swing.JLabel TMonto;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

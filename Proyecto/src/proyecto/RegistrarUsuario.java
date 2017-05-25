@@ -29,13 +29,15 @@ public class RegistrarUsuario extends javax.swing.JPanel {
 
         Titulo = new javax.swing.JLabel();
         Instrucciones = new javax.swing.JLabel();
-        CampoTrabajo = new javax.swing.JLabel();
+        TNombre = new javax.swing.JLabel();
         Enviar = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        CampoTrabajo1 = new javax.swing.JLabel();
-        CampoTrabajo2 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        Nombre = new javax.swing.JTextField();
+        Password = new javax.swing.JPasswordField();
+        TPassword = new javax.swing.JLabel();
+        TRPassword = new javax.swing.JLabel();
+        RPassword = new javax.swing.JPasswordField();
+        TPreguntas = new javax.swing.JLabel();
+        Preguntas = new javax.swing.JComboBox<>();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -45,48 +47,66 @@ public class RegistrarUsuario extends javax.swing.JPanel {
         Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Instrucciones.setText("Complete los siguientes campos para realizar su registro");
 
-        CampoTrabajo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo.setText("Nombre");
+        TNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TNombre.setText("Nombre");
 
         Enviar.setText("Aceptar");
 
-        jTextField1.setText("Braulio Fernandez");
+        Nombre.setText("Braulio Fernandez");
 
-        jPasswordField1.setText("12345");
+        Password.setText("12345");
 
-        CampoTrabajo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo1.setText("Password");
+        TPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TPassword.setText("Password");
 
-        CampoTrabajo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CampoTrabajo2.setText("Repetir Password");
+        TRPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TRPassword.setText("Repetir Password");
 
-        jPasswordField2.setText("12345");
+        RPassword.setText("12345");
+
+        TPreguntas.setText("Pregunta De Seguridad");
+
+        Preguntas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Preguntas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PreguntasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(195, 195, 195)
+                .addComponent(Enviar)
+                .addContainerGap(210, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CampoTrabajo1)
-                            .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CampoTrabajo2)))
+                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(195, 195, 195)
-                        .addComponent(Enviar)))
-                .addContainerGap(210, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TPassword)
+                            .addComponent(RPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TRPassword))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TPreguntas)
+                    .addComponent(Preguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(CampoTrabajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGap(415, 415, 415))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -96,16 +116,20 @@ public class RegistrarUsuario extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
+                .addComponent(TPreguntas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoTrabajo1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Preguntas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1)
+                .addComponent(TPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoTrabajo2)
+                .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField2)
+                .addComponent(TRPassword)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(RPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Enviar)
                 .addContainerGap())
@@ -116,21 +140,27 @@ public class RegistrarUsuario extends javax.swing.JPanel {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(Instrucciones)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(CampoTrabajo)
+                    .addComponent(TNombre)
                     .addContainerGap(169, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void PreguntasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreguntasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PreguntasActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel CampoTrabajo;
-    private javax.swing.JLabel CampoTrabajo1;
-    private javax.swing.JLabel CampoTrabajo2;
     private javax.swing.JButton Enviar;
     private javax.swing.JLabel Instrucciones;
+    private javax.swing.JTextField Nombre;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JComboBox<String> Preguntas;
+    private javax.swing.JPasswordField RPassword;
+    private javax.swing.JLabel TNombre;
+    private javax.swing.JLabel TPassword;
+    private javax.swing.JLabel TPreguntas;
+    private javax.swing.JLabel TRPassword;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,47 +28,47 @@ public class Empleado extends javax.swing.JPanel {
     private void initComponents() {
 
         Titulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        BuscaChamba = new javax.swing.JButton();
+        BuscaSocio = new javax.swing.JButton();
+        SubirProyecto = new javax.swing.JButton();
+        CalificarEmpleador = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        CambiaPassword = new javax.swing.JButton();
+        BuscarCursos = new javax.swing.JButton();
+        CamposExtra = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("Empleado");
 
-        jButton1.setText("Buscar Chamba");
+        BuscaChamba.setText("Buscar Chamba");
 
-        jButton2.setText("Buscar Socio");
+        BuscaSocio.setText("Buscar Socio");
 
-        jButton3.setText("Subir proyecto");
+        SubirProyecto.setText("Subir proyecto");
 
-        jButton4.setText("Calificar Empleador");
+        CalificarEmpleador.setText("Calificar Empleador");
 
-        jButton5.setText("Salir");
+        Salir.setText("Salir");
 
-        jButton6.setText("Cambiar contraseña");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        CambiaPassword.setText("Cambiar contraseña");
+        CambiaPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                CambiaPasswordActionPerformed(evt);
             }
         });
 
-        jButton7.setText("Buscar cursos");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        BuscarCursos.setText("Buscar cursos");
+        BuscarCursos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                BuscarCursosActionPerformed(evt);
             }
         });
 
-        jButton8.setText("Añadir campos extra");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        CamposExtra.setText("Añadir campos extra");
+        CamposExtra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                CamposExtraActionPerformed(evt);
             }
         });
 
@@ -82,16 +82,16 @@ public class Empleado extends javax.swing.JPanel {
                     .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jButton4)
-                            .addComponent(jButton6)
-                            .addComponent(jButton7))
+                            .addComponent(BuscaChamba)
+                            .addComponent(CalificarEmpleador)
+                            .addComponent(CambiaPassword)
+                            .addComponent(BuscarCursos))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton8)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2)
-                            .addComponent(jButton5))))
+                            .addComponent(CamposExtra)
+                            .addComponent(SubirProyecto)
+                            .addComponent(BuscaSocio)
+                            .addComponent(Salir))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -101,46 +101,46 @@ public class Empleado extends javax.swing.JPanel {
                 .addComponent(Titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(BuscaChamba)
+                    .addComponent(BuscaSocio))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(SubirProyecto)
+                    .addComponent(CalificarEmpleador))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8))
+                    .addComponent(BuscarCursos)
+                    .addComponent(CamposExtra))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(Salir)
+                    .addComponent(CambiaPassword))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void CambiaPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiaPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_CambiaPasswordActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void BuscarCursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarCursosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_BuscarCursosActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void CamposExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CamposExtraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_CamposExtraActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BuscaChamba;
+    private javax.swing.JButton BuscaSocio;
+    private javax.swing.JButton BuscarCursos;
+    private javax.swing.JButton CalificarEmpleador;
+    private javax.swing.JButton CambiaPassword;
+    private javax.swing.JButton CamposExtra;
+    private javax.swing.JButton Salir;
+    private javax.swing.JButton SubirProyecto;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     // End of variables declaration//GEN-END:variables
 }

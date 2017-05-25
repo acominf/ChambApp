@@ -24,26 +24,26 @@
                       <EmptySpace min="255" pref="255" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="CampoTrabajo" max="32767" attributes="0"/>
+                      <Component id="TEspecialidad" max="32767" attributes="0"/>
                       <EmptySpace min="415" pref="415" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="Instrucciones" alignment="0" max="32767" attributes="0"/>
-                              <Component id="CamposDeTrabajo" alignment="0" max="32767" attributes="0"/>
+                              <Component id="ListaEspecialidad" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
                                   <Component id="Enviar" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="Prestaciones" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="Empresario" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="TPrestaciones" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                          <Component id="ExperienciaTitulo" alignment="0" min="-2" pref="327" max="-2" attributes="0"/>
+                          <Component id="TEmpresario" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                          <Component id="TCapital" alignment="0" min="-2" pref="327" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="TExperiencia" min="-2" max="-2" attributes="0"/>
+                              <Component id="TMonto" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Experiencia" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="Monto" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -60,19 +60,19 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Instrucciones" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="CampoTrabajo" min="-2" max="-2" attributes="0"/>
+              <Component id="TEspecialidad" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="CamposDeTrabajo" min="-2" max="-2" attributes="0"/>
+              <Component id="ListaEspecialidad" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="TPrestaciones" min="-2" max="-2" attributes="0"/>
+              <Component id="TEmpresario" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Prestaciones" min="-2" max="-2" attributes="0"/>
+              <Component id="Empresario" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="ExperienciaTitulo" min="-2" max="-2" attributes="0"/>
+              <Component id="TCapital" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TExperiencia" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Experiencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TMonto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Monto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               <Component id="Enviar" min="-2" max="-2" attributes="0"/>
@@ -91,7 +91,7 @@
         <Property name="text" type="java.lang.String" value="Buscador de Socios"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="CamposDeTrabajo">
+    <Component class="javax.swing.JComboBox" name="ListaEspecialidad">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Tecnolog&#xed;as de la informaci&#xf3;n&quot;,&#xa;&quot;Mercadotecn&#xed;a&quot;,&#xa;&quot;Industria&quot;,&#xa;&quot;Administraci&#xf3;n de empresas&quot; })" type="code"/>
@@ -101,7 +101,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="CampoTrabajo">
+    <Component class="javax.swing.JLabel" name="TEspecialidad">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Especialidad"/>
@@ -116,15 +116,15 @@
         <Property name="text" type="java.lang.String" value="Complete los siguientes campos para realizar su b&#xfa;squeda"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="Prestaciones">
+    <Component class="javax.swing.JCheckBox" name="Empresario">
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PrestacionesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EmpresarioActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="TPrestaciones">
+    <Component class="javax.swing.JLabel" name="TEmpresario">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="&#xbf;Empresario?"/>
@@ -135,19 +135,19 @@
         <Property name="text" type="java.lang.String" value="Subir solicitud"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="ExperienciaTitulo">
+    <Component class="javax.swing.JLabel" name="TCapital">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Cantidad de capital que est&#xe1; dispuesto a invertir"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="TExperiencia">
+    <Component class="javax.swing.JLabel" name="TMonto">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Monto"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JSpinner" name="Experiencia">
+    <Component class="javax.swing.JSpinner" name="Monto">
     </Component>
   </SubComponents>
 </Form>
