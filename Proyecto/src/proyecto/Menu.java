@@ -5,7 +5,8 @@
  */
 package proyecto;
 
-import javafx.scene.input.MouseEvent;
+import java.awt.Component;
+import static java.lang.System.exit;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 /**
@@ -70,6 +71,11 @@ public class Menu extends JFrame{
         });
 
         jButton8.setText("Acerca de");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -77,6 +83,11 @@ public class Menu extends JFrame{
         });
 
         jButton9.setText("Comentarios y feedback");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -141,13 +152,20 @@ public class Menu extends JFrame{
     }//GEN-LAST:event_jButton7KeyPressed
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-        // TODO add your handling code here:
+        Utilerias.muestraComponente( this, new Login(this) );
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
-        // TODO add your handling code here:
-        
+        exit(0);
     }//GEN-LAST:event_SalirMouseClicked
+    
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        Utilerias.muestraComponente( this, new Comentarios(this) );
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        Utilerias.muestraComponente( this, new AcercaDe(this) );
+    }//GEN-LAST:event_jButton8MouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Salir;

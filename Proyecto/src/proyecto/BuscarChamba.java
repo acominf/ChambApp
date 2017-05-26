@@ -5,16 +5,19 @@
  */
 package proyecto;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author davidazullo
  */
-public class BuscarChamba extends javax.swing.JPanel {
+public class BuscarChamba extends ContenidoPanel {
 
     /**
      * Creates new form BuscarChamba
      */
-    public BuscarChamba() {
+    public BuscarChamba(JFrame ventana) {
+        super(ventana);
         initComponents();
     }
 

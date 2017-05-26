@@ -1,20 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyecto;
+
+import javax.swing.JFrame;
 
 /**
  *
  * @author davidazullo
  */
-public class Empleado extends javax.swing.JPanel {
+public class Empleado extends ContenidoPanel {
 
     /**
      * Creates new form Socio
      */
-    public Empleado() {
+    public Empleado(JFrame ventana) {
+        super(ventana);
         initComponents();
     }
 

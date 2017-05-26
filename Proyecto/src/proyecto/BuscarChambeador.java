@@ -5,16 +5,19 @@
  */
 package proyecto;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author davidazullo
  */
-public class BuscarChambeador extends javax.swing.JPanel {
+public class BuscarChambeador extends ContenidoPanel {
 
     /**
      * Creates new form BuscarChambeador
      */
-    public BuscarChambeador() {
+    public BuscarChambeador(JFrame ventana) {
+        super(ventana);
         initComponents();
     }
 

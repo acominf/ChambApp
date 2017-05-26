@@ -116,6 +116,7 @@
         <Property name="text" type="java.lang.String" value="Solicitar cambio de contrase&#xf1;a"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CambioMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CambioActionPerformed"/>
       </Events>
     </Component>

@@ -9,26 +9,28 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
  * @author davidazullo
  */
-public class Login extends javax.swing.JPanel {
+public class Login extends ContenidoPanel {
 
     /**
      * Creates new form Login
      */
-    public Login() {
+    public Login(JFrame ventana) {
+        super(ventana);
         initComponents();
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
-        ImageIcon fondo = new ImageIcon("src/Imagenes/Logo.png");
+        /*ImageIcon fondo = new ImageIcon("src/Imagenes/Logo.png");
         g.drawImage(fondo.getImage(),
                 tamano.width/2-fondo.getIconWidth()/2, 0,
-                tamano.width/2+fondo.getIconWidth()/2, tamano.height/2, null);
+                tamano.width/2+fondo.getIconWidth()/2, tamano.height/2, null);*/
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,6 +81,11 @@ public class Login extends javax.swing.JPanel {
         });
 
         Cambio.setText("Solicitar cambio de contraseña");
+        Cambio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CambioMouseClicked(evt);
+            }
+        });
         Cambio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CambioActionPerformed(evt);
@@ -152,6 +159,10 @@ public class Login extends javax.swing.JPanel {
     private void CambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CambioActionPerformed
+
+    private void CambioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambioMouseClicked
+        Utilerias.muestraComponente( ventana, new Comentarios(ventana) );
+    }//GEN-LAST:event_CambioMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
