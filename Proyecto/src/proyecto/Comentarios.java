@@ -1,5 +1,6 @@
 package proyecto;
 
+import static java.lang.System.exit;
 import javax.swing.JFrame;
 
 /**
@@ -45,6 +46,11 @@ public class Comentarios extends ContenidoPanel {
         Instrucciones2.setText("en que le gustaría que mejoraramos");
 
         Enviar.setText("Aceptar");
+        Enviar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EnviarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -77,6 +83,11 @@ public class Comentarios extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
+        //[] Completar
+        exit(0);
+    }//GEN-LAST:event_EnviarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

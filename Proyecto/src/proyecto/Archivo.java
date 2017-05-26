@@ -1,3 +1,4 @@
+package proyecto;
 /**
  * Clase encargada de la escritura y lectura de archivos de la aplicacion.
  */

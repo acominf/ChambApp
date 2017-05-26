@@ -164,7 +164,7 @@ public class Menu extends JFrame{
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        Utilerias.muestraComponente( this, new AcercaDe(this) );
+        Utilerias.muestraComponente( this, new AcercaDe1(this) );
     }//GEN-LAST:event_jButton8MouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

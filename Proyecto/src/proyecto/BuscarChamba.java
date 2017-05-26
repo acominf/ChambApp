@@ -48,6 +48,12 @@ public class BuscarChamba extends ContenidoPanel {
         TExperiencia = new javax.swing.JLabel();
         Experiencia = new javax.swing.JSpinner();
 
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                formKeyReleased(evt);
+            }
+        });
+
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("Buscador de Chamba");
@@ -201,6 +207,10 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
     private void TiempoCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiempoCompletoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TiempoCompletoActionPerformed
+
+    private void formKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
