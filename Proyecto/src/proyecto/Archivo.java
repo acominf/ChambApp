@@ -3,7 +3,6 @@ package proyecto;
  * Clase encargada de la escritura y lectura de archivos de la aplicacion.
  */
 import java.io.*;
-
 public class Archivo {
     private Usuario user;
     private String nombreArchivoS;

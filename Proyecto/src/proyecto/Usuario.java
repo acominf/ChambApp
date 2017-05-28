@@ -1,3 +1,5 @@
+package proyecto;
+
 /**
 *Clase encargada de la creacion de un nuevo usuario
 *@author José Bernardo Bernal Cabrera
