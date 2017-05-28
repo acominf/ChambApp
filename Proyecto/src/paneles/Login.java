@@ -21,7 +21,7 @@ public class Login extends ContenidoPanel {
     /**
      * Creates new form Login
      */
-    public Login(JFrame ventana) {
+    public Login(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

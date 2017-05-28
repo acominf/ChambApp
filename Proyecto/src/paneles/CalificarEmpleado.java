@@ -11,7 +11,7 @@ public class CalificarEmpleado extends ContenidoPanel {
     /**
      * Creates new form CalificarEmpleado
      */
-    public CalificarEmpleado(JFrame ventana) {
+    public CalificarEmpleado(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

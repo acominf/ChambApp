@@ -11,7 +11,7 @@ public class Empleado extends ContenidoPanel {
     /**
      * Creates new form Socio
      */
-    public Empleado(JFrame ventana) {
+    public Empleado(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

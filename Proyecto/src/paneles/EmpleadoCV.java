@@ -11,7 +11,7 @@ public class EmpleadoCV extends ContenidoPanel {
     /**
      * Creates new form EmpleadoCV
      */
-    public EmpleadoCV(JFrame ventana) {
+    public EmpleadoCV(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

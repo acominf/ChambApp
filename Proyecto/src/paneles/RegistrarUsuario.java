@@ -12,7 +12,7 @@ public class RegistrarUsuario extends ContenidoPanel {
      * Creates new form RegistrarUsuario
      * @param ventana
      */
-    public RegistrarUsuario(JFrame ventana) {
+    public RegistrarUsuario(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

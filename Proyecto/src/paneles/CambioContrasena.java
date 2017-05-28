@@ -11,7 +11,7 @@ public class CambioContrasena extends ContenidoPanel {
     /**
      * Creates new form CambioContrasena
      */
-    public CambioContrasena(JFrame ventana) {
+    public CambioContrasena(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

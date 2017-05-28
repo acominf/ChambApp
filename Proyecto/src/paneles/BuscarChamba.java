@@ -16,7 +16,7 @@ public class BuscarChamba extends ContenidoPanel {
     /**
      * Creates new form BuscarChamba
      */
-    public BuscarChamba(JFrame ventana) {
+    public BuscarChamba(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

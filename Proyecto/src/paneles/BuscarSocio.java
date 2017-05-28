@@ -11,7 +11,7 @@ public class BuscarSocio extends ContenidoPanel {
     /**
      * Creates new form BuscarChamba
      */
-    public BuscarSocio(JFrame ventana) {
+    public BuscarSocio(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

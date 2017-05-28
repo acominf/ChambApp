@@ -12,7 +12,7 @@ public class AcercaDe1 extends ContenidoPanel {
     /**
      * Creates new form CursosDisponibles
      */
-    public AcercaDe1(JFrame ventana) {
+    public AcercaDe1(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

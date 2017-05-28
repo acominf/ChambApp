@@ -10,12 +10,12 @@ import javax.swing.JFrame;
  * @author davidazullo
  */
 public class ContenidoPanel extends javax.swing.JPanel implements KeyListener {
-    protected JFrame ventana;
-    ContenidoPanel(JFrame ventana) {
+    protected ContenidoJFrame ventana;
+    ContenidoPanel(ContenidoJFrame ventana) {
         this.ventana = ventana;
     }
     
-    public void setVentana(JFrame ventana) {
+    public void setVentana(ContenidoJFrame ventana) {
         this.ventana = ventana;
     }
     

@@ -11,7 +11,7 @@ public class BuscarChambeador extends ContenidoPanel {
     /**
      * Creates new form BuscarChambeador
      */
-    public BuscarChambeador(JFrame ventana) {
+    public BuscarChambeador(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

@@ -1,6 +1,7 @@
 package elementos;
 import java.io.*;
 
+//TODO: Checar que la clase funcione correctamente
 /**
  * Clase encargada de la escritura y lectura de archivos de la aplicacion.
  */

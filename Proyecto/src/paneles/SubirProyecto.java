@@ -12,7 +12,7 @@ public class SubirProyecto extends ContenidoPanel {
      * Creates new form BuscarChamba
      * @param ventana
      */
-    public SubirProyecto(JFrame ventana) {
+    public SubirProyecto(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

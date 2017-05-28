@@ -14,7 +14,7 @@ import javax.swing.JFrame;
  *
  * @author davidazullo
  */
-public class Menu extends JFrame{
+public class Menu extends ContenidoJFrame{
     private ImageIcon icono;
     /**
      * Constructor encargado de la generación de un menú para el manejo de la aplicación.

@@ -6,9 +6,6 @@ import java.io.Serializable;
  */
 public class Usuario implements Serializable{
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.2F700D45-F03F-D45C-18FF-291CABA15074]
-    // </editor-fold> 
     private String nombre;
     private String pregunta;
     private String respuesta;

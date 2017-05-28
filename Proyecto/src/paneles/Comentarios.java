@@ -15,7 +15,7 @@ public class Comentarios extends ContenidoPanel {
      * Creates new form Comentarios
      * @param ventana
      */
-    public Comentarios(JFrame ventana) {
+    public Comentarios(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }

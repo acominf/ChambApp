@@ -11,7 +11,7 @@ public class CursosDisponibles extends ContenidoPanel {
     /**
      * Creates new form CursosDisponibles
      */
-    public CursosDisponibles(JFrame ventana) {
+    public CursosDisponibles(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }
