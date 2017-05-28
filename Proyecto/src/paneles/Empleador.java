@@ -1,4 +1,4 @@
-package proyecto;
+package paneles;
 
 import javax.swing.JFrame;
 

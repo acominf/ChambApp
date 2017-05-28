@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package proyecto;
+package paneles;
 
 import javax.swing.JFrame;
 
@@ -11,12 +6,12 @@ import javax.swing.JFrame;
  *
  * @author davidazullo
  */
-public class BuscarChamba extends ContenidoPanel {
+public class BuscarChambeador extends ContenidoPanel {
 
     /**
-     * Creates new form BuscarChamba
+     * Creates new form BuscarChambeador
      */
-    public BuscarChamba(JFrame ventana) {
+    public BuscarChambeador(JFrame ventana) {
         super(ventana);
         initComponents();
     }
@@ -41,42 +36,33 @@ public class BuscarChamba extends ContenidoPanel {
         Maximo = new javax.swing.JSpinner();
         Prestaciones = new javax.swing.JCheckBox();
         TPrestaciones = new javax.swing.JLabel();
-        Enviar = new javax.swing.JButton();
         TTiempoCompleto = new javax.swing.JLabel();
         TiempoCompleto = new javax.swing.JCheckBox();
         ExperienciaTitulo = new javax.swing.JLabel();
         TExperiencia = new javax.swing.JLabel();
+        Comentarios = new javax.swing.JLabel();
+        CampoComentarios = new javax.swing.JScrollPane();
+        AreaTexto = new javax.swing.JTextArea();
+        Enviar = new javax.swing.JButton();
         Experiencia = new javax.swing.JSpinner();
 
-        addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                formKeyReleased(evt);
-            }
-        });
-
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo.setText("Buscador de Chamba");
+        Titulo.setText("Buscador de Chambeador");
 
         CamposDeTrabajo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tecnologías de la información",
             "Mercadotecnía",
             "Industria",
             "Administración de empresas" }));
 
-CampoTrabajo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 CampoTrabajo.setText("Campo:");
 
-Rango.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-Rango.setText("Rango de saldo esperado:");
+Rango.setText("Rango de saldo que la empresa/persona física está dispuesto a ofrecerle:");
 
 Instrucciones.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
-Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 Instrucciones.setText("Complete los siguientes campos para realizar su búsqueda");
 
-TMinimo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 TMinimo.setText("Mínimo:");
 
-TMaximo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 TMaximo.setText("Máximo:");
 
 Prestaciones.setText("Sí");
@@ -86,13 +72,9 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
     }
     });
 
-    TPrestaciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TPrestaciones.setText("Necesita prestaciones");
+    TPrestaciones.setText("¿Ofrece prestaciones?");
 
-    Enviar.setText("Subir solicitud");
-
-    TTiempoCompleto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TTiempoCompleto.setText("Disponible tiempo completo");
+    TTiempoCompleto.setText("¿Lo requiere por tiempo completo?");
 
     TiempoCompleto.setText("Sí");
     TiempoCompleto.addActionListener(new java.awt.event.ActionListener() {
@@ -101,11 +83,17 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    ExperienciaTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    ExperienciaTitulo.setText("Años de experiencia en el área especificada");
+    ExperienciaTitulo.setText("Mínimo de años de experiencia solicitado:");
 
-    TExperiencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     TExperiencia.setText("Años");
+
+    Comentarios.setText("Comentarios Adicionales:");
+
+    AreaTexto.setColumns(20);
+    AreaTexto.setRows(5);
+    CampoComentarios.setViewportView(AreaTexto);
+
+    Enviar.setText("Subir solicitud");
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
@@ -114,49 +102,43 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
         .addGroup(layout.createSequentialGroup()
             .addContainerGap()
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(Prestaciones)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(255, 255, 255))
-                .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CampoComentarios, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
+                    .addGap(302, 302, 302))
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(CampoTrabajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(415, 415, 415))
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(Rango, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(281, 281, 281))
-                .addComponent(CamposDeTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(12, 12, 12)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Prestaciones)
+                            .addComponent(Titulo)
+                            .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CampoTrabajo)
+                            .addComponent(Rango)
+                            .addComponent(CamposDeTrabajo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(TMaximo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(TMinimo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(TPrestaciones))
+                        .addComponent(Comentarios)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(TMaximo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(176, 176, 176)
+                            .addComponent(Enviar))
+                        .addComponent(TiempoCompleto)
+                        .addComponent(TTiempoCompleto)
+                        .addComponent(ExperienciaTitulo)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(3, 3, 3)
-                            .addComponent(TMinimo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(346, 346, 346))
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(TPrestaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(310, 310, 310))
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(176, 176, 176)
-                    .addComponent(Enviar))
-                .addComponent(TiempoCompleto)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(TTiempoCompleto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(222, 222, 222))
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(ExperienciaTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(171, 171, 171))
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(12, 12, 12)
-                    .addComponent(TExperiencia)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(12, 12, 12)
+                            .addComponent(TExperiencia)
+                            .addGap(33, 33, 33)
+                            .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
             .addContainerGap())
     );
     layout.setVerticalGroup(
@@ -194,7 +176,11 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(TExperiencia)
                 .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(10, 10, 10)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(Comentarios)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(CampoComentarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(Enviar)
             .addContainerGap())
     );
@@ -208,14 +194,13 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_TiempoCompletoActionPerformed
 
-    private void formKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_formKeyReleased
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea AreaTexto;
+    private javax.swing.JScrollPane CampoComentarios;
     private javax.swing.JLabel CampoTrabajo;
     private javax.swing.JComboBox<String> CamposDeTrabajo;
+    private javax.swing.JLabel Comentarios;
     private javax.swing.JButton Enviar;
     private javax.swing.JSpinner Experiencia;
     private javax.swing.JLabel ExperienciaTitulo;

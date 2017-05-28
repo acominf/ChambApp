@@ -1,8 +1,9 @@
-package proyecto;
+package elementos;
+import java.io.*;
+
 /**
  * Clase encargada de la escritura y lectura de archivos de la aplicacion.
  */
-import java.io.*;
 public class Archivo {
     private Usuario user;
     private String nombreArchivoS;
@@ -18,7 +19,7 @@ public class Archivo {
      */
     public Archivo(Usuario user){
         this.user = user;
-        nombreArchivoS = this.user.devuelveNombre() + ".dat";
+        nombreArchivoS = this.user.getNombre()+ ".dat";
     }
     /**
      * Constructor utilizado para inicializar el nombre del archivo a leer
@@ -57,6 +58,7 @@ public class Archivo {
     }
     /**
      * Método que se encarga de leer de un archivo un objeto usuario
+     * @return Usuario
      */
     public Usuario leeArchivo(){
         try {

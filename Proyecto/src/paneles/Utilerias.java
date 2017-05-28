@@ -1,4 +1,4 @@
-package proyecto;
+package paneles;
 
 import java.awt.Component;
 import javax.swing.JFrame;

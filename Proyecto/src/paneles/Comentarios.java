@@ -1,4 +1,4 @@
-package proyecto;
+package paneles;
 
 import static java.lang.System.exit;
 import javax.swing.JFrame;
