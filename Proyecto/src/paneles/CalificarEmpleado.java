@@ -1,5 +1,6 @@
 package paneles;
 
+//TODO: Completarla
 /**
  *
  * @author davidazullo
@@ -49,11 +50,6 @@ public class CalificarEmpleado extends ContenidoPanel {
         TEmpleado.setText("Empleado");
 
         Empleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Braulio García" }));
-        Empleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmpleadoActionPerformed(evt);
-            }
-        });
 
         TDesempeno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TDesempeno.setText("Desempeño en el trabajo");
@@ -126,10 +122,6 @@ public class CalificarEmpleado extends ContenidoPanel {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void EmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpleadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpleadoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

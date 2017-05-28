@@ -189,9 +189,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PrestacionesActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="TTiempoCompleto">
       <Properties>
@@ -202,9 +199,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TiempoCompletoActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="TExperiencia">
       <Properties>

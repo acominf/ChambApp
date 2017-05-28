@@ -38,11 +38,6 @@ public class EmpleadoCV extends ContenidoPanel {
         Instrucciones.setText("Suba su Curriculum Vitae en formato PDF de preferencia");
 
         Enviar.setText("Aceptar");
-        Enviar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnviarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -74,11 +69,6 @@ public class EmpleadoCV extends ContenidoPanel {
                 .addGap(27, 27, 27))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EnviarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFileChooser Archivo;

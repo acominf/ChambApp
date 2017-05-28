@@ -1,7 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
+//TODO: Completarla
 /**
  *
  * @author davidazullo
@@ -49,11 +48,6 @@ public class CalificarEmpleador extends ContenidoPanel {
         TEmpresa.setText("Empresa");
 
         Empresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Valeo" }));
-        Empresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmpresaActionPerformed(evt);
-            }
-        });
 
         THorario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         THorario.setText("Horario");
@@ -117,10 +111,6 @@ public class CalificarEmpleador extends ContenidoPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void EmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpresaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

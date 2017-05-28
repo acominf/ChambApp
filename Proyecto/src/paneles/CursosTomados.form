@@ -20,7 +20,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Titulo" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="0" min="-2" pref="253" max="-2" attributes="0"/>
+                  <Component id="Aceptar" alignment="0" min="-2" pref="253" max="-2" attributes="0"/>
                   <Component id="Descripcion" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="Curso1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="Curso2" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -56,7 +56,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Horario2" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Component id="jButton1" max="32767" attributes="0"/>
+              <Component id="Aceptar" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -72,13 +72,10 @@
         <Property name="text" type="java.lang.String" value="Cursos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="Aceptar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aceptar"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="Descripcion">
       <Properties>

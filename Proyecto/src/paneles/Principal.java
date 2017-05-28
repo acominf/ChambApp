@@ -6,7 +6,7 @@ package paneles;
 public class Principal {
 
     /**
-     * Función principal del programa
+     * Función principal del programa, ejecuta la interfaz del menu
      * @param args
      */
     public static void main(String []args){

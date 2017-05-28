@@ -1,7 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
+//TODO: Completar
 /**
  *
  * @author davidazullo
@@ -42,11 +41,6 @@ public class CursosDisponibles extends ContenidoPanel {
         Titulo.setText("Cursos");
 
         Enviar.setText("Aceptar");
-        Enviar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnviarActionPerformed(evt);
-            }
-        });
 
         Intrucciones.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Intrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -120,10 +114,6 @@ public class CursosDisponibles extends ContenidoPanel {
                 .addGap(10, 10, 10))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EnviarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

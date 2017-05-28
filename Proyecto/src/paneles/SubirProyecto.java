@@ -1,5 +1,6 @@
 package paneles;
 
+//TODO: Completarla
 /**
  *
  * @author davidazullo
@@ -58,11 +59,6 @@ public class SubirProyecto extends ContenidoPanel {
         TEmpresa.setText("Es una empresa ya constituida, con menos de 2 años de actividad");
 
         Empresa.setText("Sí");
-        Empresa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EmpresaActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,10 +116,6 @@ public class SubirProyecto extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void EmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpresaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpresaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,7 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
+//TODO: Completarla
 /**
  *
  * @author davidazullo
@@ -43,11 +42,6 @@ public class CambioContrasena extends ContenidoPanel {
         TPregunta.setText("Pregunta de seguridad");
 
         Pregunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "¿En qué escuela estudiaste?" }));
-        Pregunta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PreguntaActionPerformed(evt);
-            }
-        });
 
         TNueva.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TNueva.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -62,11 +56,6 @@ public class CambioContrasena extends ContenidoPanel {
         Nueva.setText("12345");
 
         Enviar.setText("Aceptar");
-        Enviar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnviarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -114,14 +103,6 @@ public class CambioContrasena extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void PreguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreguntaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PreguntaActionPerformed
-
-    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EnviarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

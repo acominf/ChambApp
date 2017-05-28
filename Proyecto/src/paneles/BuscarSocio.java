@@ -1,7 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
+//TODO: Completarla
 /**
  *
  * @author davidazullo
@@ -53,52 +52,47 @@ Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 Instrucciones.setText("Complete los siguientes campos para realizar su búsqueda");
 
 Empresario.setText("Sí");
-Empresario.addActionListener(new java.awt.event.ActionListener() {
-    public void actionPerformed(java.awt.event.ActionEvent evt) {
-        EmpresarioActionPerformed(evt);
-    }
-    });
 
-    TEmpresario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TEmpresario.setText("¿Empresario?");
+TEmpresario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+TEmpresario.setText("¿Empresario?");
 
-    Enviar.setText("Subir solicitud");
+Enviar.setText("Subir solicitud");
 
-    TCapital.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TCapital.setText("Cantidad de capital que está dispuesto a invertir");
+TCapital.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+TCapital.setText("Cantidad de capital que está dispuesto a invertir");
 
-    TMonto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    TMonto.setText("Monto");
+TMonto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+TMonto.setText("Monto");
 
-    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-    this.setLayout(layout);
-    layout.setHorizontalGroup(
-        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(255, 255, 255))
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(TEspecialidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(415, 415, 415))
-                .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Instrucciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ListaEspecialidad, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(176, 176, 176)
-                                .addComponent(Enviar))
-                            .addComponent(Empresario, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addComponent(TEmpresario, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TCapital, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(TMonto)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE))))
+javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+this.setLayout(layout);
+layout.setHorizontalGroup(
+    layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+    .addGroup(layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(255, 255, 255))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(TEspecialidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(415, 415, 415))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(Instrucciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ListaEspecialidad, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(176, 176, 176)
+                            .addComponent(Enviar))
+                        .addComponent(Empresario, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(TEmpresario, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TCapital, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(TMonto)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))))
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,10 +120,6 @@ Empresario.addActionListener(new java.awt.event.ActionListener() {
             .addContainerGap())
     );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void EmpresarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpresarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EmpresarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

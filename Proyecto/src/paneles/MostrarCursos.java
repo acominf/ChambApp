@@ -1,8 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
-//TODO:CHECAR
+//TODO: Completarla
 /**
  *
  * @author davidazullo
@@ -68,11 +66,6 @@ public class MostrarCursos extends ContenidoPanel {
         Presencial.setText("Sí");
 
         Enviar.setText("Aceptar");
-        Enviar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnviarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -125,10 +118,6 @@ public class MostrarCursos extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EnviarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

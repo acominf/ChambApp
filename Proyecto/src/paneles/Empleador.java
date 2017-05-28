@@ -149,7 +149,7 @@ public class Empleador extends ContenidoPanel {
     }//GEN-LAST:event_SubirProyectoMouseClicked
 
     private void BuscarCursosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarCursosMouseClicked
-        Utilerias.muestraComponente( this.getPadre(), new CursosDisponibles(this.getPadre()) );
+        Utilerias.muestraComponente( this.getPadre(), new MostrarCursos(this.getPadre()) );
     }//GEN-LAST:event_BuscarCursosMouseClicked
 
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked

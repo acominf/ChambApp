@@ -1,7 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
+//TODO: Completar
 /**
  *
  * @author davidazullo
@@ -26,7 +25,7 @@ public class CursosTomados extends ContenidoPanel {
     private void initComponents() {
 
         Titulo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Aceptar = new javax.swing.JButton();
         Descripcion = new javax.swing.JLabel();
         Curso1 = new javax.swing.JLabel();
         Curso2 = new javax.swing.JLabel();
@@ -40,12 +39,7 @@ public class CursosTomados extends ContenidoPanel {
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("Cursos");
 
-        jButton1.setText("Aceptar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        Aceptar.setText("Aceptar");
 
         Descripcion.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         Descripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -87,7 +81,7 @@ public class CursosTomados extends ContenidoPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Aceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Descripcion)
                     .addComponent(Curso1)
                     .addComponent(Curso2)
@@ -120,17 +114,14 @@ public class CursosTomados extends ContenidoPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Horario2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(47, 47, 47)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Aceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(10, 10, 10))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Aceptar;
     private javax.swing.JLabel Curso1;
     private javax.swing.JLabel Curso2;
     private javax.swing.JLabel Descripcion;
@@ -140,6 +131,5 @@ public class CursosTomados extends ContenidoPanel {
     private javax.swing.JLabel Intrucciones1;
     private javax.swing.JLabel Intrucciones3;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

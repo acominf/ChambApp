@@ -1,13 +1,10 @@
 package paneles;
 
 import elementos.Utilerias;
-import static java.lang.System.exit;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
 
+//TODO: Acabarla
 /**
- *
- * @author davidazullo
+ * Clase que se encarga de enviar por ...
  */
 public class Comentarios extends ContenidoPanel {
 

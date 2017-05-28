@@ -71,83 +71,73 @@ TMaximo.setText("Máximo:");
 TPrestaciones.setText("Necesita prestaciones");
 
 Prestaciones.setText("Sí");
-Prestaciones.addActionListener(new java.awt.event.ActionListener() {
-    public void actionPerformed(java.awt.event.ActionEvent evt) {
-        PrestacionesActionPerformed(evt);
-    }
-    });
 
-    TTiempoCompleto.setText("Quiere trabajar tiempo completo");
+TTiempoCompleto.setText("Quiere trabajar tiempo completo");
 
-    TiempoCompleto.setText("Sí");
-    TiempoCompleto.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            TiempoCompletoActionPerformed(evt);
-        }
-    });
+TiempoCompleto.setText("Sí");
 
-    TExperiencia.setText("Años");
+TExperiencia.setText("Años");
 
-    ExperienciaTitulo.setText("Cantidad de años de experiencia en su campo");
+ExperienciaTitulo.setText("Cantidad de años de experiencia en su campo");
 
-    Comentarios.setText("Comentarios Adicionales:");
+Comentarios.setText("Comentarios Adicionales:");
 
-    AreaTexto.setColumns(20);
-    AreaTexto.setRows(5);
-    CampoComentarios.setViewportView(AreaTexto);
+AreaTexto.setColumns(20);
+AreaTexto.setRows(5);
+CampoComentarios.setViewportView(AreaTexto);
 
-    Enviar.setText("Subir CV");
+Enviar.setText("Subir CV");
 
-    Enviar1.setText("Actualizar información");
+Enviar1.setText("Actualizar información");
 
-    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-    this.setLayout(layout);
-    layout.setHorizontalGroup(
-        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(CampoComentarios)
-                    .addGap(278, 278, 278))
-                .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Instrucciones, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Prestaciones)
-                        .addComponent(CampoTrabajo)
-                        .addComponent(Rango)
-                        .addComponent(CamposDeTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TPrestaciones)
-                        .addComponent(Comentarios)
-                        .addComponent(TiempoCompleto)
-                        .addComponent(TTiempoCompleto)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ExperienciaTitulo)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Enviar)
-                                .addGap(23, 23, 23)))
+javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+this.setLayout(layout);
+layout.setHorizontalGroup(
+    layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+    .addGroup(layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(CampoComentarios)
+                .addGap(278, 278, 278))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Instrucciones, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Prestaciones)
+                    .addComponent(CampoTrabajo)
+                    .addComponent(Rango)
+                    .addComponent(CamposDeTrabajo, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TPrestaciones)
+                    .addComponent(Comentarios)
+                    .addComponent(TiempoCompleto)
+                    .addComponent(TTiempoCompleto)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(ExperienciaTitulo)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(12, 12, 12)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(TMaximo)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(TMinimo)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Enviar)
+                            .addGap(23, 23, 23)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addComponent(TExperiencia)
-                                    .addGap(33, 33, 33)
-                                    .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addContainerGap())))
-        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Enviar1)
-            .addGap(178, 178, 178))
+                                    .addComponent(TMaximo)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(TMinimo)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(TExperiencia)
+                                .addGap(33, 33, 33)
+                                .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap())))
+    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(Enviar1)
+        .addGap(178, 178, 178))
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,14 +185,6 @@ Prestaciones.addActionListener(new java.awt.event.ActionListener() {
             .addContainerGap())
     );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void PrestacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrestacionesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PrestacionesActionPerformed
-
-    private void TiempoCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiempoCompletoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TiempoCompletoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

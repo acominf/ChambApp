@@ -168,7 +168,7 @@ public class Empleado extends ContenidoPanel {
     }//GEN-LAST:event_CamposExtraMouseClicked
 
     private void CambiaPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambiaPasswordMouseClicked
-        Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()) );
+        Utilerias.muestraComponente( this.getPadre(), new MostrarCursos(this.getPadre()) );
     }//GEN-LAST:event_CambiaPasswordMouseClicked
 
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
