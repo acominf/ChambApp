@@ -1,7 +1,6 @@
 package elementos;
 
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import paneles.ContenidoJFrame;
 import paneles.ContenidoPanel;
 
@@ -23,6 +22,7 @@ public class Utilerias {
         f.pack();
         f.setVisible(true);
         f.setLocationRelativeTo(null);
+        f.setDefaultCloseOperation(EXIT_ON_CLOSE);
         jframe.setVisible(false);
     }
     

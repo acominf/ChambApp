@@ -9,7 +9,7 @@ public class Usuario implements Serializable{
     private String nombre;
     private String pregunta;
     private String respuesta;
-    private String password; 
+    private char []password; 
 
     /**
      * Metodo de acceso al atributo nombre de un usuario
@@ -63,7 +63,7 @@ public class Usuario implements Serializable{
      * Metodo de acceso al atributo contraseña de un usuario
      * @return Contraseña del usuario
      */
-    public String getPassword() {
+    public char[] getPassword() {
         return password;
     }
 
@@ -71,7 +71,7 @@ public class Usuario implements Serializable{
      * Metodo de modificacion al atributo contraseña de un usuario
      * @param password
      */
-    public void setPassword(String password) {
+    public void setPassword(char[] password) {
         this.password = password;
     }
     
@@ -82,7 +82,7 @@ public class Usuario implements Serializable{
      * @param pregunta
      * @param respuesta
      */
-    public Usuario(String nombre,String password, String pregunta, String respuesta){
+    public Usuario(String nombre, char[] password, String pregunta, String respuesta){
             this.nombre = nombre;
             this.pregunta = pregunta;
             this.respuesta = respuesta;

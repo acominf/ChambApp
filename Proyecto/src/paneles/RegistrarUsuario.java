@@ -1,12 +1,20 @@
 package paneles;
 
 //TODO: Completarla
+
+import elementos.Archivo;
+import elementos.Usuario;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davidazullo
  */
 public class RegistrarUsuario extends ContenidoPanel {
-
+    private String nombre;
+    private char password[], temporal[];
+    private String pregunta;
+    private String respuesta;
     /**
      * Creates new form RegistrarUsuario
      * @param ventana
@@ -36,6 +44,8 @@ public class RegistrarUsuario extends ContenidoPanel {
         RPassword = new javax.swing.JPasswordField();
         TPreguntas = new javax.swing.JLabel();
         Preguntas = new javax.swing.JComboBox<>();
+        TRespuesta = new javax.swing.JLabel();
+        Respuesta = new javax.swing.JTextField();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -49,10 +59,14 @@ public class RegistrarUsuario extends ContenidoPanel {
         TNombre.setText("Nombre");
 
         Enviar.setText("Aceptar");
+        Enviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnviarActionPerformed(evt);
+            }
+        });
 
-        Nombre.setText("Braulio Fernandez");
-
-        Password.setText("12345");
+        Nombre.setMinimumSize(new java.awt.Dimension(200, 20));
+        Nombre.setPreferredSize(new java.awt.Dimension(200, 20));
 
         TPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TPassword.setText("Password");
@@ -60,37 +74,38 @@ public class RegistrarUsuario extends ContenidoPanel {
         TRPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TRPassword.setText("Repetir Password");
 
-        RPassword.setText("12345");
-
         TPreguntas.setText("Pregunta De Seguridad");
 
-        Preguntas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Preguntas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nombre De Tu Primer Mascota", "Lugar De Nacimiento De Tu Madre", "Cancion Favorita", "Nombre De Tu Abuela/o", " " }));
+
+        TRespuesta.setText("Respuesta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(Enviar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                            .addComponent(TPassword)
+                            .addComponent(RPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                            .addComponent(TRPassword)
+                            .addComponent(Nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TRespuesta)
                             .addComponent(TPreguntas)
                             .addComponent(Preguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(195, 195, 195)
-                                .addComponent(Enviar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TPassword)
-                                    .addComponent(RPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TRPassword))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(Respuesta))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -115,9 +130,13 @@ public class RegistrarUsuario extends ContenidoPanel {
                     .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Preguntas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TPassword)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TPassword)
+                    .addComponent(TRespuesta))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                    .addComponent(Respuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TRPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -137,6 +156,46 @@ public class RegistrarUsuario extends ContenidoPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
+        // TODO add your handling code here:
+        nombre = Nombre.getText();
+        password = Password.getPassword();
+        temporal = RPassword.getPassword();
+        pregunta = (String) Preguntas.getSelectedItem();
+        respuesta = Respuesta.getText();
+        if(nombre.equals("") || respuesta.equals("") || password.length == 0 || password.length == 0){
+            JOptionPane.showMessageDialog(null, "Ingrese El Campo Faltante", "Error", JOptionPane.WARNING_MESSAGE);        
+            Password.setText("");
+            RPassword.setText("");
+        }
+        else{
+            if(!comparaPassword(password, temporal)){
+                JOptionPane.showMessageDialog(null, "Las Contraseñas No Coinciden", "Error", JOptionPane.WARNING_MESSAGE);        
+                Password.setText("");
+                RPassword.setText("");
+            }
+            Archivo nuevo = new Archivo(nombre);
+            if(nuevo.existe()){
+                JOptionPane.showMessageDialog(null, "El Nombre De Usuario Ya Existe", "Error", JOptionPane.WARNING_MESSAGE);        
+                Nombre.setText("");
+            }
+            else{
+                nuevo = new Archivo(new Usuario(nombre, password, pregunta, respuesta));
+                nuevo.escribeArchivo();
+                JOptionPane.showMessageDialog(null, "Usuario Creado Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_EnviarActionPerformed
+    private boolean comparaPassword(char principal[], char secundario[]){
+        if(principal.length == secundario.length){
+            for(int i = 0; i < principal.length; i++){
+                if(principal[i] != secundario[i])
+                    return false;
+            }
+            return true;
+        }
+        return false;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Enviar;
@@ -145,10 +204,12 @@ public class RegistrarUsuario extends ContenidoPanel {
     private javax.swing.JPasswordField Password;
     private javax.swing.JComboBox<String> Preguntas;
     private javax.swing.JPasswordField RPassword;
+    private javax.swing.JTextField Respuesta;
     private javax.swing.JLabel TNombre;
     private javax.swing.JLabel TPassword;
     private javax.swing.JLabel TPreguntas;
     private javax.swing.JLabel TRPassword;
+    private javax.swing.JLabel TRespuesta;
     private javax.swing.JLabel Titulo;
     // End of variables declaration//GEN-END:variables
 }

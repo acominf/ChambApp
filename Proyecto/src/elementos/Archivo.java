@@ -89,4 +89,8 @@ public class Archivo {
         }
         return user;
     }
+    public boolean existe(){
+        File f = new File(nombreArchivoE);
+        return f.exists();
+    }
 }
