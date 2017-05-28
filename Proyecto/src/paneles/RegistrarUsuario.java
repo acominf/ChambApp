@@ -174,15 +174,17 @@ public class RegistrarUsuario extends ContenidoPanel {
                 Password.setText("");
                 RPassword.setText("");
             }
-            Archivo nuevo = new Archivo(nombre);
-            if(nuevo.existe()){
-                JOptionPane.showMessageDialog(null, "El Nombre De Usuario Ya Existe", "Error", JOptionPane.WARNING_MESSAGE);        
-                Nombre.setText("");
-            }
             else{
-                nuevo = new Archivo(new Usuario(nombre, password, pregunta, respuesta));
-                nuevo.escribeArchivo();
-                JOptionPane.showMessageDialog(null, "Usuario Creado Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+                Archivo nuevo = new Archivo(nombre);
+                if(nuevo.existe()){
+                    JOptionPane.showMessageDialog(null, "El Nombre De Usuario Ya Existe", "Error", JOptionPane.WARNING_MESSAGE);        
+                    Nombre.setText("");
+                }
+                else{
+                    nuevo = new Archivo(new Usuario(nombre, password, pregunta, respuesta));
+                    nuevo.escribeArchivo();
+                    JOptionPane.showMessageDialog(null, "Usuario Creado Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+                }
             }
         }
     }//GEN-LAST:event_EnviarActionPerformed
