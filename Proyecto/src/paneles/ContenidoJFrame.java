@@ -1,8 +1,6 @@
 package paneles;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import static java.lang.System.exit;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -11,9 +9,13 @@ import javax.swing.JFrame;
  */
 public class ContenidoJFrame extends JFrame {
     private final String titulo;
+    private final ImageIcon icono;
     
     public ContenidoJFrame(String titulo) {
         super(titulo);
+        String rutaIcono = "src/Imagenes/Logo.png";
+        icono = new ImageIcon(rutaIcono);
+        setIconImage(icono.getImage());
         this.titulo = titulo;
     }        
 

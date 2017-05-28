@@ -2,6 +2,7 @@ package paneles;
 
 import javax.swing.JFrame;
 
+//TODO:CHECAR
 /**
  *
  * @author davidazullo

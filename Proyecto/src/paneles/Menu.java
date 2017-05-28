@@ -1,30 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paneles;
-
 import elementos.Utilerias;
-import java.awt.Component;
 import static java.lang.System.exit;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+
 /**
- *
- * @author davidazullo
+ * Clase que contiene las interacciones principales del programa
  */
 public class Menu extends ContenidoJFrame{
-    private ImageIcon icono;
     /**
      * Constructor encargado de la generación de un menú para el manejo de la aplicación.
+     * @param titulo
      */
     public Menu(String titulo) {
         super(titulo);
-        icono = new ImageIcon("src/Imagenes/Logo.png");
-        setIconImage(icono.getImage());
         initComponents();
     }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,9 +26,9 @@ public class Menu extends ContenidoJFrame{
 
         Titulo = new javax.swing.JLabel();
         Salir = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        Acceder = new javax.swing.JButton();
+        AcercaDe = new javax.swing.JButton();
+        Comentarios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -54,44 +44,24 @@ public class Menu extends ContenidoJFrame{
             }
         });
 
-        jButton7.setText("Acceder");
-        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+        Acceder.setText("Acceder");
+        Acceder.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton7MouseClicked(evt);
-            }
-        });
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jButton7.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jButton7KeyPressed(evt);
+                AccederMouseClicked(evt);
             }
         });
 
-        jButton8.setText("Acerca de");
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+        AcercaDe.setText("Acerca de");
+        AcercaDe.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
-            }
-        });
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                AcercaDeMouseClicked(evt);
             }
         });
 
-        jButton9.setText("Comentarios y feedback");
-        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+        Comentarios.setText("Comentarios y feedback");
+        Comentarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton9MouseClicked(evt);
-            }
-        });
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                ComentariosMouseClicked(evt);
             }
         });
 
@@ -110,11 +80,11 @@ public class Menu extends ContenidoJFrame{
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Comentarios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton7)
+                                .addComponent(Acceder)
                                 .addGap(57, 57, 57)
-                                .addComponent(jButton8)))
+                                .addComponent(AcercaDe)))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -124,10 +94,10 @@ public class Menu extends ContenidoJFrame{
                 .addComponent(Titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8))
+                    .addComponent(Acceder)
+                    .addComponent(AcercaDe))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jButton9)
+                .addComponent(Comentarios)
                 .addGap(18, 18, 18)
                 .addComponent(Salir)
                 .addContainerGap())
@@ -136,43 +106,27 @@ public class Menu extends ContenidoJFrame{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton7KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7KeyPressed
-
-    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+    private void AccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccederMouseClicked
         Utilerias.muestraComponente( this, new Login(this) );
-    }//GEN-LAST:event_jButton7MouseClicked
+    }//GEN-LAST:event_AccederMouseClicked
 
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
         exit(0);
     }//GEN-LAST:event_SalirMouseClicked
     
-    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+    private void ComentariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComentariosMouseClicked
         Utilerias.muestraComponente( this, new Comentarios(this) );
-    }//GEN-LAST:event_jButton9MouseClicked
+    }//GEN-LAST:event_ComentariosMouseClicked
 
-    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+    private void AcercaDeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercaDeMouseClicked
         Utilerias.muestraComponente( this, new AcercaDe1(this) );
-    }//GEN-LAST:event_jButton8MouseClicked
+    }//GEN-LAST:event_AcercaDeMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Acceder;
+    private javax.swing.JButton AcercaDe;
+    private javax.swing.JButton Comentarios;
     private javax.swing.JButton Salir;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     // End of variables declaration//GEN-END:variables
 }
