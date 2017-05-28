@@ -1,7 +1,5 @@
 package paneles;
 
-import javax.swing.JFrame;
-
 /**
  *
  * @author davidazullo

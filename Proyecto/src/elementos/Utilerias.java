@@ -31,9 +31,7 @@ public class Utilerias {
      * @param actual
      */
     public static void cambiaComponentePadre(ContenidoPanel actual) {         
-        JFrame padre;
         actual.getVentana().setVisible(true);
-        padre = (JFrame) SwingUtilities.getWindowAncestor(actual);
-        padre.setVisible(false);
+        actual.getPadre().setVisible(false);
     }
 }

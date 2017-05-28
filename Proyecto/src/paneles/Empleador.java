@@ -1,15 +1,16 @@
 package paneles;
 
-import javax.swing.JFrame;
+import elementos.Utilerias;
+import static java.lang.System.exit;
 
 /**
- *
- * @author davidazullo
+ * Clase que muestra las acciones disponibles del empleador
  */
 public class Empleador extends ContenidoPanel {
 
     /**
-     * Creates new form Socio
+     * Constructor de empleador
+     * @param ventana
      */
     public Empleador(ContenidoJFrame ventana) {
         super(ventana);
@@ -39,26 +40,51 @@ public class Empleador extends ContenidoPanel {
         Titulo.setText("Empleador");
 
         BuscaChambeador.setText("Buscar Chambeador");
+        BuscaChambeador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BuscaChambeadorMouseClicked(evt);
+            }
+        });
 
         BuscaSocio.setText("Buscar Socio");
+        BuscaSocio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BuscaSocioMouseClicked(evt);
+            }
+        });
 
         SubirProyecto.setText("Subir proyecto");
+        SubirProyecto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SubirProyectoMouseClicked(evt);
+            }
+        });
 
         CalificaEmpleado.setText("Calificar Empleado");
+        CalificaEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CalificaEmpleadoMouseClicked(evt);
+            }
+        });
 
         Salir.setText("Salir");
+        Salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalirMouseClicked(evt);
+            }
+        });
 
         CambiarPassword.setText("Cambiar contraseña");
-        CambiarPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CambiarPasswordActionPerformed(evt);
+        CambiarPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CambiarPasswordMouseClicked(evt);
             }
         });
 
         BuscarCursos.setText("Buscar cursos");
-        BuscarCursos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarCursosActionPerformed(evt);
+        BuscarCursos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BuscarCursosMouseClicked(evt);
             }
         });
 
@@ -106,13 +132,33 @@ public class Empleador extends ContenidoPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CambiarPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CambiarPasswordActionPerformed
+    private void BuscaChambeadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscaChambeadorMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new BuscarChambeador(this.getPadre()) );
+    }//GEN-LAST:event_BuscaChambeadorMouseClicked
 
-    private void BuscarCursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarCursosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BuscarCursosActionPerformed
+    private void BuscaSocioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscaSocioMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new BuscarSocio(this.getPadre()) );
+    }//GEN-LAST:event_BuscaSocioMouseClicked
+
+    private void CalificaEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalificaEmpleadoMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new CalificarEmpleado(this.getPadre()) );
+    }//GEN-LAST:event_CalificaEmpleadoMouseClicked
+
+    private void SubirProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubirProyectoMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new SubirProyecto(this.getPadre()) );
+    }//GEN-LAST:event_SubirProyectoMouseClicked
+
+    private void BuscarCursosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarCursosMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new CursosDisponibles(this.getPadre()) );
+    }//GEN-LAST:event_BuscarCursosMouseClicked
+
+    private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
+        exit(0);
+    }//GEN-LAST:event_SalirMouseClicked
+
+    private void CambiarPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambiarPasswordMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()) );
+    }//GEN-LAST:event_CambiarPasswordMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

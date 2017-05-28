@@ -1,7 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
+//TODO: Esta se queda opcional
 /**
  *
  * @author davidazullo

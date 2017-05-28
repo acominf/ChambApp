@@ -1,15 +1,16 @@
 package paneles;
 
-import javax.swing.JFrame;
+import elementos.Utilerias;
+import static java.lang.System.exit;
 
 /**
- *
- * @author davidazullo
+ * Clase que representa las funciones que el empleado puede hacer
  */
 public class Empleado extends ContenidoPanel {
 
     /**
-     * Creates new form Socio
+     * Constructor del Empleado
+     * @param ventana
      */
     public Empleado(ContenidoJFrame ventana) {
         super(ventana);
@@ -40,33 +41,58 @@ public class Empleado extends ContenidoPanel {
         Titulo.setText("Empleado");
 
         BuscaChamba.setText("Buscar Chamba");
+        BuscaChamba.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BuscaChambaMouseClicked(evt);
+            }
+        });
 
         BuscaSocio.setText("Buscar Socio");
+        BuscaSocio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BuscaSocioMouseClicked(evt);
+            }
+        });
 
         SubirProyecto.setText("Subir proyecto");
+        SubirProyecto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SubirProyectoMouseClicked(evt);
+            }
+        });
 
         CalificarEmpleador.setText("Calificar Empleador");
+        CalificarEmpleador.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CalificarEmpleadorMouseClicked(evt);
+            }
+        });
 
         Salir.setText("Salir");
+        Salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SalirMouseClicked(evt);
+            }
+        });
 
         CambiaPassword.setText("Cambiar contraseña");
-        CambiaPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CambiaPasswordActionPerformed(evt);
+        CambiaPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CambiaPasswordMouseClicked(evt);
             }
         });
 
         BuscarCursos.setText("Buscar cursos");
-        BuscarCursos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarCursosActionPerformed(evt);
+        BuscarCursos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BuscarCursosMouseClicked(evt);
             }
         });
 
         CamposExtra.setText("Añadir campos extra");
-        CamposExtra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CamposExtraActionPerformed(evt);
+        CamposExtra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CamposExtraMouseClicked(evt);
             }
         });
 
@@ -117,18 +143,37 @@ public class Empleado extends ContenidoPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CambiaPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiaPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CambiaPasswordActionPerformed
+    private void BuscaChambaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscaChambaMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new BuscarChamba(this.getPadre()) );
+    }//GEN-LAST:event_BuscaChambaMouseClicked
 
-    private void BuscarCursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarCursosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BuscarCursosActionPerformed
+    private void BuscaSocioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscaSocioMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new BuscarSocio(this.getPadre()) );
+    }//GEN-LAST:event_BuscaSocioMouseClicked
 
-    private void CamposExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CamposExtraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CamposExtraActionPerformed
+    private void CalificarEmpleadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalificarEmpleadorMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new CalificarEmpleador(this.getPadre()) );
+    }//GEN-LAST:event_CalificarEmpleadorMouseClicked
 
+    private void SubirProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubirProyectoMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new SubirProyecto(this.getPadre()) );
+    }//GEN-LAST:event_SubirProyectoMouseClicked
+
+    private void BuscarCursosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarCursosMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new CursosDisponibles(this.getPadre()) );
+    }//GEN-LAST:event_BuscarCursosMouseClicked
+
+    private void CamposExtraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CamposExtraMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new EmpleadoAdicional(this.getPadre()) );
+    }//GEN-LAST:event_CamposExtraMouseClicked
+
+    private void CambiaPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambiaPasswordMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()) );
+    }//GEN-LAST:event_CambiaPasswordMouseClicked
+
+    private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
+        exit(0);
+    }//GEN-LAST:event_SalirMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscaChamba;

@@ -1,7 +1,6 @@
 package paneles;
 
-import javax.swing.JFrame;
-
+// TODO: Completarlo
 /**
  *
  * @author davidazullo
@@ -10,6 +9,7 @@ public class EmpleadoAdicional extends ContenidoPanel {
 
     /**
      * Creates new form EmpleadoAdicional
+     * @param ventana
      */
     public EmpleadoAdicional(ContenidoJFrame ventana) {
         super(ventana);

@@ -1,38 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paneles;
-
 import elementos.Utilerias;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Toolkit;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 
 /**
- *
- * @author davidazullo
+ * Clase que se encarga de administrar el logueo de los usuarios
  */
 public class Login extends ContenidoPanel {
 
     /**
-     * Creates new form Login
+     * Constructor de Login
+     * @param ventana
      */
     public Login(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
+        //TODO: Cambiar datos de acceso, poner ejemplo
     }
-    public void paintComponent(Graphics g){
-        super.paintComponent(g);
-        Dimension tamano = Toolkit.getDefaultToolkit().getScreenSize();
-        /*ImageIcon fondo = new ImageIcon("src/Imagenes/Logo.png");
-        g.drawImage(fondo.getImage(),
-                tamano.width/2-fondo.getIconWidth()/2, 0,
-                tamano.width/2+fondo.getIconWidth()/2, tamano.height/2, null);*/
-    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -58,11 +41,6 @@ public class Login extends ContenidoPanel {
         Titulo.setText("Login");
 
         Usuario.setText("Braulio García");
-        Usuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UsuarioActionPerformed(evt);
-            }
-        });
 
         TUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         TUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -72,12 +50,10 @@ public class Login extends ContenidoPanel {
         TPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TPassword.setText("Password");
 
-        Password.setText("12345");
-
         Entrar.setText("Entrar");
-        Entrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EntrarActionPerformed(evt);
+        Entrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EntrarMouseClicked(evt);
             }
         });
 
@@ -87,13 +63,13 @@ public class Login extends ContenidoPanel {
                 CambioMouseClicked(evt);
             }
         });
-        Cambio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CambioActionPerformed(evt);
-            }
-        });
 
         Resgitro.setText("Registrarse");
+        Resgitro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ResgitroMouseClicked(evt);
+            }
+        });
 
         TCambio.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TCambio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -149,22 +125,17 @@ public class Login extends ContenidoPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_UsuarioActionPerformed
-
-    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EntrarActionPerformed
-
-    private void CambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CambioActionPerformed
-
     private void CambioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambioMouseClicked
-        Utilerias.muestraComponente( ventana, new Comentarios(ventana) );
+        Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()) );
     }//GEN-LAST:event_CambioMouseClicked
 
+    private void ResgitroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResgitroMouseClicked
+        Utilerias.muestraComponente( this.getPadre(), new RegistrarUsuario(this.getPadre()) );
+    }//GEN-LAST:event_ResgitroMouseClicked
+
+    private void EntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EntrarMouseClicked
+        // TODO: Validar logueo de usuario
+    }//GEN-LAST:event_EntrarMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cambio;

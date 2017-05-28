@@ -80,33 +80,48 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar Chambeador"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuscaChambeadorMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BuscaSocio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar Socio"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuscaSocioMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="SubirProyecto">
       <Properties>
         <Property name="text" type="java.lang.String" value="Subir proyecto"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="SubirProyectoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="CalificaEmpleado">
       <Properties>
         <Property name="text" type="java.lang.String" value="Calificar Empleado"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CalificaEmpleadoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Salir">
       <Properties>
         <Property name="text" type="java.lang.String" value="Salir"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="SalirMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="CambiarPassword">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cambiar contrase&#xf1;a"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CambiarPasswordActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CambiarPasswordMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BuscarCursos">
@@ -114,7 +129,7 @@
         <Property name="text" type="java.lang.String" value="Buscar cursos"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BuscarCursosActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuscarCursosMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>

@@ -76,9 +76,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Braulio Garc&#xed;a"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UsuarioActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="TUsuario">
       <Properties>
@@ -99,16 +96,13 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="Password">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="12345"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="Entrar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Entrar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EntrarActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="EntrarMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Cambio">
@@ -117,13 +111,15 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CambioMouseClicked"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CambioActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Resgitro">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrarse"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ResgitroMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="TCambio">
       <Properties>
