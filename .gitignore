@@ -14,3 +14,7 @@ hs_err_pid*
 /Proyecto/nbproject/private/
 /Proyecto/build/
 /Proyecto/dist/
+
+# TODOS
+/node_modules/
+TODOS.js

@@ -19,6 +19,10 @@ public class ContenidoPanel extends javax.swing.JPanel implements KeyListener {
         this.ventana = ventana;
     }
     
+    public JFrame getVentana() {
+        return ventana;
+    }
+    
     private void KeyReleased(java.awt.event.KeyEvent evt) {                                 
         int tecla = evt.getKeyCode();
         switch(tecla) {

@@ -1,7 +1,9 @@
-package paneles;
+package elementos;
 
 import java.awt.Component;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+import paneles.ContenidoPanel;
 
 /**
  *
@@ -15,6 +17,12 @@ public class Utilerias {
         f.setVisible(true);
         f.setLocationRelativeTo(null);
         jframe.setVisible(false);
-        componente.setVentana(f);
+    }
+    
+    public static void cambiaComponentePadre(ContenidoPanel actual) {         
+        JFrame padre;
+        actual.getVentana().setVisible(true);
+        padre = (JFrame) SwingUtilities.getWindowAncestor(actual);
+        padre.setVisible(false);
     }
 }

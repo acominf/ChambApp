@@ -5,6 +5,7 @@
  */
 package paneles;
 
+import elementos.Utilerias;
 import java.awt.Component;
 import static java.lang.System.exit;
 import javax.swing.ImageIcon;

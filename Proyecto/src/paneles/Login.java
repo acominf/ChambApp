@@ -5,6 +5,7 @@
  */
 package paneles;
 
+import elementos.Utilerias;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Toolkit;

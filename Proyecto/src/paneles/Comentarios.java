@@ -1,7 +1,9 @@
 package paneles;
 
+import elementos.Utilerias;
 import static java.lang.System.exit;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -85,8 +87,9 @@ public class Comentarios extends ContenidoPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
-        //[] Completar
-        exit(0);
+        //Guardar comentarios
+        //TODO Completar
+        Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_EnviarMouseClicked
 
 
