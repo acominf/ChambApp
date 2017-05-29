@@ -1,15 +1,18 @@
 package paneles;
-
+import elementos.Archivo;
+import elementos.Chambapp;
 import elementos.Utilerias;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
-//TODO: Acabarla
 /**
- * Clase que se encarga de enviar por ...
+ * Clase que se encarga de almacenar los comentarios
+ * y sugerencias de sus usuarios
  */
 public class Comentarios extends ContenidoPanel {
 
     /**
-     * Creates new form Comentarios
+     * Constructor de la interfaz de usuario COmentarios
      * @param ventana
      */
     public Comentarios(ContenidoJFrame ventana) {
@@ -84,9 +87,27 @@ public class Comentarios extends ContenidoPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
-        //Guardar comentarios
-        //TODO Completar
-        
+        Chambapp chambapp = this.getChambapp();
+        Archivo fichero = new Archivo(this.getChambapp().getRutaComentarios());
+        if(fichero.existe())
+            chambapp.setComentarios(fichero.leeComentarios());
+        if(chambapp.getComentarios() == null)
+            chambapp.setComentarios(new ArrayList<String>());
+        String comentario = Comentarios.getText();
+        String mensaje;
+        if(chambapp.getComentarios().isEmpty())
+            mensaje = "Usted ha sido el primero en proporcionarnos feedback, gracias ;).";
+        else {
+            mensaje = "Gracias por su feedback, el penultimo comentario fue: '";
+            mensaje += chambapp.getComentarios().get(chambapp.getComentarios().size()-1);
+            mensaje += "' y con el suyo suman ya "+(chambapp.getComentarios().size()+1);
+            mensaje += " comentarios";
+        }
+        chambapp.addComentario(comentario);
+        Archivo nuevo;
+        nuevo = new Archivo(chambapp.getComentarios(), chambapp.getRutaComentarios());
+        nuevo.escribeComentarios();
+        JOptionPane.showMessageDialog(null, mensaje, "", JOptionPane.INFORMATION_MESSAGE);
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_EnviarMouseClicked
 
