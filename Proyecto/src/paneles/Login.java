@@ -133,7 +133,13 @@ public class Login extends ContenidoPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CambioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambioMouseClicked
-        Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()) );
+        nombre = JOptionPane.showInputDialog("Introduce El Nombre De Usuario:");
+        Archivo temporal = new Archivo(nombre);
+        if(!temporal.existe()){
+            JOptionPane.showMessageDialog(null, "El Nombre De Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        else
+            Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre(), nombre));
     }//GEN-LAST:event_CambioMouseClicked
 
     private void RegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistroMouseClicked

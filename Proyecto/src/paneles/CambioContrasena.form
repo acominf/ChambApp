@@ -24,18 +24,17 @@
                       <Component id="Enviar" min="-2" pref="253" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="TNueva" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="RNueva" alignment="0" max="32767" attributes="0"/>
+                          <Component id="Respuesta" alignment="0" max="32767" attributes="0"/>
                           <Component id="Titulo" alignment="0" max="32767" attributes="0"/>
                           <Component id="TPregunta" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="Pregunta" min="-2" pref="256" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="TNueva" alignment="1" max="32767" attributes="0"/>
-                          <Component id="Respuesta" alignment="1" max="32767" attributes="0"/>
+                          <Component id="TRNueva" alignment="1" max="32767" attributes="0"/>
                           <Component id="Nueva" alignment="1" max="32767" attributes="0"/>
                           <Component id="TRespuesta" alignment="1" max="32767" attributes="0"/>
+                          <Component id="Pregunta" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -47,22 +46,26 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Titulo" max="32767" attributes="0"/>
+              <Component id="Titulo" pref="29" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="TPregunta" max="32767" attributes="0"/>
+              <Component id="TPregunta" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Pregunta" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="TRespuesta" max="32767" attributes="0"/>
+              <Component id="TRespuesta" min="-2" pref="17" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Respuesta" max="32767" attributes="0"/>
+              <Component id="Respuesta" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="TNueva" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-              <Component id="Nueva" max="32767" attributes="0"/>
+              <Component id="TNueva" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="Enviar" max="32767" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="Nueva" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="TRNueva" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="RNueva" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Component id="Enviar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,8 +92,12 @@
     <Component class="javax.swing.JComboBox" name="Pregunta">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="1">
-            <StringItem index="0" value="&#xbf;En qu&#xe9; escuela estudiaste?"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Nombre De Tu Primer Mascota"/>
+            <StringItem index="1" value="Lugar De Nacimiento De Tu Madre"/>
+            <StringItem index="2" value="Cancion Favorita"/>
+            <StringItem index="3" value="Nombre De Tu Abuela/o"/>
+            <StringItem index="4" value=" "/>
           </StringArray>
         </Property>
       </Properties>
@@ -98,18 +105,13 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="TNueva">
+    <Component class="javax.swing.JLabel" name="TRNueva">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="14" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Nueva contrase&#xf1;a"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JPasswordField" name="Respuesta">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="12345"/>
+        <Property name="text" type="java.lang.String" value="Repetir Contrase&#xf1;a"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="TRespuesta">
@@ -122,14 +124,30 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="Nueva">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="12345"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="Enviar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aceptar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EnviarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="Respuesta">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RespuestaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="TNueva">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Dialog" size="14" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Nueva Contrase&#xf1;a"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="RNueva">
     </Component>
   </SubComponents>
 </Form>

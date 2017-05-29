@@ -1,13 +1,15 @@
 package paneles;
 
+import elementos.Archivo;
 import elementos.Utilerias;
 import static java.lang.System.exit;
+import javax.swing.JOptionPane;
 
 /**
  * Clase que representa las funciones que el empleado puede hacer
  */
 public class Empleado extends ContenidoPanel {
-
+    private String nombre;
     /**
      * Constructor del Empleado
      * @param ventana
@@ -168,7 +170,13 @@ public class Empleado extends ContenidoPanel {
     }//GEN-LAST:event_CamposExtraMouseClicked
 
     private void CambiaPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambiaPasswordMouseClicked
-        Utilerias.muestraComponente( this.getPadre(), new MostrarCursos(this.getPadre()) );
+        nombre = JOptionPane.showInputDialog("Introduce El Nombre De Usuario:");
+        Archivo temporal = new Archivo(nombre);
+        if(!temporal.existe()){
+            JOptionPane.showMessageDialog(null, "El Nombre De Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        else
+            Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre(), nombre));
     }//GEN-LAST:event_CambiaPasswordMouseClicked
 
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked

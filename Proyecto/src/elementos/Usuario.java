@@ -120,8 +120,4 @@ public class Usuario implements Serializable{
             this.password = password;
             this.tipo = tipo;
     }
-
-    public char[] setPassword() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

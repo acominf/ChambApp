@@ -86,6 +86,7 @@ public class Comentarios extends ContenidoPanel {
     private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
         //Guardar comentarios
         //TODO Completar
+        
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_EnviarMouseClicked
 

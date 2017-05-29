@@ -89,6 +89,10 @@ public class Archivo {
         }
         return user;
     }
+    public boolean eliminaArchivo(){
+        File f = new File(nombreArchivoE);
+        return f.delete();
+    }
     public boolean existe(){
         File f = new File(nombreArchivoE);
         return f.exists();
