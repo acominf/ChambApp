@@ -17,9 +17,13 @@ public class Usuario implements Serializable{
     private boolean tCompleto;
     private int experiencia;
     private String comentarios;
-    private String tipo;
+    private final String tipo;
+    private Proyecto proyecto;
     public void setSueldoMin(float sueldo){
         sueldoMin = sueldo;
+    }
+    public void setProyecto(Proyecto proyecto){
+        this.proyecto = proyecto;
     }
     public void setSueldoMax(float sueldo){
         sueldoMax = sueldo;
@@ -132,6 +136,7 @@ public class Usuario implements Serializable{
      * @param tipo
      */
     public Usuario(String nombre, char[] password, String pregunta, String respuesta, String tipo){
+            this.proyecto = new Proyecto();
             this.prestaciones = false;
             this.tCompleto = false;
             this.experiencia = 0;

@@ -35,6 +35,7 @@ public class Empleado extends ContenidoPanel {
         CambiaPassword = new javax.swing.JButton();
         BuscarCursos = new javax.swing.JButton();
         CamposExtra = new javax.swing.JButton();
+        BuscarProyecto = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -96,6 +97,8 @@ public class Empleado extends ContenidoPanel {
             }
         });
 
+        BuscarProyecto.setText("BuscarProyecto");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,7 +118,8 @@ public class Empleado extends ContenidoPanel {
                             .addComponent(CamposExtra)
                             .addComponent(SubirProyecto)
                             .addComponent(BuscaSocio)
-                            .addComponent(Salir))))
+                            .addComponent(Salir)))
+                    .addComponent(BuscarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -135,7 +139,9 @@ public class Empleado extends ContenidoPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BuscarCursos)
                     .addComponent(CamposExtra))
-                .addGap(43, 43, 43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BuscarProyecto)
+                .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Salir)
                     .addComponent(CambiaPassword))
@@ -179,6 +185,7 @@ public class Empleado extends ContenidoPanel {
     private javax.swing.JButton BuscaChamba;
     private javax.swing.JButton BuscaSocio;
     private javax.swing.JButton BuscarCursos;
+    private javax.swing.JButton BuscarProyecto;
     private javax.swing.JButton CalificarEmpleador;
     private javax.swing.JButton CambiaPassword;
     private javax.swing.JButton CamposExtra;
