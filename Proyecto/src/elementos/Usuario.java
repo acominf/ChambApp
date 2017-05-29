@@ -57,8 +57,10 @@ public class Usuario implements Serializable{
      */
     public String getRespuesta() {
         return respuesta;
+    }   
+    public String getTipo(){
+        return tipo;
     }
-
     /**
      * Metodo de modificacion al atributo respuesta de un usuario
      * @param respuesta
@@ -71,7 +73,7 @@ public class Usuario implements Serializable{
      * Metodo de acceso al atributo contraseña de un usuario
      * @return Contraseña del usuario
      */
-    public char[] getPassword() {
+    public char[] getPassword(){
         return password;
     }
 

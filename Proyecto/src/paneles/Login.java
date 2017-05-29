@@ -155,6 +155,13 @@ public class Login extends ContenidoPanel {
             if(!comparaPassword(password, temporal.getPassword())){
                 JOptionPane.showMessageDialog(null, "La Contraseña Es Incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
             }
+            else{
+                if(temporal.getTipo().equals("Empleado")){
+                    Utilerias.muestraComponente( this.getPadre(), new Empleado(this.getPadre()));
+                }
+                else
+                    Utilerias.muestraComponente( this.getPadre(), new Empleador(this.getPadre()));
+            }
         }
         else{
             JOptionPane.showMessageDialog(null, "El Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);

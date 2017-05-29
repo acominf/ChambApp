@@ -4,6 +4,7 @@ package paneles;
 
 import elementos.Archivo;
 import elementos.Usuario;
+import elementos.Utilerias;
 import javax.swing.JOptionPane;
 
 /**
@@ -199,6 +200,7 @@ public class RegistrarUsuario extends ContenidoPanel {
                     nuevo = new Archivo(new Usuario(nombre, password, pregunta, respuesta, tipoUsuario));
                     nuevo.escribeArchivo();
                     JOptionPane.showMessageDialog(null, "Usuario Creado Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+                    Utilerias.cambiaComponentePadre(this);
                 }
             }
         }
