@@ -46,14 +46,17 @@ public class MostrarCursos extends ContenidoPanel {
             if(Presencial.isSelected())
                 cursosDisponibles.add("MODELOS DE PRODUCCION");            
         }
-        String cadena = "Dadas sus preferencias, le recomendamos estos cursos,\n";
-        cadena += "seleccione uno o más y envienos un mail a cursos@chambapp.com,\n";
-        cadena += "se le notificará de manera oportuna los costos y fechas.\n";
-        cadena += "A continuacion los cursos:\n";
-        for (String curso : cursosDisponibles) 
-            cadena += "\n" + curso;
-        JOptionPane.showMessageDialog(null, cadena, "", JOptionPane.INFORMATION_MESSAGE);
-        Utilerias.cambiaComponentePadre(this);
+        if(!cursosDisponibles.isEmpty()) {
+            String cadena = "Dadas sus preferencias, le recomendamos estos cursos,\n";
+            cadena += "seleccione uno o más y envienos un mail a cursos@chambapp.com,\n";
+            cadena += "se le notificará de manera oportuna los costos y fechas.\n";
+            cadena += "A continuacion los cursos:\n";
+            for (String curso : cursosDisponibles) 
+                cadena += "\n" + curso;
+            JOptionPane.showMessageDialog(null, cadena, "", JOptionPane.INFORMATION_MESSAGE);
+            Utilerias.cambiaComponentePadre(this);
+        }
+        else JOptionPane.showMessageDialog(null, "No se encontro ningun curso acorde a sus preferencias.", "", JOptionPane.INFORMATION_MESSAGE);
     }
     
     /**
@@ -75,6 +78,7 @@ public class MostrarCursos extends ContenidoPanel {
         TPresencial = new javax.swing.JLabel();
         Presencial = new javax.swing.JCheckBox();
         Enviar = new javax.swing.JButton();
+        Regresar = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -107,6 +111,13 @@ public class MostrarCursos extends ContenidoPanel {
             }
         });
 
+        Regresar.setText("Regresar");
+        Regresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegresarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -114,17 +125,23 @@ public class MostrarCursos extends ContenidoPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Topico5)
-                    .addComponent(Topico4)
-                    .addComponent(Topico3)
-                    .addComponent(Topico2)
-                    .addComponent(Topico1)
-                    .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Instrucciones)
-                    .addComponent(TPresencial)
-                    .addComponent(Presencial)
-                    .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(112, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                        .addComponent(Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Topico5)
+                            .addComponent(Topico4)
+                            .addComponent(Topico3)
+                            .addComponent(Topico2)
+                            .addComponent(Topico1)
+                            .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Instrucciones)
+                            .addComponent(Presencial)
+                            .addComponent(TPresencial))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +165,9 @@ public class MostrarCursos extends ContenidoPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Presencial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Enviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Enviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Regresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -157,11 +176,16 @@ public class MostrarCursos extends ContenidoPanel {
         validarFormulario();
     }//GEN-LAST:event_EnviarMouseClicked
 
+    private void RegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseClicked
+        Utilerias.cambiaComponentePadre(this);
+    }//GEN-LAST:event_RegresarMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Enviar;
     private javax.swing.JLabel Instrucciones;
     private javax.swing.JCheckBox Presencial;
+    private javax.swing.JButton Regresar;
     private javax.swing.JLabel TPresencial;
     private javax.swing.JLabel Titulo;
     private javax.swing.JCheckBox Topico1;

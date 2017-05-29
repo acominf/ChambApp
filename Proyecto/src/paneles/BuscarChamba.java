@@ -233,7 +233,13 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
                         String archivo = temp.substring(0, temp.length()-4);
                         Archivo empleador = new Archivo(archivo);
                         Usuario temporal = empleador.leeArchivo();
-                        if(temporal.getSueldoMin() >= minimo && temporal.getSueldoMax() <= maximo && temporal.getCampo().equals(campo) && temporal.getExperiencia() == experiencia && temporal.getPrestaciones() == prestaciones && temporal.gettCompleto() == tCompleto && temporal.getTipo().equals("Empleador"))
+                        if(temporal.getSueldoMin() >= minimo && 
+                        temporal.getSueldoMax() <= maximo &&
+                        temporal.getCampo().equals(campo) &&
+                        temporal.getExperiencia() >= experiencia &&
+                        temporal.getPrestaciones() == prestaciones &&
+                        temporal.gettCompleto() == tCompleto &&
+                        temporal.getTipo().equals("Empleador"))
                             usuarios.add(temporal);
                     }
                 }
