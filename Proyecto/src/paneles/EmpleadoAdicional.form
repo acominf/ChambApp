@@ -28,7 +28,7 @@
                           <Component id="Titulo" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                           <Component id="Instrucciones" alignment="0" min="-2" pref="468" max="-2" attributes="0"/>
                           <Component id="Prestaciones" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CampoTrabajo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="TCamposTrabajo" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="Rango" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="CamposDeTrabajo" alignment="0" min="-2" pref="525" max="-2" attributes="0"/>
                           <Component id="TPrestaciones" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -45,16 +45,20 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="TMaximo" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Maximo" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="TMinimo" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="TMaximo" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="TMinimo" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="Minimo" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="Maximo" max="32767" attributes="0"/>
+                                          <Component id="Minimo" pref="70" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -84,7 +88,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Instrucciones" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="CampoTrabajo" min="-2" max="-2" attributes="0"/>
+              <Component id="TCamposTrabajo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="CamposDeTrabajo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -146,7 +150,7 @@
         <Property name="text" type="java.lang.String" value="Complete los siguientes campos para completar su perfil"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="CampoTrabajo">
+    <Component class="javax.swing.JLabel" name="TCamposTrabajo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Campo:"/>
       </Properties>
@@ -222,6 +226,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="Experiencia">
+      <Properties>
+        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+          <SpinnerModel initial="0" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Comentarios">
       <Properties>
@@ -252,6 +261,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Actualizar informaci&#xf3;n"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Enviar1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

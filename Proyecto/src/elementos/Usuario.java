@@ -18,7 +18,24 @@ public class Usuario implements Serializable{
     private int experiencia;
     private String comentarios;
     private String tipo;
-
+    public void setSueldoMin(float sueldo){
+        sueldoMin = sueldo;
+    }
+    public void setSueldoMax(float sueldo){
+        sueldoMax = sueldo;
+    }
+    public void setPrestaciones(){
+        prestaciones = true;
+    }
+    public void setTCompleto(){
+        tCompleto = true;
+    }
+    public void setExperiencia(int anios){
+        experiencia = anios;
+    }
+    public void setComentarios(String coment){
+        comentarios = coment;
+    }
     /**
      * Metodo de acceso al atributo nombre de un usuario
      * @return Nombre del usuario
@@ -112,8 +129,15 @@ public class Usuario implements Serializable{
      * @param password
      * @param pregunta
      * @param respuesta
+     * @param tipo
      */
     public Usuario(String nombre, char[] password, String pregunta, String respuesta, String tipo){
+            this.prestaciones = false;
+            this.tCompleto = false;
+            this.experiencia = 0;
+            this.comentarios = "";
+            this.sueldoMax = 0;
+            this.sueldoMin = 0;
             this.nombre = nombre;
             this.pregunta = pregunta;
             this.respuesta = respuesta;
