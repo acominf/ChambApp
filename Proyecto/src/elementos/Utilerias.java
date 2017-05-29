@@ -32,4 +32,21 @@ public class Utilerias {
         actual.getVentana().setVisible(true);
         actual.getPadre().setVisible(false);
     }
+    
+    /**
+     * Método que compara si son constraseñas son iguales
+     * @param principal
+     * @param secundario
+     * @return 
+     */
+    public static boolean comparaPassword(char principal[], char secundario[]){
+        if(principal.length == secundario.length){
+            for(int i = 0; i < principal.length; i++){
+                if(principal[i] != secundario[i])
+                    return false;
+            }
+            return true;
+        }
+        return false;
+    }
 }

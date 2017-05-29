@@ -3,6 +3,7 @@ import elementos.Utilerias;
 import elementos.Archivo;
 import elementos.Usuario;
 import javax.swing.JOptionPane;
+
 /**
  * Clase que se encarga de administrar el logueo de los usuarios
  */
@@ -10,6 +11,7 @@ public class Login extends ContenidoPanel {
     private String nombre;
     private char password[];
     Usuario temporal;
+    
     /**
      * Constructor de Login
      * @param ventana
@@ -18,6 +20,40 @@ public class Login extends ContenidoPanel {
         super(ventana);
         initComponents();
         //TODO: Cambiar datos de acceso, poner ejemplo
+    }    
+    
+    /**
+     * Método que se encarga de validar el formulario del Login
+     * @param verdadero
+     */
+    private void validarFormulario() {
+        nombre = Usuario.getText();
+        password = Password.getPassword();
+        Archivo fichero = new Archivo(nombre);
+        if(fichero.existe()){
+            temporal = fichero.leeArchivo();
+            if(!Utilerias.comparaPassword(password, temporal.getPassword()))
+                JOptionPane.showMessageDialog(null, "La Contraseña Es Incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
+            else {
+                this.getChambapp().setUsuarioActual(temporal);
+                if(temporal.getTipo().equals("Empleado"))
+                    Utilerias.muestraComponente( this.getPadre(), new Empleado(this.getPadre()));
+                else Utilerias.muestraComponente( this.getPadre(), new Empleador(this.getPadre()));
+            }
+        }
+        else JOptionPane.showMessageDialog(null, "El Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
+    }
+    
+    /**
+     * Método que se encarga de validar el el cambio de contraseña
+     * @param verdadero
+     */
+    private void validarCambioContrasena() {
+        nombre = JOptionPane.showInputDialog("Introduce El Nombre De Usuario:");
+        Archivo user = new Archivo(nombre);
+        if(!user.existe())
+            JOptionPane.showMessageDialog(null, "El Nombre De Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
+        else Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre(), nombre));
     }
     
     /**
@@ -128,13 +164,7 @@ public class Login extends ContenidoPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CambioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambioMouseClicked
-        nombre = JOptionPane.showInputDialog("Introduce El Nombre De Usuario:");
-        Archivo temporal = new Archivo(nombre);
-        if(!temporal.existe()){
-            JOptionPane.showMessageDialog(null, "El Nombre De Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-        else
-            Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre(), nombre));
+        validarCambioContrasena();
     }//GEN-LAST:event_CambioMouseClicked
 
     private void RegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistroMouseClicked
@@ -142,35 +172,9 @@ public class Login extends ContenidoPanel {
     }//GEN-LAST:event_RegistroMouseClicked
 
     private void EntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EntrarMouseClicked
-        nombre = Usuario.getText();
-        password = Password.getPassword();
-        Archivo fichero = new Archivo(nombre);
-        if(fichero.existe()){
-            temporal = fichero.leeArchivo();
-            if(!comparaPassword(password, temporal.getPassword()))
-                JOptionPane.showMessageDialog(null, "La Contraseña Es Incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
-            else {
-                this.getChambapp().setUsuarioActual(temporal);
-                if(temporal.getTipo().equals("Empleado"))
-                    Utilerias.muestraComponente( this.getPadre(), new Empleado(this.getPadre()));
-                else Utilerias.muestraComponente( this.getPadre(), new Empleador(this.getPadre()));
-            }
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "El Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
-        }        
+        validarFormulario();
     }//GEN-LAST:event_EntrarMouseClicked
     
-    private boolean comparaPassword(char principal[], char secundario[]){
-        if(principal.length == secundario.length){
-            for(int i = 0; i < principal.length; i++){
-                if(principal[i] != secundario[i])
-                    return false;
-            }
-            return true;
-        }
-        return false;
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cambio;
     private javax.swing.JButton Entrar;
