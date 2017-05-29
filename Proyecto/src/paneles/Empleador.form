@@ -25,17 +25,18 @@
                           <Component id="BuscaChambeador" min="-2" max="-2" attributes="0"/>
                           <Component id="CalificaEmpleado" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="CambiarPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="BuscarCursos" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="SubirProyecto" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="SubirProyecto" max="32767" attributes="0"/>
                           <Component id="BuscaSocio" min="-2" max="-2" attributes="0"/>
                           <Component id="Salir" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="CamposExtra" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="BuscarCursos" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,7 +56,10 @@
                   <Component id="CalificaEmpleado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="BuscarCursos" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BuscarCursos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CamposExtra" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Salir" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -130,6 +134,14 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuscarCursosMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="CamposExtra">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="A&#xf1;adir Campos Extra"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CamposExtraActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

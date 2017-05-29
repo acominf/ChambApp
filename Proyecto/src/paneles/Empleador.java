@@ -34,6 +34,7 @@ public class Empleador extends ContenidoPanel {
         Salir = new javax.swing.JButton();
         CambiarPassword = new javax.swing.JButton();
         BuscarCursos = new javax.swing.JButton();
+        CamposExtra = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -88,6 +89,13 @@ public class Empleador extends ContenidoPanel {
             }
         });
 
+        CamposExtra.setText("Añadir Campos Extra");
+        CamposExtra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CamposExtraActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -100,14 +108,15 @@ public class Empleador extends ContenidoPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BuscaChambeador)
                             .addComponent(CalificaEmpleado)
-                            .addComponent(CambiarPassword))
+                            .addComponent(CambiarPassword)
+                            .addComponent(BuscarCursos))
                         .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SubirProyecto)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(SubirProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BuscaSocio)
-                            .addComponent(Salir)))
-                    .addComponent(BuscarCursos))
-                .addContainerGap(37, Short.MAX_VALUE))
+                            .addComponent(Salir)
+                            .addComponent(CamposExtra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,7 +132,9 @@ public class Empleador extends ContenidoPanel {
                     .addComponent(SubirProyecto)
                     .addComponent(CalificaEmpleado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BuscarCursos)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BuscarCursos)
+                    .addComponent(CamposExtra))
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Salir)
@@ -160,6 +171,11 @@ public class Empleador extends ContenidoPanel {
         Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()) );
     }//GEN-LAST:event_CambiarPasswordMouseClicked
 
+    private void CamposExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CamposExtraActionPerformed
+        // TODO add your handling code here:
+        Utilerias.muestraComponente( this.getPadre(), new EmpleadorAdicional(this.getPadre()) );
+    }//GEN-LAST:event_CamposExtraActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscaChambeador;
@@ -167,6 +183,7 @@ public class Empleador extends ContenidoPanel {
     private javax.swing.JButton BuscarCursos;
     private javax.swing.JButton CalificaEmpleado;
     private javax.swing.JButton CambiarPassword;
+    private javax.swing.JButton CamposExtra;
     private javax.swing.JButton Salir;
     private javax.swing.JButton SubirProyecto;
     private javax.swing.JLabel Titulo;
