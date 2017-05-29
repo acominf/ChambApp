@@ -9,12 +9,13 @@ package paneles;
  *
  * @author davidazullo
  */
-public class AcercaDe extends javax.swing.JPanel {
+public class AcercaDe extends ContenidoPanel {
 
     /**
      * Creates new form AcercaDe
      */
-    public AcercaDe() {
+    public AcercaDe(ContenidoJFrame ventana) {
+        super(ventana);
         initComponents();
     }
 

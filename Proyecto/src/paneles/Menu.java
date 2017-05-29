@@ -120,7 +120,7 @@ public class Menu extends ContenidoJFrame{
     }//GEN-LAST:event_ComentariosMouseClicked
 
     private void AcercaDeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercaDeMouseClicked
-        Utilerias.muestraComponente( this, new AcercaDe1(this) );
+        Utilerias.muestraComponente( this, new AcercaDe(this) );
     }//GEN-LAST:event_AcercaDeMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
