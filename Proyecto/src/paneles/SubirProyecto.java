@@ -1,5 +1,9 @@
 package paneles;
-
+import elementos.Usuario;
+import elementos.Archivo;
+import elementos.Proyecto;
+import elementos.Utilerias;
+import javax.swing.JOptionPane;
 //TODO: Completarla
 /**
  *
@@ -35,6 +39,8 @@ public class SubirProyecto extends ContenidoPanel {
         Descripcion = new javax.swing.JTextField();
         TEmpresa = new javax.swing.JLabel();
         Empresa = new javax.swing.JCheckBox();
+        TNombre = new javax.swing.JLabel();
+        Nombre = new javax.swing.JTextField();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -48,6 +54,11 @@ public class SubirProyecto extends ContenidoPanel {
         Instrucciones.setText("Complete los siguientes campos para realizar su búsqueda");
 
         Enviar.setText("Subir proyecto");
+        Enviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnviarActionPerformed(evt);
+            }
+        });
 
         DescipcionMonto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         DescipcionMonto.setText("Monto solicitado para financiar proyecto");
@@ -55,10 +66,14 @@ public class SubirProyecto extends ContenidoPanel {
         TMonto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TMonto.setText("Monto");
 
+        Monto.setModel(new javax.swing.SpinnerNumberModel(0.0f, 0.0f, null, 1.0f));
+
         TEmpresa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TEmpresa.setText("Es una empresa ya constituida, con menos de 2 años de actividad");
 
         Empresa.setText("Sí");
+
+        TNombre.setText("Nombre Proyecto: ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -84,10 +99,14 @@ public class SubirProyecto extends ContenidoPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(TMonto)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(DescipcionMonto)
+                            .addComponent(TEmpresa)
                             .addComponent(Empresa)
-                            .addComponent(TEmpresa))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(TNombre)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -97,25 +116,47 @@ public class SubirProyecto extends ContenidoPanel {
                 .addComponent(Titulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Instrucciones)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TNombre)
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TDescripcion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(DescipcionMonto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TMonto)
-                    .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Monto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TMonto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TEmpresa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Empresa)
-                .addGap(10, 10, 10)
+                .addGap(5, 5, 5)
                 .addComponent(Enviar)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
+        // TODO add your handling code here:
+        Usuario temporal = this.getChambapp().getUsuarioActual();
+        if(Nombre.getText().equals("") || Descripcion.getText().equals("") || (float)Monto.getValue() == 0){
+            JOptionPane.showMessageDialog(null, "Falta Introducir Datos", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            Proyecto temp = new Proyecto(Nombre.getText(), Descripcion.getText(), Empresa.isSelected(),(float)Monto.getValue());
+            temporal.setProyecto(temp);
+            Archivo fichero = new Archivo(temporal.getNombre());
+            fichero.eliminaArchivo();
+            fichero = new Archivo(temporal);
+            fichero.escribeArchivo();
+            JOptionPane.showMessageDialog(null, "Proyecto Agregado Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+            Utilerias.cambiaComponentePadre(this);
+        }
+    }//GEN-LAST:event_EnviarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -125,9 +166,11 @@ public class SubirProyecto extends ContenidoPanel {
     private javax.swing.JButton Enviar;
     private javax.swing.JLabel Instrucciones;
     private javax.swing.JSpinner Monto;
+    private javax.swing.JTextField Nombre;
     private javax.swing.JLabel TDescripcion;
     private javax.swing.JLabel TEmpresa;
     private javax.swing.JLabel TMonto;
+    private javax.swing.JLabel TNombre;
     private javax.swing.JLabel Titulo;
     // End of variables declaration//GEN-END:variables
 }

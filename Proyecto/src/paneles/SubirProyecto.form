@@ -40,11 +40,16 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="TMonto" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="Monto" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="Monto" min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                           <Component id="DescipcionMonto" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Empresa" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="TEmpresa" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Empresa" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="TNombre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Nombre" min="-2" pref="273" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -59,22 +64,27 @@
               <Component id="Titulo" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Instrucciones" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="TNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="TDescripcion" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Descripcion" min="-2" pref="60" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="DescipcionMonto" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="TMonto" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Monto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TMonto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="TEmpresa" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Empresa" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
               <Component id="Enviar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -110,6 +120,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Subir proyecto"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EnviarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="DescipcionMonto">
       <Properties>
@@ -124,6 +137,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JSpinner" name="Monto">
+      <Properties>
+        <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
+          <SpinnerModel initial="0.0" minimum="0.0" numberType="java.lang.Float" stepSize="1.0" type="number"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="Descripcion">
     </Component>
@@ -137,6 +155,13 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="S&#xed;"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="TNombre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre Proyecto: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="Nombre">
     </Component>
   </SubComponents>
 </Form>
