@@ -1,11 +1,15 @@
 package paneles;
 import elementos.Utilerias;
-
+import elementos.Archivo;
+import elementos.Usuario;
+import javax.swing.JOptionPane;
 /**
  * Clase que se encarga de administrar el logueo de los usuarios
  */
 public class Login extends ContenidoPanel {
-
+    private String nombre;
+    private char password[];
+    Usuario temporal;
     /**
      * Constructor de Login
      * @param ventana
@@ -32,15 +36,13 @@ public class Login extends ContenidoPanel {
         Password = new javax.swing.JPasswordField();
         Entrar = new javax.swing.JButton();
         Cambio = new javax.swing.JButton();
-        Resgitro = new javax.swing.JButton();
+        Registro = new javax.swing.JButton();
         TCambio = new javax.swing.JLabel();
         TRegistro = new javax.swing.JLabel();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("Login");
-
-        Usuario.setText("Braulio García");
 
         TUsuario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         TUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -56,6 +58,11 @@ public class Login extends ContenidoPanel {
                 EntrarMouseClicked(evt);
             }
         });
+        Entrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EntrarActionPerformed(evt);
+            }
+        });
 
         Cambio.setText("Solicitar cambio de contraseña");
         Cambio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,10 +71,10 @@ public class Login extends ContenidoPanel {
             }
         });
 
-        Resgitro.setText("Registrarse");
-        Resgitro.addMouseListener(new java.awt.event.MouseAdapter() {
+        Registro.setText("Registrarse");
+        Registro.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ResgitroMouseClicked(evt);
+                RegistroMouseClicked(evt);
             }
         });
 
@@ -93,7 +100,7 @@ public class Login extends ContenidoPanel {
                     .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Cambio)
-                    .addComponent(Resgitro, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Registro, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TCambio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(TRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
@@ -120,7 +127,7 @@ public class Login extends ContenidoPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Resgitro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Registro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(33, 33, 33))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -129,19 +136,45 @@ public class Login extends ContenidoPanel {
         Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()) );
     }//GEN-LAST:event_CambioMouseClicked
 
-    private void ResgitroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResgitroMouseClicked
+    private void RegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistroMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new RegistrarUsuario(this.getPadre()) );
-    }//GEN-LAST:event_ResgitroMouseClicked
+    }//GEN-LAST:event_RegistroMouseClicked
 
     private void EntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EntrarMouseClicked
         // TODO: Validar logueo de usuario
+        
     }//GEN-LAST:event_EntrarMouseClicked
 
+    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
+        // TODO add your handling code here:
+        nombre = Usuario.getText();
+        password = Password.getPassword();
+        Archivo fichero = new Archivo(nombre);
+        if(fichero.existe()){
+            temporal = fichero.leeArchivo();
+            if(!comparaPassword(password, temporal.getPassword())){
+                JOptionPane.showMessageDialog(null, "La Contraseña Es Incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "El Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_EntrarActionPerformed
+    private boolean comparaPassword(char principal[], char secundario[]){
+        if(principal.length == secundario.length){
+            for(int i = 0; i < principal.length; i++){
+                if(principal[i] != secundario[i])
+                    return false;
+            }
+            return true;
+        }
+        return false;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cambio;
     private javax.swing.JButton Entrar;
     private javax.swing.JPasswordField Password;
-    private javax.swing.JButton Resgitro;
+    private javax.swing.JButton Registro;
     private javax.swing.JLabel TCambio;
     private javax.swing.JLabel TPassword;
     private javax.swing.JLabel TRegistro;

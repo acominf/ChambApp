@@ -26,7 +26,7 @@
                   <Component id="Password" alignment="2" min="-2" pref="253" max="-2" attributes="0"/>
                   <Component id="Entrar" alignment="2" min="-2" pref="253" max="-2" attributes="0"/>
                   <Component id="Cambio" alignment="2" min="-2" max="-2" attributes="0"/>
-                  <Component id="Resgitro" alignment="2" min="-2" pref="253" max="-2" attributes="0"/>
+                  <Component id="Registro" alignment="2" min="-2" pref="253" max="-2" attributes="0"/>
                   <Component id="TCambio" alignment="2" max="32767" attributes="0"/>
                   <Component id="TRegistro" alignment="2" max="32767" attributes="0"/>
               </Group>
@@ -56,7 +56,7 @@
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="TRegistro" max="32767" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Component id="Resgitro" max="32767" attributes="0"/>
+              <Component id="Registro" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -73,9 +73,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="Usuario">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Braulio Garc&#xed;a"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="TUsuario">
       <Properties>
@@ -103,6 +100,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="EntrarMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EntrarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Cambio">
@@ -113,12 +111,12 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CambioMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Resgitro">
+    <Component class="javax.swing.JButton" name="Registro">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrarse"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ResgitroMouseClicked"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="RegistroMouseClicked"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="TCambio">
