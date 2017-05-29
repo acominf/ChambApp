@@ -1,7 +1,4 @@
 package paneles;
-
-//TODO: Completarla
-
 import elementos.Archivo;
 import elementos.Usuario;
 import elementos.Utilerias;
@@ -10,19 +7,66 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author davidazullo
+ * Clase que se encarga de buscar empleos que ofrezcan los empleadores
  */
 public class BuscarChamba extends ContenidoPanel {
 
     /**
-     * Creates new form BuscarChamba
+     * Constructor de la interfaz de usuario de BuscarChamba
      */
     public BuscarChamba(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }
 
+    /**
+     * Método que se encarga de validar el formulario
+     */
+    private void validarFormulario() {
+        float minimo = (float)Minimo.getValue();
+        float maximo = (float)Maximo.getValue();
+        String campo = (String)CamposDeTrabajo.getSelectedItem();
+        int experiencia = (int)Experiencia.getValue();
+        boolean prestaciones = Prestaciones.isSelected();
+        boolean tCompleto = TiempoCompleto.isSelected();
+        if(minimo == 0 || maximo == 0){
+            JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            ArrayList<Usuario> usuarios = new ArrayList<>();
+            File f = new File(System.getProperty("user.dir"));
+            if(f.exists()){
+                File[] ficheros = f.listFiles(); 
+                for (File fichero : ficheros) {
+                    String temp = fichero.getName();
+                    if(temp.endsWith(".dat")){
+                        String archivo = temp.substring(0, temp.length()-4);
+                        Archivo empleador = new Archivo(archivo);
+                        Usuario temporal = empleador.leeArchivo();
+                        if(temporal.getSueldoMin() >= minimo && 
+                        temporal.getSueldoMax() <= maximo &&
+                        temporal.getCampo().equals(campo) &&
+                        temporal.getExperiencia() >= experiencia &&
+                        temporal.getPrestaciones() == prestaciones &&
+                        temporal.gettCompleto() == tCompleto &&
+                        temporal.getTipo().equals("Empleador"))
+                            usuarios.add(temporal);
+                    }
+                }
+            }
+            if(usuarios.isEmpty()){
+                JOptionPane.showMessageDialog(null, "No hay empleos con los paramétros especificados", "", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else{
+                String cadena = "Usuarios Que Cumplen Con El Perfil Solicitado: \n";
+                for(Usuario user : usuarios)
+                    cadena += Utilerias.convierteACadena(user);
+                JOptionPane.showMessageDialog(null, cadena, "", JOptionPane.INFORMATION_MESSAGE);
+                Utilerias.cambiaComponentePadre(this);
+            }
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -212,58 +256,12 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
-        float minimo = (float)Minimo.getValue();
-        float maximo = (float)Maximo.getValue();
-        String campo = (String)CamposDeTrabajo.getSelectedItem();
-        int experiencia = (int)Experiencia.getValue();
-        boolean prestaciones = Prestaciones.isSelected();
-        boolean tCompleto = TiempoCompleto.isSelected();
-        if(minimo == 0 || maximo == 0){
-            JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            ArrayList<Usuario> usuarios = new ArrayList<>();
-            File f = new File(System.getProperty("user.dir"));
-            if(f.exists()){
-                File[] ficheros = f.listFiles(); 
-                for (File fichero : ficheros) {
-                    String temp = fichero.getName();
-                    if(temp.endsWith(".dat")){
-                        String archivo = temp.substring(0, temp.length()-4);
-                        Archivo empleador = new Archivo(archivo);
-                        Usuario temporal = empleador.leeArchivo();
-                        if(temporal.getSueldoMin() >= minimo && 
-                        temporal.getSueldoMax() <= maximo &&
-                        temporal.getCampo().equals(campo) &&
-                        temporal.getExperiencia() >= experiencia &&
-                        temporal.getPrestaciones() == prestaciones &&
-                        temporal.gettCompleto() == tCompleto &&
-                        temporal.getTipo().equals("Empleador"))
-                            usuarios.add(temporal);
-                    }
-                }
-            }
-            if(usuarios.isEmpty()){
-                JOptionPane.showMessageDialog(null, "No hay empleos con los paramétros especificados", "", JOptionPane.INFORMATION_MESSAGE);
-            }
-            else{
-                ArrayList<String> cad = new ArrayList<>();
-                cad.add("Usuarios Que Cumplen Con El Perfil Solicitado: \n");
-                for(Usuario user : usuarios){
-                    cad.add(Utilerias.convierteACadena(user));
-                }
-                JOptionPane.showMessageDialog(null, cad, "", JOptionPane.INFORMATION_MESSAGE);
-                Utilerias.cambiaComponentePadre(this);
-            }
-        }
+        validarFormulario();
     }//GEN-LAST:event_EnviarActionPerformed
 
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
-        // TODO add your handling code here:
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_RegresarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CampoTrabajo;
