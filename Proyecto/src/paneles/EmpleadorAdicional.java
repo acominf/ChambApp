@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paneles;
-
 import elementos.Archivo;
 import elementos.Usuario;
 import elementos.Utilerias;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author berna
+ * Clase que se encarga de añadir los campos restantes al empleador
  */
 public class EmpleadorAdicional extends ContenidoPanel{
     private String campo;
@@ -22,8 +15,9 @@ public class EmpleadorAdicional extends ContenidoPanel{
     private boolean tCompleto;
     private int experiencia;
     private String comentarios;
+    
     /**
-     * Creates new form EmpleadorAdicional
+     * Constructor de la interfaz de usuario del EmpleadorAdicional
      * @param ventana
      */
     public EmpleadorAdicional(ContenidoJFrame ventana){
@@ -31,6 +25,37 @@ public class EmpleadorAdicional extends ContenidoPanel{
         initComponents();
     }
 
+    /**
+     * Método que se encarga de validar el formulario
+     */
+    private void validarFormulario() {
+        campo = (String) CamposDeTrabajo.getSelectedItem();
+        sueldoMin =(float) Minimo.getValue();
+        sueldoMax = (float) Maximo.getValue();
+        experiencia = (int) Experiencia.getValue();
+        comentarios = Comentarios.getText();
+        if(sueldoMin == 0 || sueldoMax == 0){
+            JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            Usuario temporal = this.getChambapp().getUsuarioActual();
+            Archivo fichero = new Archivo(temporal.getNombre());
+            temporal.setSueldoMin(sueldoMin);
+            temporal.setSueldoMax(sueldoMax);
+            temporal.setComentarios(comentarios);
+            temporal.setExperiencia(experiencia);
+            if(Prestaciones.isSelected())
+                temporal.setPrestaciones();
+            if(TiempoCompleto.isSelected())
+                temporal.setTCompleto();
+            fichero.eliminaArchivo();
+            fichero = new Archivo(temporal);
+            fichero.escribeArchivo();
+            JOptionPane.showMessageDialog(null, "Cambios Agregados Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+            Utilerias.cambiaComponentePadre(this);
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -226,32 +251,7 @@ Enviar1.addActionListener(new java.awt.event.ActionListener() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Enviar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enviar1ActionPerformed
-        // TODO add your handling code here:
-        campo = (String) CamposDeTrabajo.getSelectedItem();
-        sueldoMin =(float) Minimo.getValue();
-        sueldoMax = (float) Maximo.getValue();
-        experiencia = (int) Experiencia.getValue();
-        comentarios = Comentarios.getText();
-        if(sueldoMin == 0 || sueldoMax == 0){
-            JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            Usuario temporal = this.getChambapp().getUsuarioActual();
-            Archivo fichero = new Archivo(temporal.getNombre());
-            temporal.setSueldoMin(sueldoMin);
-            temporal.setSueldoMax(sueldoMax);
-            temporal.setComentarios(comentarios);
-            temporal.setExperiencia(experiencia);
-            if(Prestaciones.isSelected())
-                temporal.setPrestaciones();
-            if(TiempoCompleto.isSelected())
-                temporal.setTCompleto();
-            fichero.eliminaArchivo();
-            fichero = new Archivo(temporal);
-            fichero.escribeArchivo();
-            JOptionPane.showMessageDialog(null, "Cambios Agregados Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
-            Utilerias.cambiaComponentePadre(this);
-        } 
+        validarFormulario(); 
     }//GEN-LAST:event_Enviar1ActionPerformed
 
 

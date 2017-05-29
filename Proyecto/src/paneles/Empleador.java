@@ -111,15 +111,15 @@ public class Empleador extends ContenidoPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(BuscarProyecto, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BuscaChambeador, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CalificaEmpleado, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CambiarPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BuscarCursos, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(BuscarCursos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CalificaEmpleado, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(SubirProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BuscaSocio)
                             .addComponent(Salir)
-                            .addComponent(CamposExtra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(CamposExtra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BuscaSocio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -178,7 +178,6 @@ public class Empleador extends ContenidoPanel {
     }//GEN-LAST:event_CambiarPasswordMouseClicked
 
     private void CamposExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CamposExtraActionPerformed
-        // TODO add your handling code here:
         Utilerias.muestraComponente( this.getPadre(), new EmpleadorAdicional(this.getPadre()) );
     }//GEN-LAST:event_CamposExtraActionPerformed
 

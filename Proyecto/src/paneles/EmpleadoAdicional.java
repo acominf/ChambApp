@@ -1,14 +1,11 @@
 package paneles;
-
-// TODO: Completarlo
-
 import javax.swing.JOptionPane;
 import elementos.Usuario;
 import elementos.Archivo;
 import elementos.Utilerias;
+
 /**
- *
- * @author davidazullo
+ * Clase que se encarga de añadir los campos adicionales del empleado
  */
 public class EmpleadoAdicional extends ContenidoPanel {
     private String campo;
@@ -18,8 +15,9 @@ public class EmpleadoAdicional extends ContenidoPanel {
     private boolean tCompleto;
     private int experiencia;
     private String comentarios;
+    
     /**
-     * Creates new form EmpleadoAdicional
+     * Constructor de la interfaz de usuario del EmpleadoAdicional
      * @param ventana
      */
     public EmpleadoAdicional(ContenidoJFrame ventana) {
@@ -27,6 +25,36 @@ public class EmpleadoAdicional extends ContenidoPanel {
         initComponents();
     }
 
+    /**
+     * Método que se encarga de validar el formulario
+     */
+    private void validarFormulario() {
+        campo = (String) CamposDeTrabajo.getSelectedItem();
+        sueldoMin =(float) Minimo.getValue();
+        sueldoMax = (float) Maximo.getValue();
+        experiencia = (int) Experiencia.getValue();
+        comentarios = Comentarios.getText();
+        if(sueldoMin == 0 || sueldoMax == 0)
+            JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
+        else{
+            Usuario temporal = this.getChambapp().getUsuarioActual();
+            Archivo fichero = new Archivo(temporal.getNombre());
+            temporal.setSueldoMin(sueldoMin);
+            temporal.setSueldoMax(sueldoMax);
+            temporal.setComentarios(comentarios);
+            temporal.setExperiencia(experiencia);
+            if(Prestaciones.isSelected())
+                temporal.setPrestaciones();
+            if(TiempoCompleto.isSelected())
+                temporal.setTCompleto();
+            fichero.eliminaArchivo();
+            fichero = new Archivo(temporal);
+            fichero.escribeArchivo();
+            JOptionPane.showMessageDialog(null, "Cambios Agregados Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+            Utilerias.cambiaComponentePadre(this);
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -203,34 +231,8 @@ Enviar1.addActionListener(new java.awt.event.ActionListener() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Enviar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enviar1ActionPerformed
-        // TODO add your handling code here:
-        campo = (String) CamposDeTrabajo.getSelectedItem();
-        sueldoMin =(float) Minimo.getValue();
-        sueldoMax = (float) Maximo.getValue();
-        experiencia = (int) Experiencia.getValue();
-        comentarios = Comentarios.getText();
-        if(sueldoMin == 0 || sueldoMax == 0){
-            JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            Usuario temporal = this.getChambapp().getUsuarioActual();
-            Archivo fichero = new Archivo(temporal.getNombre());
-            temporal.setSueldoMin(sueldoMin);
-            temporal.setSueldoMax(sueldoMax);
-            temporal.setComentarios(comentarios);
-            temporal.setExperiencia(experiencia);
-            if(Prestaciones.isSelected())
-                temporal.setPrestaciones();
-            if(TiempoCompleto.isSelected())
-                temporal.setTCompleto();
-            fichero.eliminaArchivo();
-            fichero = new Archivo(temporal);
-            fichero.escribeArchivo();
-            JOptionPane.showMessageDialog(null, "Cambios Agregados Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
-            Utilerias.cambiaComponentePadre(this);
-        } 
+        validarFormulario(); 
     }//GEN-LAST:event_Enviar1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea AreaTexto;

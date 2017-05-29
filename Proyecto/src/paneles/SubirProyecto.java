@@ -4,22 +4,40 @@ import elementos.Archivo;
 import elementos.Proyecto;
 import elementos.Utilerias;
 import javax.swing.JOptionPane;
-//TODO: Completarla
+
 /**
- *
- * @author davidazullo
+ * Clase que se encarga de añadir el proyecto actual al usuario y lo sobreescribe
  */
 public class SubirProyecto extends ContenidoPanel {
 
     /**
-     * Creates new form BuscarChamba
+     * Constructor de la interfaz de usuario de SubirProyecto
      * @param ventana
      */
     public SubirProyecto(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
     }
-
+    
+    /**
+     * Método que se encarga de validar los datos del formulario
+     */
+    private void validarFormulario() {
+        Usuario temporal = this.getChambapp().getUsuarioActual();
+        if(Nombre.getText().equals("") || Descripcion.getText().equals("") || (float)Monto.getValue() == 0)
+            JOptionPane.showMessageDialog(null, "Falta Introducir Datos", "Error", JOptionPane.WARNING_MESSAGE);
+        else {
+            Proyecto temp = new Proyecto(Nombre.getText(), Descripcion.getText(), Empresa.isSelected(),(float)Monto.getValue());
+            temporal.setProyecto(temp);
+            Archivo fichero = new Archivo(temporal.getNombre());
+            fichero.eliminaArchivo();
+            fichero = new Archivo(temporal);
+            fichero.escribeArchivo();
+            JOptionPane.showMessageDialog(null, "Proyecto Agregado Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
+            Utilerias.cambiaComponentePadre(this);
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -141,23 +159,8 @@ public class SubirProyecto extends ContenidoPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
-        Usuario temporal = this.getChambapp().getUsuarioActual();
-        if(Nombre.getText().equals("") || Descripcion.getText().equals("") || (float)Monto.getValue() == 0){
-            JOptionPane.showMessageDialog(null, "Falta Introducir Datos", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-        else{
-            Proyecto temp = new Proyecto(Nombre.getText(), Descripcion.getText(), Empresa.isSelected(),(float)Monto.getValue());
-            temporal.setProyecto(temp);
-            Archivo fichero = new Archivo(temporal.getNombre());
-            fichero.eliminaArchivo();
-            fichero = new Archivo(temporal);
-            fichero.escribeArchivo();
-            JOptionPane.showMessageDialog(null, "Proyecto Agregado Correctamente", "", JOptionPane.INFORMATION_MESSAGE);
-            Utilerias.cambiaComponentePadre(this);
-        }
+        validarFormulario();
     }//GEN-LAST:event_EnviarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DescipcionMonto;

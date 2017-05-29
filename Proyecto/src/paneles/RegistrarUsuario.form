@@ -16,40 +16,40 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="Password" alignment="0" pref="253" max="32767" attributes="0"/>
-                  <Component id="TPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="RPassword" alignment="0" pref="253" max="32767" attributes="0"/>
-                  <Component id="TRPassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="Nombre" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="Enviar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="Cancelar" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="Password" alignment="0" pref="253" max="32767" attributes="0"/>
+                      <Component id="TPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="RPassword" alignment="0" pref="253" max="32767" attributes="0"/>
+                      <Component id="TRPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Nombre" alignment="0" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="TRespuesta" min="-2" max="-2" attributes="0"/>
-                          <Component id="TPreguntas" min="-2" max="-2" attributes="0"/>
-                          <Component id="Preguntas" min="-2" pref="193" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
                   <Component id="Respuesta" max="32767" attributes="0"/>
                   <Component id="TipoUsuario" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="TTipoUsuario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="TPreguntas" min="-2" max="-2" attributes="0"/>
+                          <Component id="Preguntas" min="-2" max="-2" attributes="0"/>
+                          <Component id="TRespuesta" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
-              <Component id="Enviar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Component id="Cancelar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
@@ -57,7 +57,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="Instrucciones" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="TNombre" max="32767" attributes="0"/>
+                          <Component id="TNombre" pref="138" max="32767" attributes="0"/>
                           <EmptySpace min="415" pref="415" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -73,9 +73,9 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
               <Component id="TPreguntas" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Preguntas" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -188,12 +188,11 @@
     <Component class="javax.swing.JComboBox" name="Preguntas">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="5">
+          <StringArray count="4">
             <StringItem index="0" value="Nombre De Tu Primer Mascota"/>
             <StringItem index="1" value="Lugar De Nacimiento De Tu Madre"/>
             <StringItem index="2" value="Cancion Favorita"/>
             <StringItem index="3" value="Nombre De Tu Abuela/o"/>
-            <StringItem index="4" value=" "/>
           </StringArray>
         </Property>
       </Properties>
@@ -211,11 +210,9 @@
     <Component class="javax.swing.JComboBox" name="TipoUsuario">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
+          <StringArray count="2">
             <StringItem index="0" value="Empleado"/>
             <StringItem index="1" value="Empleador"/>
-            <StringItem index="2" value=" "/>
-            <StringItem index="3" value=" "/>
           </StringArray>
         </Property>
       </Properties>
