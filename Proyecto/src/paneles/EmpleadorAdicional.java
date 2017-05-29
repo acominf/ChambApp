@@ -1,18 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package paneles;
 
-// TODO: Completarlo
 /**
  *
- * @author davidazullo
+ * @author berna
  */
-public class EmpleadoAdicional extends ContenidoPanel {
+public class EmpleadorAdicional extends javax.swing.JPanel {
 
     /**
-     * Creates new form EmpleadoAdicional
-     * @param ventana
+     * Creates new form EmpleadorAdicional
      */
-    public EmpleadoAdicional(ContenidoJFrame ventana) {
-        super(ventana);
+    public EmpleadorAdicional() {
         initComponents();
     }
 
@@ -25,6 +27,7 @@ public class EmpleadoAdicional extends ContenidoPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
         Instrucciones = new javax.swing.JLabel();
         CampoTrabajo = new javax.swing.JLabel();
@@ -44,25 +47,24 @@ public class EmpleadoAdicional extends ContenidoPanel {
         Comentarios = new javax.swing.JLabel();
         CampoComentarios = new javax.swing.JScrollPane();
         AreaTexto = new javax.swing.JTextArea();
-        Enviar = new javax.swing.JButton();
         Enviar1 = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo.setText("Empleado");
+        Titulo.setText("Empleador");
 
         Instrucciones.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Instrucciones.setText("Complete los siguientes campos para completar su perfil");
 
-        CampoTrabajo.setText("Campo:");
+        CampoTrabajo.setText("Trabajo Solicitado");
 
         CamposDeTrabajo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tecnologías de la información",
             "Mercadotecnía",
             "Industria",
             "Administración de empresas" }));
 
-Rango.setText("Rango de saldo que considera justos para usted");
+Rango.setText("Saldo que usted otogará por el trabajo");
 
 TMinimo.setText("Mínimo:");
 
@@ -73,17 +75,17 @@ Maximo.setToolTipText("");
 
 TMaximo.setText("Máximo:");
 
-TPrestaciones.setText("Necesita prestaciones");
+TPrestaciones.setText("¿Otorga prestaciones?");
 
 Prestaciones.setText("Sí");
 
-TTiempoCompleto.setText("Quiere trabajar tiempo completo");
+TTiempoCompleto.setText("¿Necesita Empleado Tiempo Completo?");
 
 TiempoCompleto.setText("Sí");
 
 TExperiencia.setText("Años");
 
-ExperienciaTitulo.setText("Cantidad de años de experiencia en su campo");
+ExperienciaTitulo.setText("¿Experiencia necesaria para el trabajo?");
 
 Comentarios.setText("Comentarios Adicionales:");
 
@@ -91,22 +93,20 @@ AreaTexto.setColumns(20);
 AreaTexto.setRows(5);
 CampoComentarios.setViewportView(AreaTexto);
 
-Enviar.setText("Subir CV");
-
 Enviar1.setText("Actualizar información");
 
-javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-this.setLayout(layout);
-layout.setHorizontalGroup(
-    layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-    .addGroup(layout.createSequentialGroup()
+javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+jPanel1.setLayout(jPanel1Layout);
+jPanel1Layout.setHorizontalGroup(
+    jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+    .addGroup(jPanel1Layout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(CampoComentarios)
                 .addGap(278, 278, 278))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Instrucciones, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Prestaciones)
@@ -117,36 +117,32 @@ layout.setHorizontalGroup(
                     .addComponent(Comentarios)
                     .addComponent(TiempoCompleto)
                     .addComponent(TTiempoCompleto)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(ExperienciaTitulo)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(Enviar)
-                            .addGap(23, 23, 23)))
-                    .addGroup(layout.createSequentialGroup()
+                    .addComponent(ExperienciaTitulo)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(TMaximo)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(TMinimo)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(TExperiencia)
                                 .addGap(33, 33, 33)
                                 .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())))
-    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addComponent(Enviar1)
         .addGap(178, 178, 178))
     );
-    layout.setVerticalGroup(
-        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(layout.createSequentialGroup()
+    jPanel1Layout.setVerticalGroup(
+        jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanel1Layout.createSequentialGroup()
             .addContainerGap()
             .addComponent(Titulo)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -158,11 +154,11 @@ layout.setHorizontalGroup(
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(Rango)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(TMinimo)
                 .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(TMaximo)
                 .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -176,18 +172,37 @@ layout.setHorizontalGroup(
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(ExperienciaTitulo)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(TExperiencia)
                 .addComponent(Experiencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(Comentarios)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(CampoComentarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-            .addComponent(Enviar)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
             .addComponent(Enviar1)
             .addContainerGap())
+    );
+
+    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+    this.setLayout(layout);
+    layout.setHorizontalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 545, Short.MAX_VALUE)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)))
+    );
+    layout.setVerticalGroup(
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 510, Short.MAX_VALUE)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)))
     );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -198,7 +213,6 @@ layout.setHorizontalGroup(
     private javax.swing.JLabel CampoTrabajo;
     private javax.swing.JComboBox<String> CamposDeTrabajo;
     private javax.swing.JLabel Comentarios;
-    private javax.swing.JButton Enviar;
     private javax.swing.JButton Enviar1;
     private javax.swing.JSpinner Experiencia;
     private javax.swing.JLabel ExperienciaTitulo;
@@ -214,5 +228,6 @@ layout.setHorizontalGroup(
     private javax.swing.JLabel TTiempoCompleto;
     private javax.swing.JCheckBox TiempoCompleto;
     private javax.swing.JLabel Titulo;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
