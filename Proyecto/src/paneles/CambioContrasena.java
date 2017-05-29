@@ -3,17 +3,17 @@ import elementos.Archivo;
 import elementos.Usuario;
 import elementos.Utilerias;
 import javax.swing.JOptionPane;
-//TODO: Completarla
+
 /**
- *
- * @author davidazullo
+ * Clase que se encarga de crear la interfaz para cambiar de contrasena
  */
 public class CambioContrasena extends ContenidoPanel {
     private String nombre;
     private String pregunta;
     private String respuesta;
+    
     /**
-     * Creates new form CambioContrasena
+     * Constructor de la clase CambioContrasena
      * @param ventana
      * @param nombre
      */
@@ -23,12 +23,47 @@ public class CambioContrasena extends ContenidoPanel {
         initComponents();
     }
     
+    /**
+     * Constructor de la clase CambioContrasena
+     * @param ventana
+     */
     public CambioContrasena(ContenidoJFrame ventana) {
         super(ventana);
         this.nombre = this.getChambapp().getUsuarioActual().getNombre();
         initComponents();
+    }    
+    
+    /**
+     * Método que valida los datos del formulario
+     * @param ventana
+     * @param nombre
+     */
+    private void validarFormulario() {
+        pregunta = (String) Pregunta.getSelectedItem();
+        respuesta = Respuesta.getText();
+        Archivo fichero = new Archivo(nombre);
+        Usuario temporal = fichero.leeArchivo();
+        if(temporal.getPregunta().equals(pregunta) && temporal.getRespuesta().equals(respuesta)){
+            if(Utilerias.comparaPassword(Nueva.getPassword(), RNueva.getPassword())){
+                temporal.setPassword(Nueva.getPassword());
+                fichero.eliminaArchivo();
+                fichero = new Archivo(temporal);
+                fichero.escribeArchivo();
+                JOptionPane.showMessageDialog(null, "Cambio De Contraseña Realizado", "", JOptionPane.INFORMATION_MESSAGE);
+                Utilerias.cambiaComponentePadre(this);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Las Contraseñas No Coinciden", "Error", JOptionPane.WARNING_MESSAGE);
+                Nueva.setText("");
+                RNueva.setText("");
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Respuesta Incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
+            Utilerias.cambiaComponentePadre(this);
+        }
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,6 +83,7 @@ public class CambioContrasena extends ContenidoPanel {
         Respuesta = new javax.swing.JTextField();
         TNueva = new javax.swing.JLabel();
         RNueva = new javax.swing.JPasswordField();
+        Cancelar = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -74,15 +110,16 @@ public class CambioContrasena extends ContenidoPanel {
             }
         });
 
-        Respuesta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RespuestaActionPerformed(evt);
-            }
-        });
-
         TNueva.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TNueva.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TNueva.setText("Nueva Contraseña");
+
+        Cancelar.setText("Cancelar");
+        Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -91,21 +128,21 @@ public class CambioContrasena extends ContenidoPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(TNueva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(RNueva, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Respuesta, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Titulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TPregunta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TRNueva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Nueva)
-                            .addComponent(TRespuesta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Pregunta, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(RNueva)
+                            .addComponent(Respuesta)
+                            .addComponent(Titulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TPregunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TRNueva, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Nueva, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TRespuesta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Pregunta, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -130,53 +167,23 @@ public class CambioContrasena extends ContenidoPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(RNueva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(19, 19, 19)
-                .addComponent(Enviar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Enviar)
+                    .addComponent(Cancelar))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RespuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RespuestaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RespuestaActionPerformed
-
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
-        pregunta = (String) Pregunta.getSelectedItem();
-        respuesta = Respuesta.getText();
-        Archivo fichero = new Archivo(nombre);
-        Usuario temporal = fichero.leeArchivo();
-        if(temporal.getPregunta().equals(pregunta) && temporal.getRespuesta().equals(respuesta)){
-            if(comparaPassword(Nueva.getPassword(), RNueva.getPassword())){
-                temporal.setPassword(Nueva.getPassword());
-                fichero.eliminaArchivo();
-                fichero = new Archivo(temporal);
-                fichero.escribeArchivo();
-                JOptionPane.showMessageDialog(null, "Cambio De Contraseña Realizado", "", JOptionPane.INFORMATION_MESSAGE);
-                Utilerias.cambiaComponentePadre(this);
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "Las Contraseñas No Coinciden", "Error", JOptionPane.WARNING_MESSAGE);
-                Nueva.setText("");
-                RNueva.setText("");
-            }
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Respuesta Incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
-            Utilerias.cambiaComponentePadre(this);
-        }
+        validarFormulario();
     }//GEN-LAST:event_EnviarActionPerformed
-    private boolean comparaPassword(char principal[], char secundario[]){
-        if(principal.length == secundario.length){
-            for(int i = 0; i < principal.length; i++){
-                if(principal[i] != secundario[i])
-                    return false;
-            }
-            return true;
-        }
-        return false;
-    }
+
+    private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
+        Utilerias.cambiaComponentePadre(this);
+    }//GEN-LAST:event_CancelarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cancelar;
     private javax.swing.JButton Enviar;
     private javax.swing.JPasswordField Nueva;
     private javax.swing.JComboBox<String> Pregunta;

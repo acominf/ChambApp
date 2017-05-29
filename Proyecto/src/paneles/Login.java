@@ -19,7 +19,6 @@ public class Login extends ContenidoPanel {
     public Login(ContenidoJFrame ventana) {
         super(ventana);
         initComponents();
-        //TODO: Cambiar datos de acceso, poner ejemplo
     }    
     
     /**
