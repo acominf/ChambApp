@@ -24,7 +24,18 @@ public class Proyecto implements Serializable{
         this.empresa = empresa;
         this.monto = monto;
     }
-    
+    public String getNombre(){
+        return nombre;
+    }
+    public String getDescripcion(){
+        return nombre;
+    }
+    public boolean getEmpresa(){
+        return empresa;
+    }
+    public float getMonto(){
+        return monto;
+    }
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
