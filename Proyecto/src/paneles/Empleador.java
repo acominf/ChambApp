@@ -35,6 +35,7 @@ public class Empleador extends ContenidoPanel {
         CambiarPassword = new javax.swing.JButton();
         BuscarCursos = new javax.swing.JButton();
         CamposExtra = new javax.swing.JButton();
+        BuscarProyecto = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -96,6 +97,8 @@ public class Empleador extends ContenidoPanel {
             }
         });
 
+        BuscarProyecto.setText("Buscar Proyecto");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,7 +118,8 @@ public class Empleador extends ContenidoPanel {
                             .addComponent(SubirProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BuscaSocio)
                             .addComponent(Salir)
-                            .addComponent(CamposExtra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(CamposExtra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(BuscarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -135,7 +139,9 @@ public class Empleador extends ContenidoPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BuscarCursos)
                     .addComponent(CamposExtra))
-                .addGap(43, 43, 43)
+                .addGap(9, 9, 9)
+                .addComponent(BuscarProyecto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Salir)
                     .addComponent(CambiarPassword))
@@ -181,6 +187,7 @@ public class Empleador extends ContenidoPanel {
     private javax.swing.JButton BuscaChambeador;
     private javax.swing.JButton BuscaSocio;
     private javax.swing.JButton BuscarCursos;
+    private javax.swing.JButton BuscarProyecto;
     private javax.swing.JButton CalificaEmpleado;
     private javax.swing.JButton CambiarPassword;
     private javax.swing.JButton CamposExtra;
