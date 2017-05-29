@@ -129,7 +129,9 @@ public class Usuario implements Serializable{
     public String getComentarios(){
         return comentarios;
     }
-    
+    public Proyecto getProyecto(){
+        return proyecto;
+    }
     /**
      * Constructor de la clase usuario
      * @param nombre

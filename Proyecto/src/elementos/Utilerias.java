@@ -49,6 +49,16 @@ public class Utilerias {
         }
         return false;
     }
+    public static String convierteACadena(Proyecto project){
+       String cad = "Nombre: " + project.getNombre() + "\n";
+       cad+="Descripcion: " + project.getDescripcion() + "\n";
+       if(project.getEmpresa())
+           cad += "Empresa Formal: Sí" + "\n";
+       else
+            cad += "Empresa Formal: Sí" + "\n";
+       cad+="Monto: " + project.getMonto() + "\n";
+       return cad;
+    }
     public static String convierteACadena(Usuario user){
        String cad = "Nombre: " + user.getNombre() + "\n";
        cad += "Sueldo Minimo: " + user.getSueldoMin() + "\n";
@@ -56,7 +66,7 @@ public class Utilerias {
        if(user.getPrestaciones())
            cad += "Prestaciones: Sí\n";
        else
-           cad += "Prstaciones: No\n";
+           cad += "Prestaciones: No\n";
        if(user.gettCompleto())
            cad += "Tiempo Completo: Sí\n";
        else
@@ -65,4 +75,5 @@ public class Utilerias {
        cad += "Comentarios: " + user.getComentarios() + "\n";
        return cad;
     }
+    
 }

@@ -1,7 +1,13 @@
 package paneles;
 
+import elementos.Archivo;
+import elementos.Proyecto;
+import elementos.Usuario;
 import elementos.Utilerias;
+import java.io.File;
 import static java.lang.System.exit;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  * Clase que muestra las acciones disponibles del empleador
@@ -98,6 +104,11 @@ public class Empleador extends ContenidoPanel {
         });
 
         BuscarProyecto.setText("Buscar Proyecto");
+        BuscarProyecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarProyectoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -180,6 +191,39 @@ public class Empleador extends ContenidoPanel {
     private void CamposExtraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CamposExtraActionPerformed
         Utilerias.muestraComponente( this.getPadre(), new EmpleadorAdicional(this.getPadre()) );
     }//GEN-LAST:event_CamposExtraActionPerformed
+
+    private void BuscarProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarProyectoActionPerformed
+        // TODO add your handling code here:
+        float monto = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el presupuesto de proyecto: "));
+        ArrayList<Proyecto> proyectos = new ArrayList<>();
+            File f = new File(System.getProperty("user.dir"));
+            if(f.exists()){
+                File[] ficheros = f.listFiles(); 
+                for (File fichero : ficheros) {
+                    String temp = fichero.getName();
+                    if(temp.endsWith(".dat")){
+                        String archivo = temp.substring(0, temp.length()-4);
+                        Archivo empleador = new Archivo(archivo);
+                        Usuario temporal = empleador.leeArchivo();
+                        Proyecto project = temporal.getProyecto();
+                        if(project.getMonto() <= monto)
+                            proyectos.add(project);
+                    }
+                }
+            }
+            if(proyectos.isEmpty()){
+                JOptionPane.showMessageDialog(null, "No Hay Proyecto Con El Monto Especificado", "", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else{
+                ArrayList<String> cad = new ArrayList<>();
+                cad.add("Proyectos Que Cumplen Con El Monto Solicitado: \n");
+                for(Proyecto p : proyectos){
+                    cad.add(Utilerias.convierteACadena(p));
+                }
+                JOptionPane.showMessageDialog(null, cad, "", JOptionPane.INFORMATION_MESSAGE);
+                Utilerias.cambiaComponentePadre(this);
+            }
+    }//GEN-LAST:event_BuscarProyectoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
