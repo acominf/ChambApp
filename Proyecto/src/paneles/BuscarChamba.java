@@ -242,7 +242,13 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
                 JOptionPane.showMessageDialog(null, "No hay empleos con los paramétros especificados", "", JOptionPane.INFORMATION_MESSAGE);
             }
             else{
-                Utilerias.muestraComponente(this.getPadre(), new MuestraEmpleador(this.getPadre(), usuarios));
+                ArrayList<String> cad = new ArrayList<>();
+                cad.add("Usuarios Que Cumplen Con El Perfil Solicitado: \n");
+                for(Usuario user : usuarios){
+                    cad.add(Utilerias.convierteACadena(user));
+                }
+                JOptionPane.showMessageDialog(null, cad, "", JOptionPane.INFORMATION_MESSAGE);
+                Utilerias.cambiaComponentePadre(this);
             }
         }
     }//GEN-LAST:event_EnviarActionPerformed

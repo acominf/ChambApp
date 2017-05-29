@@ -49,4 +49,20 @@ public class Utilerias {
         }
         return false;
     }
+    public static String convierteACadena(Usuario user){
+       String cad = "Nombre: " + user.getNombre() + "\n";
+       cad += "Sueldo Minimo: " + user.getSueldoMin() + "\n";
+       cad += "Sueldo Maximo: " +  user.getSueldoMax() + "\n";
+       if(user.getPrestaciones())
+           cad += "Prestaciones: Sí\n";
+       else
+           cad += "Prstaciones: No\n";
+       if(user.gettCompleto())
+           cad += "Tiempo Completo: Sí\n";
+       else
+           cad += "Tiempo Completo: No\n";
+       cad += "Experiencia: " + user.getExperiencia() + "\n";
+       cad += "Comentarios: " + user.getComentarios() + "\n";
+       return cad;
+    }
 }

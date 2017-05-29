@@ -33,7 +33,7 @@ public class EmpleadoAdicional extends ContenidoPanel {
         sueldoMin =(float) Minimo.getValue();
         sueldoMax = (float) Maximo.getValue();
         experiencia = (int) Experiencia.getValue();
-        comentarios = Comentarios.getText();
+        comentarios = AreaTexto.getText();
         if(sueldoMin == 0 || sueldoMax == 0)
             JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
         else{
