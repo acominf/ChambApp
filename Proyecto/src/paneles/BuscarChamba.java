@@ -2,7 +2,11 @@ package paneles;
 
 //TODO: Completarla
 
+import elementos.Archivo;
+import elementos.Usuario;
 import elementos.Utilerias;
+import java.io.File;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -210,7 +214,7 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         // TODO add your handling code here:
         float minimo = (float)Minimo.getValue();
-        float maximo = (float)Minimo.getValue();
+        float maximo = (float)Maximo.getValue();
         String campo = (String)CamposDeTrabajo.getSelectedItem();
         int experiencia = (int)Experiencia.getValue();
         boolean prestaciones = Prestaciones.isSelected();
@@ -219,7 +223,27 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
             JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
         }
         else{
-            
+            ArrayList<Usuario> usuarios = new ArrayList<>();
+            File f = new File(System.getProperty("user.dir"));
+            if(f.exists()){
+                File[] ficheros = f.listFiles(); 
+                for (File fichero : ficheros) {
+                    String temp = fichero.getName();
+                    if(temp.endsWith(".dat")){
+                        String archivo = temp.substring(0, temp.length()-4);
+                        Archivo empleador = new Archivo(archivo);
+                        Usuario temporal = empleador.leeArchivo();
+                        if(temporal.getSueldoMin() >= minimo && temporal.getSueldoMax() <= maximo && temporal.getCampo().equals(campo) && temporal.getExperiencia() == experiencia && temporal.getPrestaciones() == prestaciones && temporal.gettCompleto() == tCompleto && temporal.getTipo().equals("Empleador"))
+                            usuarios.add(temporal);
+                    }
+                }
+            }
+            if(usuarios.isEmpty()){
+                JOptionPane.showMessageDialog(null, "No hay empleos con los paramétros especificados", "", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else{
+                Utilerias.muestraComponente(this.getPadre(), new MuestraEmpleador(this.getPadre(), usuarios));
+            }
         }
     }//GEN-LAST:event_EnviarActionPerformed
 

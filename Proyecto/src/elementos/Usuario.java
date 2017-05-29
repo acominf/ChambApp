@@ -19,6 +19,9 @@ public class Usuario implements Serializable{
     private String comentarios;
     private final String tipo;
     private Proyecto proyecto;
+    public void setCampo(String campo){
+        this.campo = campo;
+    }
     public void setSueldoMin(float sueldo){
         sueldoMin = sueldo;
     }

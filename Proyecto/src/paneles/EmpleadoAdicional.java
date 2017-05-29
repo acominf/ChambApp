@@ -39,6 +39,7 @@ public class EmpleadoAdicional extends ContenidoPanel {
         else{
             Usuario temporal = this.getChambapp().getUsuarioActual();
             Archivo fichero = new Archivo(temporal.getNombre());
+            temporal.setCampo(campo);
             temporal.setSueldoMin(sueldoMin);
             temporal.setSueldoMax(sueldoMax);
             temporal.setComentarios(comentarios);

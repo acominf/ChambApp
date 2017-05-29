@@ -5,16 +5,23 @@
  */
 package paneles;
 
+import elementos.Usuario;
+import java.util.ArrayList;
+
 /**
  *
  * @author berna
  */
-public class MuestraEmpleador extends javax.swing.JPanel {
-
+public class MuestraEmpleador extends ContenidoPanel{
+    ArrayList<Usuario> usuarios;
     /**
      * Creates new form MuestraEmpleador
+     * @param ventana
+     * @param lista
      */
-    public MuestraEmpleador() {
+    public MuestraEmpleador(ContenidoJFrame ventana, ArrayList<Usuario> lista) {
+        super(ventana);
+        usuarios=lista;
         initComponents();
     }
 
