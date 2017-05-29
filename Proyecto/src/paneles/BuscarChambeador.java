@@ -68,9 +68,13 @@ Rango.setText("Rango de saldo que la empresa/persona física está dispuesto a o
 Instrucciones.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
 Instrucciones.setText("Complete los siguientes campos para realizar su búsqueda");
 
+Minimo.setModel(new javax.swing.SpinnerNumberModel(0.0f, 0.0f, null, 1.0f));
+
 TMinimo.setText("Mínimo:");
 
 TMaximo.setText("Máximo:");
+
+Maximo.setModel(new javax.swing.SpinnerNumberModel(0.0f, 0.0f, null, 1.0f));
 
 Prestaciones.setText("Sí");
 
@@ -97,6 +101,8 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
     }
     });
 
+    Experiencia.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+
     Regresar.setText("Regresar");
     Regresar.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,24 +123,27 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
                 .addGroup(layout.createSequentialGroup()
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Prestaciones)
-                            .addComponent(Titulo)
                             .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CampoTrabajo)
-                            .addComponent(Rango)
                             .addComponent(CamposDeTrabajo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Prestaciones)
+                                    .addComponent(Titulo)
+                                    .addComponent(CampoTrabajo)
+                                    .addComponent(Rango)
+                                    .addComponent(TPrestaciones)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(TMaximo)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(TMinimo)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(TPrestaciones))
+                                        .addGap(12, 12, 12)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(TMaximo)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Maximo, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(TMinimo)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(Minimo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(4, 4, 4)))
                         .addComponent(Comentarios)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(93, 93, 93)
