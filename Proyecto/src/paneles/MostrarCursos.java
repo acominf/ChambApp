@@ -1,6 +1,11 @@
 package paneles;
 
 //TODO: Completarla
+
+import elementos.Utilerias;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davidazullo
@@ -15,7 +20,42 @@ public class MostrarCursos extends ContenidoPanel {
         super(ventana);
         initComponents();
     }
-
+    
+    private void validarFormulario() {
+        ArrayList<String> cursosDisponibles = new ArrayList<String>();
+        if(Topico1.isSelected()) {
+            if(Presencial.isSelected())
+                cursosDisponibles.add("ANALISIS DE SEGMENTOS DE MERCADO: LAS TRIBUS DE CONSUMIDORES EN MEXICO");
+            else {
+                cursosDisponibles.add("COMUNICACION DIGITAL");
+                cursosDisponibles.add("EMOTIONAL & EXPERIENTIAL MARKETING");
+            }
+        }
+        if(Topico2.isSelected()) {
+            cursosDisponibles.add("IMPUESTOS INTERNACIONALES");
+            cursosDisponibles.add("ANALISIS DE INVERSIONES");            
+        }
+        if(Topico3.isSelected() && Presencial.isSelected()) {
+            cursosDisponibles.add("ARGUMENTACION");
+        }
+        if(Topico4.isSelected()) {
+            cursosDisponibles.add("PROGRAMACION OOP EN JAVA Y C++");
+            cursosDisponibles.add("UNA INTRODUCCION A LOS BITCOIN");            
+        }
+        if(Topico5.isSelected()) {
+            cursosDisponibles.add("ALGEBRA LINEAL CON ENFOQUE EN ECONOMIA");
+            if(Presencial.isSelected())
+                cursosDisponibles.add("MODELOS DE PRODUCCION");            
+        }
+        String cadena = "Dadas sus preferencias, le recomendamos estos cursos,\n";
+        cadena += "seleccione uno o más y envienos un mail a cursos@chambapp.com,\n";
+        cadena += "se le notificará de manera oportuna los costos y fechas.\n";
+        cadena += "A continuacion los cursos:\n";
+        for (String curso : cursosDisponibles) 
+            cadena += "\n" + curso;
+        JOptionPane.showMessageDialog(null, cadena, "", JOptionPane.INFORMATION_MESSAGE);
+        Utilerias.cambiaComponentePadre(this);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,8 +72,6 @@ public class MostrarCursos extends ContenidoPanel {
         Topico3 = new javax.swing.JCheckBox();
         Topico4 = new javax.swing.JCheckBox();
         Topico5 = new javax.swing.JCheckBox();
-        Tiempo = new javax.swing.JSlider();
-        TTiempo = new javax.swing.JLabel();
         TPresencial = new javax.swing.JLabel();
         Presencial = new javax.swing.JCheckBox();
         Enviar = new javax.swing.JButton();
@@ -56,10 +94,6 @@ public class MostrarCursos extends ContenidoPanel {
 
         Topico5.setText("Ingeniería");
 
-        TTiempo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        TTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TTiempo.setText("Tiempo disponible durante semana para estudiar");
-
         TPresencial.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         TPresencial.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TPresencial.setText("Requiere curso presencial");
@@ -67,6 +101,11 @@ public class MostrarCursos extends ContenidoPanel {
         Presencial.setText("Sí");
 
         Enviar.setText("Aceptar");
+        Enviar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EnviarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -82,12 +121,10 @@ public class MostrarCursos extends ContenidoPanel {
                     .addComponent(Topico1)
                     .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Instrucciones)
-                    .addComponent(Tiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TTiempo)
                     .addComponent(TPresencial)
                     .addComponent(Presencial)
                     .addComponent(Enviar, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,11 +143,7 @@ public class MostrarCursos extends ContenidoPanel {
                 .addComponent(Topico4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Topico5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TTiempo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Tiempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TPresencial, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Presencial)
@@ -120,14 +153,16 @@ public class MostrarCursos extends ContenidoPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
+        validarFormulario();
+    }//GEN-LAST:event_EnviarMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Enviar;
     private javax.swing.JLabel Instrucciones;
     private javax.swing.JCheckBox Presencial;
     private javax.swing.JLabel TPresencial;
-    private javax.swing.JLabel TTiempo;
-    private javax.swing.JSlider Tiempo;
     private javax.swing.JLabel Titulo;
     private javax.swing.JCheckBox Topico1;
     private javax.swing.JCheckBox Topico2;
