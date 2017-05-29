@@ -58,11 +58,6 @@ public class Login extends ContenidoPanel {
                 EntrarMouseClicked(evt);
             }
         });
-        Entrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EntrarActionPerformed(evt);
-            }
-        });
 
         Cambio.setText("Solicitar cambio de contraseña");
         Cambio.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -147,32 +142,25 @@ public class Login extends ContenidoPanel {
     }//GEN-LAST:event_RegistroMouseClicked
 
     private void EntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EntrarMouseClicked
-        // TODO: Validar logueo de usuario
-        
-    }//GEN-LAST:event_EntrarMouseClicked
-
-    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
-        // TODO add your handling code here:
         nombre = Usuario.getText();
         password = Password.getPassword();
         Archivo fichero = new Archivo(nombre);
         if(fichero.existe()){
             temporal = fichero.leeArchivo();
-            if(!comparaPassword(password, temporal.getPassword())){
+            if(!comparaPassword(password, temporal.getPassword()))
                 JOptionPane.showMessageDialog(null, "La Contraseña Es Incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
-            }
-            else{
-                if(temporal.getTipo().equals("Empleado")){
+            else {
+                this.getChambapp().setUsuarioActual(temporal);
+                if(temporal.getTipo().equals("Empleado"))
                     Utilerias.muestraComponente( this.getPadre(), new Empleado(this.getPadre()));
-                }
-                else
-                    Utilerias.muestraComponente( this.getPadre(), new Empleador(this.getPadre()));
+                else Utilerias.muestraComponente( this.getPadre(), new Empleador(this.getPadre()));
             }
         }
         else{
             JOptionPane.showMessageDialog(null, "El Usuario No Existe", "Error", JOptionPane.WARNING_MESSAGE);
-        }
-    }//GEN-LAST:event_EntrarActionPerformed
+        }        
+    }//GEN-LAST:event_EntrarMouseClicked
+    
     private boolean comparaPassword(char principal[], char secundario[]){
         if(principal.length == secundario.length){
             for(int i = 0; i < principal.length; i++){

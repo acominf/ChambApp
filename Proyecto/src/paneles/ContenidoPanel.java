@@ -1,11 +1,13 @@
 package paneles;
 
+import elementos.Chambapp;
 import javax.swing.SwingUtilities;
 
 /**
  * Subclase de JPanel, añade métodos útiles para la manipulación del programa
  */
 public class ContenidoPanel extends javax.swing.JPanel {
+    private final Chambapp chambapp;
     protected ContenidoJFrame ventana;
     
     /**
@@ -13,6 +15,7 @@ public class ContenidoPanel extends javax.swing.JPanel {
      */
     ContenidoPanel(ContenidoJFrame ventana) {
         this.ventana = ventana;
+        this.chambapp = ventana.getChambapp();
     }
     
     /**
@@ -39,5 +42,13 @@ public class ContenidoPanel extends javax.swing.JPanel {
         ContenidoJFrame padre;
         padre = (ContenidoJFrame) SwingUtilities.getWindowAncestor(this);
         return padre;
+    }
+
+    /**
+     * Método de acceso que retorna los datos de chambapp
+     * @return chambapp
+     */
+    public Chambapp getChambapp() {
+        return chambapp;
     }
 }

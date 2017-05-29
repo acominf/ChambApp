@@ -1,18 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paneles;
 
+import elementos.Utilerias;
+
 /**
- *
- * @author davidazullo
+ * Clase que despliega el objetivo de la aplicación
  */
 public class AcercaDe extends ContenidoPanel {
 
     /**
-     * Creates new form AcercaDe
+     * Constructor de la interfaz de usuario acerca de
+     * @param ventana
      */
     public AcercaDe(ContenidoJFrame ventana) {
         super(ventana);
@@ -31,6 +28,14 @@ public class AcercaDe extends ContenidoPanel {
         jDialog1 = new javax.swing.JDialog();
         jDialog2 = new javax.swing.JDialog();
         jDialog3 = new javax.swing.JDialog();
+        Titulo = new javax.swing.JLabel();
+        Instrucciones = new javax.swing.JLabel();
+        Enviar = new javax.swing.JButton();
+        Instrucciones1 = new javax.swing.JLabel();
+        Instrucciones2 = new javax.swing.JLabel();
+        Instrucciones3 = new javax.swing.JLabel();
+        Instrucciones4 = new javax.swing.JLabel();
+        Instrucciones5 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -65,20 +70,100 @@ public class AcercaDe extends ContenidoPanel {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Titulo.setText("Acerca de");
+
+        Instrucciones.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        Instrucciones.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Instrucciones.setText("obtención de empleo, fácil, rápida, innovadora y confiable");
+
+        Enviar.setText("Aceptar");
+        Enviar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EnviarMouseClicked(evt);
+            }
+        });
+
+        Instrucciones1.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        Instrucciones1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Instrucciones1.setText("Nuestro objetivo es otorgar a los usuarios una forma de ");
+
+        Instrucciones2.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        Instrucciones2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Instrucciones2.setText("con el fin de reducir los ı́ndices de desempleo en las");
+
+        Instrucciones3.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        Instrucciones3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Instrucciones3.setText("regiones donde se haga uso de la aplicación, además de");
+
+        Instrucciones4.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        Instrucciones4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Instrucciones4.setText("ofrecer una herramienta para la creación y administración");
+
+        Instrucciones5.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
+        Instrucciones5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Instrucciones5.setText("de proyectos y microempresas.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(Instrucciones2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Instrucciones3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Instrucciones1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Instrucciones4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Instrucciones5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(192, 192, 192)
+                .addComponent(Enviar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Titulo)
+                .addGap(12, 12, 12)
+                .addComponent(Instrucciones1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Instrucciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Instrucciones2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Instrucciones3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Instrucciones4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Instrucciones5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Enviar)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
+        Utilerias.cambiaComponentePadre(this);
+    }//GEN-LAST:event_EnviarMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Enviar;
+    private javax.swing.JLabel Instrucciones;
+    private javax.swing.JLabel Instrucciones1;
+    private javax.swing.JLabel Instrucciones2;
+    private javax.swing.JLabel Instrucciones3;
+    private javax.swing.JLabel Instrucciones4;
+    private javax.swing.JLabel Instrucciones5;
+    private javax.swing.JLabel Titulo;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JDialog jDialog3;

@@ -22,6 +22,12 @@ public class CambioContrasena extends ContenidoPanel {
         this.nombre=nombre;
         initComponents();
     }
+    
+    public CambioContrasena(ContenidoJFrame ventana) {
+        super(ventana);
+        this.nombre = this.getChambapp().getUsuarioActual().getNombre();
+        initComponents();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

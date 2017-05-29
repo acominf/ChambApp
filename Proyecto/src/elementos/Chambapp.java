@@ -11,15 +11,12 @@ public class Chambapp {
     private final String tituloApp;
     private final String rutaIcono;
     private final String version = "0.5";
+    private Usuario usuarioActual;
 
     public Chambapp(String titulo, String rutaIcono) {
         this.tituloApp = titulo;
         this.rutaIcono = rutaIcono;
     }
-
-        
-    //TODO: leer usuarios desde archivo
-    ArrayList<Usuario> usuarios;
     
     public String getTitulo() {
         return tituloApp + " v" + version;
@@ -27,5 +24,13 @@ public class Chambapp {
 
     public String getRutaIcono() {
         return rutaIcono;
+    }
+
+    public Usuario getUsuarioActual() {
+        return usuarioActual;
+    }
+
+    public void setUsuarioActual(Usuario usuarioActual) {
+        this.usuarioActual = usuarioActual;
     }
 }
