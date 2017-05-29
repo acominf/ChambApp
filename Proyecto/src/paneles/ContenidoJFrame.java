@@ -1,32 +1,29 @@
 package paneles;
 
+import elementos.Chambapp;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
- * Superclase de JFrame, proporciona más flexibilidad para manipular ventanas
+ * Subclase de JFrame, proporciona más flexibilidad para manipular ventanas
  */
 public class ContenidoJFrame extends JFrame {
-    private final String titulo;
+    private final Chambapp chambapp;
     private final ImageIcon icono;
     
     /**
      * Constructor para inicializar al ContenidoJFrame
-     * @param titulo
+     * @param chambapp
      */
-    public ContenidoJFrame(String titulo) {
-        super(titulo);
-        String rutaIcono = "src/Imagenes/Logo.png";
-        icono = new ImageIcon(rutaIcono);
+    public ContenidoJFrame(Chambapp chambapp) {
+        super(chambapp.getTitulo());
+        this.chambapp = chambapp;
+        icono = new ImageIcon(chambapp.getRutaIcono());
         setIconImage(icono.getImage());
-        this.titulo = titulo;
-    }        
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
 
-    /**
-     * Método de acceso que retorna el titulo de la app
-     * @return titulo
-     */
-    public String getTitulo() {
-        return titulo;
+    public Chambapp getChambapp() {
+        return chambapp;
     }
 }

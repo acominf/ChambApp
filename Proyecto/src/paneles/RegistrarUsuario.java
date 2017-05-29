@@ -157,7 +157,6 @@ public class RegistrarUsuario extends ContenidoPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
-        // TODO add your handling code here:
         nombre = Nombre.getText();
         password = Password.getPassword();
         temporal = RPassword.getPassword();

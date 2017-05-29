@@ -1,6 +1,5 @@
 package elementos;
 
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import paneles.ContenidoJFrame;
 import paneles.ContenidoPanel;
 
@@ -17,12 +16,11 @@ public class Utilerias {
      */
     public static void muestraComponente(ContenidoJFrame jframe, ContenidoPanel componente) {
         ContenidoJFrame f;
-        f = new ContenidoJFrame(jframe.getTitulo());
+        f = new ContenidoJFrame(jframe.getChambapp());
         f.getContentPane().add(componente);
         f.pack();
-        f.setVisible(true);
         f.setLocationRelativeTo(null);
-        f.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        f.setVisible(true);
         jframe.setVisible(false);
     }
     

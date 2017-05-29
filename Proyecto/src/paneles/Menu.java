@@ -1,4 +1,5 @@
 package paneles;
+import elementos.Chambapp;
 import elementos.Utilerias;
 import static java.lang.System.exit;
 
@@ -8,10 +9,10 @@ import static java.lang.System.exit;
 public class Menu extends ContenidoJFrame{
     /**
      * Constructor encargado de la generación de un menú para el manejo de la aplicación.
-     * @param titulo
+     * @param chambapp
      */
-    public Menu(String titulo) {
-        super(titulo);
+    public Menu(Chambapp chambapp) {
+        super(chambapp);
         initComponents();
     }
     

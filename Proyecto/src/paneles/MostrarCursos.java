@@ -9,6 +9,7 @@ public class MostrarCursos extends ContenidoPanel {
 
     /**
      * Creates new form MostrarCursos
+     * @param ventana
      */
     public MostrarCursos(ContenidoJFrame ventana) {
         super(ventana);

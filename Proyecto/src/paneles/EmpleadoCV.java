@@ -9,6 +9,7 @@ public class EmpleadoCV extends ContenidoPanel {
 
     /**
      * Creates new form EmpleadoCV
+     * @param ventana
      */
     public EmpleadoCV(ContenidoJFrame ventana) {
         super(ventana);

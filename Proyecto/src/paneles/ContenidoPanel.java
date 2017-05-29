@@ -3,7 +3,7 @@ package paneles;
 import javax.swing.SwingUtilities;
 
 /**
- * Superclase de JPanel, añade métodos útiles para la manipulación del programa
+ * Subclase de JPanel, añade métodos útiles para la manipulación del programa
  */
 public class ContenidoPanel extends javax.swing.JPanel {
     protected ContenidoJFrame ventana;

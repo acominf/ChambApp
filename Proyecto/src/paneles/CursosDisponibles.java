@@ -9,6 +9,7 @@ public class CursosDisponibles extends ContenidoPanel {
 
     /**
      * Creates new form CursosDisponibles
+     * @param ventana
      */
     public CursosDisponibles(ContenidoJFrame ventana) {
         super(ventana);
