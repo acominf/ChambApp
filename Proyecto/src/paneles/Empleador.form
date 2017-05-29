@@ -21,10 +21,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Titulo" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="BuscaChambeador" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="BuscarProyecto" alignment="0" max="32767" attributes="0"/>
+                          <Component id="BuscaChambeador" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="CalificaEmpleado" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CambiarPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="CambiarPassword" alignment="0" max="32767" attributes="0"/>
                           <Component id="BuscarCursos" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
@@ -35,7 +36,6 @@
                           <Component id="CamposExtra" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="BuscarProyecto" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>

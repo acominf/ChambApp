@@ -55,7 +55,6 @@ public class EmpleadoAdicional extends ContenidoPanel {
         Comentarios = new javax.swing.JLabel();
         CampoComentarios = new javax.swing.JScrollPane();
         AreaTexto = new javax.swing.JTextArea();
-        Enviar = new javax.swing.JButton();
         Enviar1 = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -104,8 +103,6 @@ AreaTexto.setColumns(20);
 AreaTexto.setRows(5);
 CampoComentarios.setViewportView(AreaTexto);
 
-Enviar.setText("Subir CV");
-
 Enviar1.setText("Actualizar información");
 Enviar1.addActionListener(new java.awt.event.ActionListener() {
     public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,11 +132,7 @@ Enviar1.addActionListener(new java.awt.event.ActionListener() {
                         .addComponent(Comentarios)
                         .addComponent(TiempoCompleto)
                         .addComponent(TTiempoCompleto)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ExperienciaTitulo)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Enviar)
-                                .addGap(23, 23, 23)))
+                        .addComponent(ExperienciaTitulo)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(12, 12, 12)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,9 +196,7 @@ Enviar1.addActionListener(new java.awt.event.ActionListener() {
             .addComponent(Comentarios)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(CampoComentarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-            .addComponent(Enviar)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Enviar1)
             .addContainerGap())
     );
@@ -246,7 +237,6 @@ Enviar1.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JScrollPane CampoComentarios;
     private javax.swing.JComboBox<String> CamposDeTrabajo;
     private javax.swing.JLabel Comentarios;
-    private javax.swing.JButton Enviar;
     private javax.swing.JButton Enviar1;
     private javax.swing.JSpinner Experiencia;
     private javax.swing.JLabel ExperienciaTitulo;
