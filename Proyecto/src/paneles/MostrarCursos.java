@@ -1,19 +1,15 @@
 package paneles;
-
-//TODO: Completarla
-
 import elementos.Utilerias;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author davidazullo
+ * Clase que se encarga de mostrar los cursos disponibles al usuario
  */
 public class MostrarCursos extends ContenidoPanel {
 
     /**
-     * Creates new form MostrarCursos
+     * Constructor de la interfaz de usuario MostrarCursos
      * @param ventana
      */
     public MostrarCursos(ContenidoJFrame ventana) {
@@ -21,6 +17,9 @@ public class MostrarCursos extends ContenidoPanel {
         initComponents();
     }
     
+    /**
+     * Método que se encarga de validar el formulario
+     */
     private void validarFormulario() {
         ArrayList<String> cursosDisponibles = new ArrayList<String>();
         if(Topico1.isSelected()) {
@@ -56,6 +55,7 @@ public class MostrarCursos extends ContenidoPanel {
         JOptionPane.showMessageDialog(null, cadena, "", JOptionPane.INFORMATION_MESSAGE);
         Utilerias.cambiaComponentePadre(this);
     }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
