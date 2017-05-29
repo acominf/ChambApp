@@ -10,6 +10,14 @@ public class Usuario implements Serializable{
     private String pregunta;
     private String respuesta;
     private char []password; 
+    private String campo;
+    private float sueldoMin;
+    private float sueldoMax;
+    private boolean prestaciones;
+    private boolean tCompleto;
+    private int experiencia;
+    private String comentarios;
+    private String tipo;
 
     /**
      * Metodo de acceso al atributo nombre de un usuario
@@ -74,6 +82,27 @@ public class Usuario implements Serializable{
     public void setPassword(char[] password) {
         this.password = password;
     }
+    public String getCampo(){
+        return campo;
+    }
+    public float getSueldoMin(){
+        return sueldoMin;
+    }
+    public float getSueldoMax(){
+        return sueldoMax;
+    }
+    public boolean getPrestaciones(){
+        return prestaciones;
+    }
+    public boolean gettCompleto(){
+        return tCompleto;
+    }
+    public int getExperiencia(){
+        return experiencia;
+    }
+    public String getComentarios(){
+        return comentarios;
+    }
     
     /**
      * Constructor de la clase usuario
@@ -82,10 +111,11 @@ public class Usuario implements Serializable{
      * @param pregunta
      * @param respuesta
      */
-    public Usuario(String nombre, char[] password, String pregunta, String respuesta){
+    public Usuario(String nombre, char[] password, String pregunta, String respuesta, String tipo){
             this.nombre = nombre;
             this.pregunta = pregunta;
             this.respuesta = respuesta;
             this.password = password;
+            this.tipo = tipo;
     }
 }
