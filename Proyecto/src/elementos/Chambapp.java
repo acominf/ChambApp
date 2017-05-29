@@ -10,7 +10,7 @@ public class Chambapp {
     private final String tituloApp;
     private final String rutaIcono;
     private final String rutaComentarios;
-    private final String version = "0.5";
+    private final String version = "1.0";
     private Usuario usuarioActual;
     private ArrayList<String> comentarios;
     

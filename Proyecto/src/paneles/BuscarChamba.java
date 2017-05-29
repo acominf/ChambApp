@@ -43,10 +43,10 @@ public class BuscarChamba extends ContenidoPanel {
                         String archivo = temp.substring(0, temp.length()-4);
                         Archivo empleador = new Archivo(archivo);
                         Usuario temporal = empleador.leeArchivo();
-                        if(temporal.getSueldoMin() >= minimo && 
-                        temporal.getSueldoMax() <= maximo &&
+                        if(temporal.getSueldoMin() <= minimo && 
+                        temporal.getSueldoMax() >= maximo &&
                         temporal.getCampo().equals(campo) &&
-                        temporal.getExperiencia() >= experiencia &&
+                        temporal.getExperiencia() <= experiencia &&
                         temporal.getPrestaciones() == prestaciones &&
                         temporal.gettCompleto() == tCompleto &&
                         temporal.getTipo().equals("Empleador"))
@@ -54,9 +54,8 @@ public class BuscarChamba extends ContenidoPanel {
                     }
                 }
             }
-            if(usuarios.isEmpty()){
+            if(usuarios.isEmpty())
                 JOptionPane.showMessageDialog(null, "No hay empleos con los paramétros especificados", "", JOptionPane.INFORMATION_MESSAGE);
-            }
             else{
                 String cadena = "Usuarios Que Cumplen Con El Perfil Solicitado: \n";
                 for(Usuario user : usuarios)

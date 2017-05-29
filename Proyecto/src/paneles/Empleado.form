@@ -94,6 +94,8 @@
     <Component class="javax.swing.JButton" name="BuscaSocio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar Socio"/>
+        <Property name="toolTipText" type="java.lang.String" value="Saldr&#xe1; en la versi&#xf3;n 2.0"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="BuscaSocioMouseClicked"/>
@@ -110,6 +112,8 @@
     <Component class="javax.swing.JButton" name="CalificarEmpleador">
       <Properties>
         <Property name="text" type="java.lang.String" value="Calificar Empleador"/>
+        <Property name="toolTipText" type="java.lang.String" value="Saldr&#xe1; en la versi&#xf3;n 2.0"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CalificarEmpleadorMouseClicked"/>

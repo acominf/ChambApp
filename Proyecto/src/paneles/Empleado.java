@@ -55,6 +55,8 @@ public class Empleado extends ContenidoPanel {
         });
 
         BuscaSocio.setText("Buscar Socio");
+        BuscaSocio.setToolTipText("Saldrá en la versión 2.0");
+        BuscaSocio.setEnabled(false);
         BuscaSocio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BuscaSocioMouseClicked(evt);
@@ -69,6 +71,8 @@ public class Empleado extends ContenidoPanel {
         });
 
         CalificarEmpleador.setText("Calificar Empleador");
+        CalificarEmpleador.setToolTipText("Saldrá en la versión 2.0");
+        CalificarEmpleador.setEnabled(false);
         CalificarEmpleador.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CalificarEmpleadorMouseClicked(evt);
@@ -193,7 +197,6 @@ public class Empleado extends ContenidoPanel {
     }//GEN-LAST:event_SalirMouseClicked
 
     private void BuscarProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarProyectoActionPerformed
-        // TODO add your handling code here:
         float monto = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el presupuesto de proyecto: "));
         ArrayList<Proyecto> proyectos = new ArrayList<>();
             File f = new File(System.getProperty("user.dir"));
@@ -206,7 +209,7 @@ public class Empleado extends ContenidoPanel {
                         Archivo empleador = new Archivo(archivo);
                         Usuario temporal = empleador.leeArchivo();
                         Proyecto project = temporal.getProyecto();
-                        if(project.getMonto() <= monto)
+                        if(project.getMonto() <= monto && project.getMonto() >= 1)
                             proyectos.add(project);
                     }
                 }
@@ -215,13 +218,11 @@ public class Empleado extends ContenidoPanel {
                 JOptionPane.showMessageDialog(null, "No Hay Proyecto Con El Monto Especificado", "", JOptionPane.INFORMATION_MESSAGE);
             }
             else{
-                ArrayList<String> cad = new ArrayList<>();
-                cad.add("Proyectos Que Cumplen Con El Monto Solicitado: \n");
+                String cad = "Proyectos Que Cumplen Con El Monto Solicitado: \n";
                 for(Proyecto p : proyectos){
-                    cad.add(Utilerias.convierteACadena(p));
+                    cad += Utilerias.convierteACadena(p);
                 }
                 JOptionPane.showMessageDialog(null, cad, "", JOptionPane.INFORMATION_MESSAGE);
-                Utilerias.cambiaComponentePadre(this);
             }
     }//GEN-LAST:event_BuscarProyectoActionPerformed
 

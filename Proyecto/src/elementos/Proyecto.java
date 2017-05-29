@@ -28,7 +28,7 @@ public class Proyecto implements Serializable{
         return nombre;
     }
     public String getDescripcion(){
-        return nombre;
+        return descripcion;
     }
     public boolean getEmpresa(){
         return empresa;

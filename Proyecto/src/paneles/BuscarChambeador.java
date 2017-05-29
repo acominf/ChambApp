@@ -44,10 +44,10 @@ public class BuscarChambeador extends ContenidoPanel {
                         String archivo = temp.substring(0, temp.length()-4);
                         Archivo empleador = new Archivo(archivo);
                         Usuario temporal = empleador.leeArchivo();
-                        if(temporal.getSueldoMin() >= minimo &&
-                        temporal.getSueldoMax() <= maximo &&
+                        if(temporal.getSueldoMin() <= minimo &&
+                        temporal.getSueldoMax() >= maximo &&
                         temporal.getCampo().equals(campo) &&
-                        temporal.getExperiencia() == experiencia &&
+                        temporal.getExperiencia() <= experiencia &&
                         temporal.getPrestaciones() == prestaciones &&
                         temporal.gettCompleto() == tCompleto &&
                         temporal.getTipo().equals("Empleado"))
