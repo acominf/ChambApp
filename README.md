@@ -4,6 +4,13 @@ ChambApp es una aplicación multiplataforma en la que sus usuarios pueden conseg
 ### Descripción del juego/aplicación
 La aplicación tiene como fin el facilitar a sus usuarios, empleados y empleadores, la búsqueda y obtención de trabajo mediante una interfaz amigable. Se pretende que sea multilplataforma y que en cada una de ellas se proporcione un acceso rápido y sencillo.
 
+### Links útiles
+* [Descarga](https://github.com/acominf/ChambApp/releases)
+* [Repositorio](https://github.com/acominf/ChambApp)
+
+### Wiki Adicional
+* [Capturas](Sitio/Capturas)
+
 ### Clases principales y sus características
 1. Chambap
 * Se encarga de administrar la app.
@@ -25,10 +32,10 @@ La aplicación tiene como fin el facilitar a sus usuarios, empleados y empleador
 
 ### Autor(es)
 El autor(es) del proyecto son:
-- Jose Bernardo Bernal Cabrera (@Supermasterspark)
 - David Andrés Garza Medina (@davidazullo25)
+- José Bernardo Bernal Cabrera (@Supermasterspark)
 
-### Materia(s)
+### Materia
 - Programación Orientada a Objetos
 
 ### Semestre
