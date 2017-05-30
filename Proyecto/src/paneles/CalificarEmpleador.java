@@ -1,6 +1,11 @@
 package paneles;
 
-//TODO: Completarla
+import elementos.Archivo;
+import elementos.Usuario;
+import java.io.File;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davidazullo
@@ -12,6 +17,11 @@ public class CalificarEmpleador extends ContenidoPanel {
      */
     public CalificarEmpleador(ContenidoJFrame ventana) {
         super(ventana);
+        Empresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ejemplo" }));
+        ArrayList<String> usuarios = encuentraUsuarios();
+        for(String f : usuarios){
+            Empresa.addItem(f);
+        }
         initComponents();
     }
 
@@ -47,7 +57,7 @@ public class CalificarEmpleador extends ContenidoPanel {
         TEmpresa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TEmpresa.setText("Empresa");
 
-        Empresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Valeo" }));
+        Empresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ejemplo" }));
 
         THorario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         THorario.setText("Horario");
@@ -69,17 +79,17 @@ public class CalificarEmpleador extends ContenidoPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(TEmpresa)
                             .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Horario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Horario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(THorario)
-                            .addComponent(Prestaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Prestaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(TPrestaciones)
-                            .addComponent(Vacaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Vacaciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(TVacaciones)
-                            .addComponent(Enviar))
+                            .addComponent(Enviar)
+                            .addComponent(Empresa, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -111,7 +121,26 @@ public class CalificarEmpleador extends ContenidoPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    public ArrayList<String> encuentraUsuarios(){
+        ArrayList<String> usuarios = new ArrayList<>();
+            File f = new File(System.getProperty("user.dir"));
+            if(f.exists()){
+                File[] ficheros = f.listFiles(); 
+                for (File fichero : ficheros) {
+                    String temp = fichero.getName();
+                    if(temp.endsWith(".dat")){
+                        String archivo = temp.substring(0, temp.length()-4);
+                        Archivo empleador = new Archivo(archivo);
+                        Usuario temporal = empleador.leeArchivo();
+                        if(temporal.getTipo().equals("Empleador"))
+                            usuarios.add(temporal.getNombre());
+                    }
+                }
+            }
+            if(usuarios.isEmpty())
+                JOptionPane.showMessageDialog(null, "No hay empleados registrados", "", JOptionPane.INFORMATION_MESSAGE);
+            return usuarios;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Empresa;

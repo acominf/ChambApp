@@ -1,6 +1,5 @@
 package paneles;
 
-//TODO: Completarla
 /**
  *
  * @author davidazullo

@@ -1,17 +1,28 @@
 package paneles;
 
-//TODO: Completarla
+import elementos.Archivo;
+import elementos.Usuario;
+import java.io.File;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author davidazullo
  */
-public class CalificarEmpleado extends ContenidoPanel {
+public final class CalificarEmpleado extends ContenidoPanel {
 
     /**
      * Creates new form CalificarEmpleado
+     * @param ventana
      */
     public CalificarEmpleado(ContenidoJFrame ventana) {
         super(ventana);
+        ArrayList<String> usuarios = encuentraUsuarios();
+        JOptionPane.showMessageDialog(null, usuarios, "", JOptionPane.INFORMATION_MESSAGE);
+        for(String f : usuarios){
+            Empleado.addItem(f);
+        }
         initComponents();
     }
 
@@ -49,8 +60,6 @@ public class CalificarEmpleado extends ContenidoPanel {
         TEmpleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TEmpleado.setText("Empleado");
 
-        Empleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Braulio García" }));
-
         TDesempeno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TDesempeno.setText("Desempeño en el trabajo");
 
@@ -74,19 +83,19 @@ public class CalificarEmpleado extends ContenidoPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(TEmpleado)
                             .addComponent(Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Desenpeno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Desenpeno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(TDesempeno)
-                            .addComponent(Profesionalismo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Profesionalismo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(TProfesinalismo)
-                            .addComponent(Responsabilidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Responsabilidad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(TResponsabilidad)
-                            .addComponent(Actitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Actitud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(TActitud)
-                            .addComponent(Enviar))
+                            .addComponent(Enviar)
+                            .addComponent(Empleado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -122,7 +131,26 @@ public class CalificarEmpleado extends ContenidoPanel {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    public ArrayList<String> encuentraUsuarios(){
+        ArrayList<String> usuarios = new ArrayList<String>();
+            File f = new File(System.getProperty("user.dir"));
+            if(f.exists()){
+                File[] ficheros = f.listFiles(); 
+                for (File fichero : ficheros) {
+                    String temp = fichero.getName();
+                    if(temp.endsWith(".dat")){
+                        String archivo = temp.substring(0, temp.length()-4);
+                        Archivo empleador = new Archivo(archivo);
+                        Usuario temporal = empleador.leeArchivo();
+                        if(temporal.getTipo().equals("Empleado"))
+                            usuarios.add(temporal.getNombre());
+                    }
+                }
+            }
+            if(usuarios.isEmpty())
+                JOptionPane.showMessageDialog(null, "No hay empleados registrados", "", JOptionPane.INFORMATION_MESSAGE);
+            return usuarios;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSlider Actitud;

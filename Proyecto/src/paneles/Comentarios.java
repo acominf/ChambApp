@@ -34,6 +34,7 @@ public class Comentarios extends ContenidoPanel {
         Instrucciones2 = new javax.swing.JLabel();
         Comentarios = new javax.swing.JTextField();
         Enviar = new javax.swing.JButton();
+        Cancelar = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -54,6 +55,13 @@ public class Comentarios extends ContenidoPanel {
             }
         });
 
+        Cancelar.setText("Cancelar");
+        Cancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CancelarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -66,7 +74,10 @@ public class Comentarios extends ContenidoPanel {
                         .addComponent(Instrucciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Instrucciones2, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Titulo, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(Enviar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Enviar)
+                        .addGap(50, 50, 50)
+                        .addComponent(Cancelar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -81,7 +92,9 @@ public class Comentarios extends ContenidoPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Comentarios, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Enviar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Enviar)
+                    .addComponent(Cancelar))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -111,8 +124,13 @@ public class Comentarios extends ContenidoPanel {
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_EnviarMouseClicked
 
+    private void CancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CancelarMouseClicked
+        Utilerias.cambiaComponentePadre(this);
+    }//GEN-LAST:event_CancelarMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cancelar;
     private javax.swing.JTextField Comentarios;
     private javax.swing.JButton Enviar;
     private javax.swing.JLabel Instrucciones;

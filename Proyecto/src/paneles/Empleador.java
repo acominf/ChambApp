@@ -42,6 +42,7 @@ public class Empleador extends ContenidoPanel {
         BuscarCursos = new javax.swing.JButton();
         CamposExtra = new javax.swing.JButton();
         BuscarProyecto = new javax.swing.JButton();
+        CerrarSesion = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -114,6 +115,13 @@ public class Empleador extends ContenidoPanel {
             }
         });
 
+        CerrarSesion.setText("Cerrar Sesión");
+        CerrarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarSesionMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -132,9 +140,10 @@ public class Empleador extends ContenidoPanel {
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(SubirProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Salir)
                             .addComponent(CamposExtra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BuscaSocio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(BuscaSocio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -155,7 +164,9 @@ public class Empleador extends ContenidoPanel {
                     .addComponent(BuscarCursos)
                     .addComponent(CamposExtra))
                 .addGap(9, 9, 9)
-                .addComponent(BuscarProyecto)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BuscarProyecto)
+                    .addComponent(CerrarSesion))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Salir)
@@ -226,6 +237,13 @@ public class Empleador extends ContenidoPanel {
             }
     }//GEN-LAST:event_BuscarProyectoActionPerformed
 
+    private void CerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionMouseClicked
+        this.getPadre().setVisible(false);
+        Menu menu = new Menu(this.getChambapp());
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+    }//GEN-LAST:event_CerrarSesionMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscaChambeador;
     private javax.swing.JButton BuscaSocio;
@@ -234,6 +252,7 @@ public class Empleador extends ContenidoPanel {
     private javax.swing.JButton CalificaEmpleado;
     private javax.swing.JButton CambiarPassword;
     private javax.swing.JButton CamposExtra;
+    private javax.swing.JButton CerrarSesion;
     private javax.swing.JButton Salir;
     private javax.swing.JButton SubirProyecto;
     private javax.swing.JLabel Titulo;

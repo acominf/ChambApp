@@ -29,7 +29,7 @@ public class Chambapp {
     }
 
     public String getRutaComentarios() {
-        return tituloApp+"/"+rutaComentarios;
+        return rutaComentarios;
     }
 
     public Usuario getUsuarioActual() {

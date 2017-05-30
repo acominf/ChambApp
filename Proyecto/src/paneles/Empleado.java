@@ -42,6 +42,7 @@ public class Empleado extends ContenidoPanel {
         BuscarCursos = new javax.swing.JButton();
         CamposExtra = new javax.swing.JButton();
         BuscarProyecto = new javax.swing.JButton();
+        CerrarSesion = new javax.swing.JButton();
 
         Titulo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -73,11 +74,6 @@ public class Empleado extends ContenidoPanel {
         CalificarEmpleador.setText("Calificar Empleador");
         CalificarEmpleador.setToolTipText("Saldrá en la versión 2.0");
         CalificarEmpleador.setEnabled(false);
-        CalificarEmpleador.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CalificarEmpleadorMouseClicked(evt);
-            }
-        });
 
         Salir.setText("Salir");
         Salir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -114,6 +110,13 @@ public class Empleado extends ContenidoPanel {
             }
         });
 
+        CerrarSesion.setText("Cerrar Sesión");
+        CerrarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CerrarSesionMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -130,12 +133,13 @@ public class Empleado extends ContenidoPanel {
                             .addComponent(CalificarEmpleador, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BuscaChamba, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CamposExtra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Salir)
                             .addComponent(SubirProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BuscaSocio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(BuscaSocio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +159,9 @@ public class Empleado extends ContenidoPanel {
                     .addComponent(BuscarCursos)
                     .addComponent(CamposExtra))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BuscarProyecto)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BuscarProyecto)
+                    .addComponent(CerrarSesion))
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Salir)
@@ -171,10 +177,6 @@ public class Empleado extends ContenidoPanel {
     private void BuscaSocioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscaSocioMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new BuscarSocio(this.getPadre()) );
     }//GEN-LAST:event_BuscaSocioMouseClicked
-
-    private void CalificarEmpleadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalificarEmpleadorMouseClicked
-        Utilerias.muestraComponente( this.getPadre(), new CalificarEmpleador(this.getPadre()) );
-    }//GEN-LAST:event_CalificarEmpleadorMouseClicked
 
     private void SubirProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubirProyectoMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new SubirProyecto(this.getPadre()) );
@@ -226,6 +228,13 @@ public class Empleado extends ContenidoPanel {
             }
     }//GEN-LAST:event_BuscarProyectoActionPerformed
 
+    private void CerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionMouseClicked
+        this.getPadre().setVisible(false);
+        Menu menu = new Menu(this.getChambapp());
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+    }//GEN-LAST:event_CerrarSesionMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BuscaChamba;
     private javax.swing.JButton BuscaSocio;
@@ -234,6 +243,7 @@ public class Empleado extends ContenidoPanel {
     private javax.swing.JButton CalificarEmpleador;
     private javax.swing.JButton CambiaPassword;
     private javax.swing.JButton CamposExtra;
+    private javax.swing.JButton CerrarSesion;
     private javax.swing.JButton Salir;
     private javax.swing.JButton SubirProyecto;
     private javax.swing.JLabel Titulo;

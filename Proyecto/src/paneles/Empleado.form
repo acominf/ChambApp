@@ -29,15 +29,16 @@
                           <Component id="BuscaChamba" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="CamposExtra" max="32767" attributes="0"/>
-                          <Component id="Salir" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="SubirProyecto" alignment="0" max="32767" attributes="0"/>
                           <Component id="BuscaSocio" alignment="0" max="32767" attributes="0"/>
+                          <Component id="CerrarSesion" max="32767" attributes="0"/>
+                          <Component id="Salir" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -62,7 +63,10 @@
                   <Component id="CamposExtra" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="BuscarProyecto" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BuscarProyecto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CerrarSesion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Salir" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -115,9 +119,6 @@
         <Property name="toolTipText" type="java.lang.String" value="Saldr&#xe1; en la versi&#xf3;n 2.0"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CalificarEmpleadorMouseClicked"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Salir">
       <Properties>
@@ -157,6 +158,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BuscarProyectoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="CerrarSesion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cerrar Sesi&#xf3;n"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CerrarSesionMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>

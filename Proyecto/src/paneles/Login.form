@@ -27,10 +27,10 @@
                   <Component id="Entrar" alignment="2" min="-2" pref="253" max="-2" attributes="0"/>
                   <Component id="Cambio" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="Registro" alignment="2" min="-2" pref="253" max="-2" attributes="0"/>
-                  <Component id="TCambio" alignment="2" max="32767" attributes="0"/>
+                  <Component id="TCambio" alignment="2" pref="267" max="32767" attributes="0"/>
                   <Component id="TRegistro" alignment="2" max="32767" attributes="0"/>
+                  <Component id="Regresar" alignment="2" min="-2" pref="253" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,7 +49,7 @@
               <Component id="Password" max="32767" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="Entrar" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Component id="TCambio" max="32767" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="Cambio" max="32767" attributes="0"/>
@@ -57,7 +57,9 @@
               <Component id="TRegistro" max="32767" attributes="0"/>
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="Registro" max="32767" attributes="0"/>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="Regresar" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -135,6 +137,14 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="&#xbf;A&#xfa;n no tienes cuenta?"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Regresar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Regresar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="RegresarMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
