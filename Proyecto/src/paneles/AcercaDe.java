@@ -1,7 +1,5 @@
 package paneles;
 
-import elementos.Utilerias;
-
 /**
  * Clase que despliega el objetivo de la aplicación
  */

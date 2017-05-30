@@ -1,8 +1,5 @@
 package paneles;
 import javax.swing.JOptionPane;
-import elementos.Usuario;
-import elementos.Archivo;
-import elementos.Utilerias;
 
 /**
  * Clase que se encarga de añadir los campos adicionales del empleado

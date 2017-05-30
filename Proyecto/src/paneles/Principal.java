@@ -1,7 +1,5 @@
 package paneles;
 
-import elementos.Chambapp;
-
 /**
  * Clase que se encarga de crear el JFrame de inicio
  */

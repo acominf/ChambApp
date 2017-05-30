@@ -1,7 +1,4 @@
 package paneles;
-import elementos.Archivo;
-import elementos.Usuario;
-import elementos.Utilerias;
 import javax.swing.JOptionPane;
 
 /**

@@ -1,6 +1,5 @@
 package paneles;
 
-import elementos.Chambapp;
 import javax.swing.SwingUtilities;
 
 /**

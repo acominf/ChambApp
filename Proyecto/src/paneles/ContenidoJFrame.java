@@ -1,6 +1,5 @@
 package paneles;
 
-import elementos.Chambapp;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 

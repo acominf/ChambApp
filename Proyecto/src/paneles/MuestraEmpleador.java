@@ -5,7 +5,6 @@
  */
 package paneles;
 
-import elementos.Usuario;
 import java.util.ArrayList;
 
 /**

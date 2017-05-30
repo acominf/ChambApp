@@ -1,9 +1,5 @@
 package paneles;
 
-import elementos.Archivo;
-import elementos.Proyecto;
-import elementos.Usuario;
-import elementos.Utilerias;
 import java.io.File;
 import static java.lang.System.exit;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package elementos;
+package paneles;
 
 import java.io.Serializable;
 

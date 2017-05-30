@@ -1,6 +1,4 @@
 package paneles;
-import elementos.Chambapp;
-import elementos.Utilerias;
 import static java.lang.System.exit;
 
 /**
