@@ -213,11 +213,17 @@ public class RegistrarUsuario extends ContenidoPanel {
                     .addContainerGap(169, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Método encargado de ejecutar la acción posterior al oprimir el botón enviar
+     * @param evt 
+     */
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         validaFormulario();
     }//GEN-LAST:event_EnviarActionPerformed
-
+    /**
+     * Método encargado de ejecutar la acción posterior al oprimir el botón cancelar
+     * @param evt 
+     */
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_CancelarActionPerformed

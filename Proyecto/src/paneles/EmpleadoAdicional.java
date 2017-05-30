@@ -227,7 +227,11 @@ Enviar1.addActionListener(new java.awt.event.ActionListener() {
             .addContainerGap())
     );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Se encarga de guardar los datos ingresados
+     * posteriormente ejecuta una acción
+     * @param evt 
+     */
     private void Enviar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enviar1ActionPerformed
         validarFormulario(); 
     }//GEN-LAST:event_Enviar1ActionPerformed

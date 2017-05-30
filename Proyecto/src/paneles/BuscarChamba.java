@@ -250,11 +250,17 @@ Enviar.addActionListener(new java.awt.event.ActionListener() {
             .addContainerGap())
     );
     }// </editor-fold>//GEN-END:initComponents
-
+     /**
+     * Ejecuta la acción al presionar botón enviar
+     * @param evt 
+     */
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         validarFormulario();
     }//GEN-LAST:event_EnviarActionPerformed
-
+    /**
+     * Regresa a la ventana anterior
+     * @param evt 
+     */
     private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_RegresarActionPerformed

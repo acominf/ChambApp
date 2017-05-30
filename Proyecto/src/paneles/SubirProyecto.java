@@ -153,7 +153,10 @@ public class SubirProyecto extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Método encargado de ejecutar la accion posterior al clic en el botón enviar
+     * @param evt Escuchador
+     */
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         validarFormulario();
     }//GEN-LAST:event_EnviarActionPerformed

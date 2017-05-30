@@ -21,7 +21,10 @@ public class ContenidoJFrame extends JFrame {
         setIconImage(icono.getImage());
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-
+    /**
+     * Método que retorna el ChambApp actual    
+     * @return Objeto ChambApp actual
+     */
     public Chambapp getChambapp() {
         return chambapp;
     }

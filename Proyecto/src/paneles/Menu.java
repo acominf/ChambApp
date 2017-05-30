@@ -104,19 +104,31 @@ public class Menu extends ContenidoJFrame{
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Ejecuta la acción al presionar botón Acceder
+     * @param evt 
+     */
     private void AccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AccederMouseClicked
         Utilerias.muestraComponente( this, new Login(this) );
     }//GEN-LAST:event_AccederMouseClicked
-
+    /**
+     * Ejecuta la acción al presionar botón Salir
+     * @param evt 
+     */
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
         exit(0);
     }//GEN-LAST:event_SalirMouseClicked
-    
+    /**
+     * Ejecuta la acción al presionar botón Comentarios y Feedback
+     * @param evt 
+     */
     private void ComentariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ComentariosMouseClicked
         Utilerias.muestraComponente( this, new Comentarios(this) );
     }//GEN-LAST:event_ComentariosMouseClicked
-
+    /**
+     * Ejecuta la acción al presionar botón Acerca De
+     * @param evt 
+     */
     private void AcercaDeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AcercaDeMouseClicked
         Utilerias.muestraComponente( this, new AcercaDe(this) );
     }//GEN-LAST:event_AcercaDeMouseClicked

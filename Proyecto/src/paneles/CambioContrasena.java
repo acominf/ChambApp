@@ -170,11 +170,17 @@ public class CambioContrasena extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Valida los datos ingresados por el usuario
+     * @param evt 
+     */
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         validarFormulario();
     }//GEN-LAST:event_EnviarActionPerformed
-
+    /**
+     * Cancela la acción a realizar
+     * @param evt 
+     */
     private void CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelarActionPerformed
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_CancelarActionPerformed

@@ -170,11 +170,17 @@ public class MostrarCursos extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Ejecuta la acción al presionar botón Aceptar
+     * @param evt 
+     */
     private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
         validarFormulario();
     }//GEN-LAST:event_EnviarMouseClicked
-
+    /**
+     * Ejecuta la acción al presionar botón regresar
+     * @param evt 
+     */
     private void RegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseClicked
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_RegresarMouseClicked

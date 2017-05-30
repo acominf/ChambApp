@@ -165,35 +165,59 @@ public class Empleado extends ContenidoPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Muestra componente BuscaChamba
+     * @param evt 
+     */
     private void BuscaChambaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscaChambaMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new BuscarChamba(this.getPadre()) );
     }//GEN-LAST:event_BuscaChambaMouseClicked
-
+    /**
+     * Muestra componente BuscarSocio
+     * @param evt 
+     */
     private void BuscaSocioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscaSocioMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new BuscarSocio(this.getPadre()) );
     }//GEN-LAST:event_BuscaSocioMouseClicked
-
+    /**
+     * Muestra componente SubirProyecto
+     * @param evt 
+     */
     private void SubirProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubirProyectoMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new SubirProyecto(this.getPadre()) );
     }//GEN-LAST:event_SubirProyectoMouseClicked
-
+    /**
+     * Muestra componente MostrarCursos
+     * @param evt 
+     */
     private void BuscarCursosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BuscarCursosMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new MostrarCursos(this.getPadre()) );
     }//GEN-LAST:event_BuscarCursosMouseClicked
-
+    /**
+     * Muestra Componente EmpleadoAdicional
+     * @param evt 
+     */
     private void CamposExtraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CamposExtraMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new EmpleadoAdicional(this.getPadre()) );
     }//GEN-LAST:event_CamposExtraMouseClicked
-
+    /**
+     * Muestra componente CambioContrasena
+     * @param evt 
+     */
     private void CambiaPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambiaPasswordMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new CambioContrasena(this.getPadre()));
     }//GEN-LAST:event_CambiaPasswordMouseClicked
-
+    /**
+     * Método para salir de la aplicación
+     * @param evt 
+     */
     private void SalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SalirMouseClicked
         exit(0);
     }//GEN-LAST:event_SalirMouseClicked
-
+    /**
+     * Método encargado de buscar un proyecto con los parametros especificados
+     * @param evt 
+     */
     private void BuscarProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarProyectoActionPerformed
         float monto = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el presupuesto de proyecto: "));
         ArrayList<Proyecto> proyectos = new ArrayList<>();
@@ -223,7 +247,10 @@ public class Empleado extends ContenidoPanel {
                 JOptionPane.showMessageDialog(null, cad, "", JOptionPane.INFORMATION_MESSAGE);
             }
     }//GEN-LAST:event_BuscarProyectoActionPerformed
-
+    /**
+     * Cierra sesión actual
+     * @param evt 
+     */
     private void CerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CerrarSesionMouseClicked
         this.getPadre().setVisible(false);
         Menu menu = new Menu(this.getChambapp());

@@ -247,7 +247,10 @@ Enviar1.addActionListener(new java.awt.event.ActionListener() {
                 .addGap(0, 0, Short.MAX_VALUE)))
     );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Ejecuta la acción al presionar botón enviar
+     * @param evt 
+     */
     private void Enviar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enviar1ActionPerformed
         validarFormulario(); 
     }//GEN-LAST:event_Enviar1ActionPerformed

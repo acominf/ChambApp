@@ -168,19 +168,31 @@ public class Login extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Ejecuta la acción luego de solicitar cambio de contraseña
+     * @param evt 
+     */
     private void CambioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CambioMouseClicked
         validarCambioContrasena();
     }//GEN-LAST:event_CambioMouseClicked
-
+    /**
+     * Ejecuta la acción al solicitar registro
+     * @param evt 
+     */
     private void RegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistroMouseClicked
         Utilerias.muestraComponente( this.getPadre(), new RegistrarUsuario(this.getPadre()) );
     }//GEN-LAST:event_RegistroMouseClicked
-
+    /**
+     * Ejecuta la acción al presionar botón Entrar
+     * @param evt 
+     */
     private void EntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EntrarMouseClicked
         validarFormulario();
     }//GEN-LAST:event_EntrarMouseClicked
-
+    /**
+     * Regresa al menú principal
+     * @param evt 
+     */
     private void RegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegresarMouseClicked
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_RegresarMouseClicked

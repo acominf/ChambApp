@@ -95,7 +95,11 @@ public class Comentarios extends ContenidoPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Valida los datos ingresados por el usuario
+     * guarda los comentarios en un archivo
+     * @param evt 
+     */
     private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
         Chambapp chambapp = this.getChambapp();
         Archivo fichero = new Archivo(this.getChambapp().getRutaComentarios());
@@ -120,7 +124,10 @@ public class Comentarios extends ContenidoPanel {
         JOptionPane.showMessageDialog(null, mensaje, "", JOptionPane.INFORMATION_MESSAGE);
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_EnviarMouseClicked
-
+    /**
+     * Cancela la accion
+     * @param evt 
+     */
     private void CancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CancelarMouseClicked
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_CancelarMouseClicked
