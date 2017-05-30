@@ -1,13 +1,12 @@
 package paneles;
-
 /**
- * Clase que despliega el objetivo de la aplicación
+ * Clase que despliega detalles de la aplicación
  */
 public class AcercaDe extends ContenidoPanel {
 
     /**
      * Constructor de la interfaz de usuario acerca de
-     * @param ventana
+     * @param ventana Ventana en la que se agregará el JPanel
      */
     public AcercaDe(ContenidoJFrame ventana) {
         super(ventana);
@@ -147,7 +146,10 @@ public class AcercaDe extends ContenidoPanel {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Método utilizado para la detección de eventos en el boton envíar
+     * @param evt Escuchador del ratón
+     */
     private void EnviarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EnviarMouseClicked
         Utilerias.cambiaComponentePadre(this);
     }//GEN-LAST:event_EnviarMouseClicked
