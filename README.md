@@ -4,12 +4,14 @@ ChambApp es una aplicación multiplataforma en la que sus usuarios pueden conseg
 ### Descripción del juego/aplicación
 La aplicación tiene como fin el facilitar a sus usuarios, empleados y empleadores, la búsqueda y obtención de trabajo mediante una interfaz amigable. Se pretende que sea multilplataforma y que en cada una de ellas se proporcione un acceso rápido y sencillo.
 
+### Wiki
+* [![Video de Chambapp](Imágenes/Video.png)](https://www.youtube.com/watch?v=wnmw4jO5p-4&feature=youtu.be "Video de Chambapp")
+* [Capturas](Sitio/Capturas)
+* [Historias de Usuario](Sitio/Historias)
+
 ### Links útiles
 * [Descarga](https://github.com/acominf/ChambApp/releases)
 * [Repositorio](https://github.com/acominf/ChambApp)
-
-### Wiki Adicional
-* [Capturas](Sitio/Capturas)
 
 ### Clases principales y sus características
 1. Chambap

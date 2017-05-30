@@ -51,5 +51,5 @@
 ![Captura 17](../Imágenes/Captura17.png)
 
 #### Captura de Pantalla 18
-![Captura 18](../Imágenes/Captura87.png)
+![Captura 18](../Imágenes/Captura18.png)
 
