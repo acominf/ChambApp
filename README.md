@@ -9,6 +9,7 @@ La aplicación tiene como fin el facilitar a sus usuarios, empleados y empleador
 ### Wiki
 * [Capturas](Sitio/Capturas)
 * [Historias de Usuario](Sitio/Historias)
+* [Diagramas de Clase](Sitio/Clases)
 
 ### Links útiles
 * [Descarga](https://github.com/acominf/ChambApp/releases)
