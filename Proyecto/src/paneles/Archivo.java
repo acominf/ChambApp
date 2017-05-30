@@ -26,8 +26,8 @@ public class Archivo {
 
     /**
      * Constructor utilizado para inicializar la lista de comentarios a escribir
-     * @param comentarios
-     * @param ruta
+     * @param comentarios Texto a excribir en el archivo        
+     * @param ruta Ubicación de escritura del archivo
      */
     public Archivo(ArrayList<String> comentarios, String ruta){
         this.comentarios = comentarios;
@@ -160,12 +160,18 @@ public class Archivo {
         }
         return comentarios;
     }
-    
+    /**
+     * Metodo utilizado para borrar el archivo actual
+     * @return Valor de éxito en la operación
+     */
     public boolean eliminaArchivo(){
         File f = new File(nombreArchivoE);
         return f.delete();
     }
-    
+    /**
+     * Utilizado para comprobar la existencia de un archivo
+     * @return Valor de éxito en la operación
+     */
     public boolean existe(){
         File f = new File(nombreArchivoE);
         return f.exists();

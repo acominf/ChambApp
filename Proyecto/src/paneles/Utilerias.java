@@ -4,15 +4,15 @@ import paneles.ContenidoJFrame;
 import paneles.ContenidoPanel;
 
 /**
- * Clase encargada de manipulaciones entre JFrames y JPanels
+ * Clase encargada de manipulaciones entre JFrames y JPanels además de métodos adicionales
  */
 public class Utilerias {
 
     /**
      * Metodo cuya funcion es asignar el JFrame actual al componente creado,
      * lo asigna a otro JFrame y lo hace visible, oculta el original
-     * @param jframe
-     * @param componente
+     * @param jframe 
+     * @param componente 
      */
     public static void muestraComponente(ContenidoJFrame jframe, ContenidoPanel componente) {
         ContenidoJFrame f;
