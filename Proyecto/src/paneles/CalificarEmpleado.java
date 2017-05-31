@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author davidazullo
+ * 
  */
 public final class CalificarEmpleado extends ContenidoPanel {
 

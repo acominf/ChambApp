@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Clase que se encarga de buscar candidatos para puestos que soliciten los empleadores.
  */
 public class BuscarChambeador extends ContenidoPanel {
 
@@ -31,7 +31,7 @@ public class BuscarChambeador extends ContenidoPanel {
             JOptionPane.showMessageDialog(null, "Introduzca Un Intervalo De Sueldo", "Error", JOptionPane.WARNING_MESSAGE);
         }
         else{
-            ArrayList<Usuario> usuarios = new ArrayList<>();
+            ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
             File f = new File(System.getProperty("user.dir"));
             if(f.exists()){
                 File[] ficheros = f.listFiles(); 

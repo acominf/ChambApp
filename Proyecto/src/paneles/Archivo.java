@@ -144,7 +144,10 @@ public class Archivo {
         catch (FileNotFoundException e){
             System.out.println(e.getMessage());
         }
-        catch(IOException | ClassNotFoundException e){
+        catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+        catch(ClassNotFoundException e){
             System.out.println(e.getMessage());
         }
         finally {
@@ -177,3 +180,4 @@ public class Archivo {
         return f.exists();
     }
 }
+

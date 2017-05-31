@@ -2,7 +2,6 @@ package paneles;
 
 /**
  *
- * @author davidazullo
  */
 public class BuscarSocio extends ContenidoPanel {
 

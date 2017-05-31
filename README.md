@@ -4,12 +4,12 @@ ChambApp es una aplicación multiplataforma en la que sus usuarios pueden conseg
 ### Descripción del juego/aplicación
 La aplicación tiene como fin el facilitar a sus usuarios, empleados y empleadores, la búsqueda y obtención de trabajo mediante una interfaz amigable. Se pretende que sea multilplataforma y que en cada una de ellas se proporcione un acceso rápido y sencillo.
 
-[![Video de Chambapp](Imágenes/Video.png)](https://www.youtube.com/watch?v=wnmw4jO5p-4&feature=youtu.be "Video de Chambapp")
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=YMoh6Oeqgo4&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
 
 ### Wiki
 * [Capturas](Sitio/Capturas)
 * [Historias de Usuario](Sitio/Historias)
-* [Diagramas de Clase](Sitio/Clases)
+* [Clases principales y sus características](Sitio/Clases)
 
 ### Links útiles
 * [Descarga](https://github.com/acominf/ChambApp/releases)
@@ -39,22 +39,6 @@ Se decidió usar este modelo de software debido a las fases que este plantea y q
 * *Planificación y Análisis de Riesgo*: Tarea requeridas para evaluar riesgos, definir recursos, tiempo y costos.
 * *Construcción e Ingeniería*: Construir prototipos, probar, instalar, soporte al usuario.
 * *Evaluación del Cliente*: Obtener la reaccin del cliente según la evaluación del proyecto.
-
-### Clases principales y sus características
-1. Chambap
-* Se encarga de administrar la app.
-* Almacena una lista de usuarios.
-* Se encarga de buscar informaciónen base a criterios específicos.
-
-2. Usuario
-* Se encarga de representar al usuario.
-* Almacena/modifica la información personal.
-* Permite interactuar con más usuarios.
-
-3. Cursos
-* Despliega las opciones de cursos disponibles.
-* Permite al usuario tomar un curso.
-* Retroalimentación a los usuarios que están participando en un curso.
 
 ### Diagrama de clases
 ![Diagrama de clases](Imágenes/ChamApp.png)
